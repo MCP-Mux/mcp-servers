@@ -1,5 +1,5 @@
 {
-  "id": "com.anthropic.puppeteer",
+  "id": "com.anthropic-puppeteer",
   "name": "Puppeteer",
   "alias": "puppeteer",
   "description": "Automate browser interactions using Puppeteer. Navigate web pages, take screenshots, click elements, fill forms, and execute JavaScript in a headless or headed Chromium browser instance.",

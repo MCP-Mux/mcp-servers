@@ -1,5 +1,5 @@
 {
-  "id": "com.anthropic.filesystem",
+  "id": "com.anthropic-filesystem",
   "name": "Filesystem",
   "alias": "fs",
   "description": "Provides secure access to the local file system with configurable allowed directories. Supports reading, writing, moving, and searching files with built-in safety controls to prevent access outside permitted paths.",

@@ -1,5 +1,5 @@
 {
-  "id": "com.anthropic.sequential-thinking",
+  "id": "com.anthropic-sequential-thinking",
   "name": "Sequential Thinking",
   "alias": "seqthink",
   "description": "A thinking tool that enables dynamic and reflective problem-solving through sequential thought steps. Supports branching, revision, and adjustment of reasoning chains for complex multi-step analysis and decision-making.",

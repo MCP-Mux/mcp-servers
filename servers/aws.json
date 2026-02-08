@@ -1,5 +1,5 @@
 {
-  "id": "com.anthropic.aws-kb",
+  "id": "com.anthropic-aws-kb",
   "name": "AWS Knowledge Base Retrieval",
   "alias": "aws",
   "description": "Retrieve information from AWS Knowledge Bases using Amazon Bedrock Agent Runtime. Query knowledge bases backed by various data sources for retrieval-augmented generation (RAG) workflows with AWS services.",

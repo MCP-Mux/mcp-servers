@@ -1,5 +1,5 @@
 {
-  "id": "com.anthropic.google-maps",
+  "id": "com.anthropic-google-maps",
   "name": "Google Maps",
   "alias": "gmaps",
   "description": "Access Google Maps Platform APIs for geocoding, directions, place search, elevation data, and distance calculations. Enables location-aware AI interactions with comprehensive mapping data.",

@@ -1,5 +1,5 @@
 {
-  "id": "com.anthropic.everything",
+  "id": "com.anthropic-everything",
   "name": "Everything (Reference Server)",
   "alias": "everything",
   "description": "A comprehensive test and reference MCP server that exercises all features of the MCP protocol. Includes sample tools, resources, prompts, and notifications for testing client implementations and learning the protocol.",

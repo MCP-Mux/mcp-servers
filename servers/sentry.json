@@ -1,5 +1,5 @@
 {
-  "id": "com.anthropic.sentry",
+  "id": "com.anthropic-sentry",
   "name": "Sentry",
   "alias": "sentry",
   "description": "Integrate with Sentry for error tracking and performance monitoring. Retrieve and analyze error reports, explore issues, view stack traces, and monitor application health through Sentry's platform.",

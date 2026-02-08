@@ -1,5 +1,5 @@
 {
-  "id": "com.anthropic.gdrive",
+  "id": "com.anthropic-gdrive",
   "name": "Google Drive",
   "alias": "gdrive",
   "description": "Access and search Google Drive files, read document contents, and manage files. Supports Google Docs, Sheets, and other Drive file types with OAuth 2.0 authentication for secure access.",

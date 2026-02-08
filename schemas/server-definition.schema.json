@@ -8,8 +8,8 @@
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^[a-z0-9.-]+$",
-      "description": "Unique identifier in reverse-domain notation (e.g., com.example.server)"
+      "pattern": "^[a-z0-9]+\\.[a-z0-9][a-z0-9-]*$",
+      "description": "Unique identifier: {tld}.{publisher}-{name} (e.g., com.cloudflare-docs, community.linear). One publisher can have multiple servers."
     },
     "name": {
       "type": "string",

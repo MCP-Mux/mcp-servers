@@ -1,5 +1,5 @@
 {
-  "id": "com.anthropic.slack",
+  "id": "com.anthropic-slack",
   "name": "Slack",
   "alias": "slack",
   "description": "Integrate with Slack workspaces to send messages, manage channels, read conversation history, and interact with users. Enables AI-powered Slack workflows and channel management.",

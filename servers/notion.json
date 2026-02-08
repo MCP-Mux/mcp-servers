@@ -1,5 +1,5 @@
 {
-  "id": "com.notion.mcp",
+  "id": "com.notion-mcp",
   "name": "Notion",
   "alias": "notion",
   "description": "Connect to Notion workspaces to search pages, read content, create and update pages, and manage databases. Enables AI-powered interaction with your Notion knowledge base and project documentation.",

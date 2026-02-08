@@ -48,8 +48,8 @@ describe("Server Definition Schema", () => {
   });
 
   it.each([
-    { id: "test", name: "Test", transport: { type: "stdio", command: "echo" } },
-    { id: "com.example.remote", name: "Remote", transport: { type: "http", url: "https://example.com/mcp" } },
+    { id: "com.example-test", name: "Test", transport: { type: "stdio", command: "echo" } },
+    { id: "com.example-remote", name: "Remote", transport: { type: "http", url: "https://example.com/mcp" } },
   ])("validates valid server definition: $id", (data) => {
     expect(validate(data)).toBe(true);
   });
@@ -58,7 +58,9 @@ describe("Server Definition Schema", () => {
     [{ name: "NoId", transport: { type: "stdio", command: "x" } }, "missing id"],
     [{ id: "x", transport: { type: "stdio", command: "x" } }, "missing name"],
     [{ id: "x", name: "X" }, "missing transport"],
-    [{ id: "INVALID-CAPS", name: "X", transport: { type: "stdio", command: "x" } }, "invalid id pattern"],
+    [{ id: "INVALID-CAPS", name: "X", transport: { type: "stdio", command: "x" } }, "invalid id pattern (caps)"],
+    [{ id: "com.foo.bar", name: "X", transport: { type: "stdio", command: "x" } }, "invalid id pattern (multi-dot)"],
+    [{ id: "noDot", name: "X", transport: { type: "stdio", command: "x" } }, "invalid id pattern (no dot)"],
     [{ id: "x", name: "", transport: { type: "stdio", command: "x" } }, "empty name"],
   ])("rejects invalid definition: %s", (data) => {
     expect(validate(data)).toBe(false);
@@ -132,9 +134,10 @@ describe("Server definitions consistency", () => {
     expect(aliasCollisions).toHaveLength(0);
   });
 
-  it("every server ID uses reverse-domain notation", () => {
+  it("every server ID uses {tld}.{publisher}-{name} format", () => {
+    const pattern = /^[a-z0-9]+\.[a-z0-9][a-z0-9-]*$/;
     for (const { data, file } of servers) {
-      expect(data.id, `${file} ID should contain dots`).toMatch(/\./);
+      expect(data.id, `${file} ID should match {tld}.{publisher}-{name} format`).toMatch(pattern);
     }
   });
 

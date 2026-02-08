@@ -1,5 +1,5 @@
 {
-  "id": "com.anthropic.sqlite",
+  "id": "com.anthropic-sqlite",
   "name": "SQLite",
   "alias": "sqlite",
   "description": "Interact with SQLite databases for querying, schema inspection, and data analysis. Supports running SQL queries against local SQLite database files with safe, controlled access.",

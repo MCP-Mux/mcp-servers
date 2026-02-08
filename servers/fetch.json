@@ -1,5 +1,5 @@
 {
-  "id": "com.anthropic.fetch",
+  "id": "com.anthropic-fetch",
   "name": "Fetch",
   "alias": "fetch",
   "description": "Fetch and extract content from web URLs. Retrieves web pages and converts them to markdown or plain text, enabling AI assistants to read and analyze web content including articles, documentation, and API responses.",

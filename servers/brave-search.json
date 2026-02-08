@@ -1,5 +1,5 @@
 {
-  "id": "com.brave.search",
+  "id": "com.brave-search",
   "name": "Brave Search",
   "alias": "brave",
   "description": "Perform web searches and local business lookups using the Brave Search API. Provides access to web search results, news, and local points of interest with privacy-respecting search technology.",

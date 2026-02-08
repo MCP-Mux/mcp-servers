@@ -1,5 +1,5 @@
 {
-  "id": "com.anthropic.docker",
+  "id": "com.anthropic-docker",
   "name": "Docker",
   "alias": "docker",
   "description": "Manage Docker containers, images, volumes, and networks through MCP. List running containers, inspect configurations, view logs, manage images, and control container lifecycle operations.",

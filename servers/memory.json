@@ -1,5 +1,5 @@
 {
-  "id": "com.anthropic.memory",
+  "id": "com.anthropic-memory",
   "name": "Memory (Knowledge Graph)",
   "alias": "memory",
   "description": "Persistent knowledge graph memory system that stores entities, relationships, and observations in a local JSON file. Enables AI assistants to maintain long-term memory across conversations with structured knowledge representation.",

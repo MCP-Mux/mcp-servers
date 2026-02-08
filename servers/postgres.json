@@ -1,5 +1,5 @@
 {
-  "id": "com.anthropic.postgres",
+  "id": "com.anthropic-postgres",
   "name": "PostgreSQL",
   "alias": "pg",
   "description": "Connect to PostgreSQL databases to inspect schemas, run read-only SQL queries, and explore table structures. Ideal for data analysis, debugging, and database exploration without risk of modifying data.",

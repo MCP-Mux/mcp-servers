@@ -1,5 +1,5 @@
 {
-  "id": "com.anthropic.github",
+  "id": "com.anthropic-github",
   "name": "GitHub",
   "alias": "gh",
   "description": "Interact with GitHub repositories, issues, pull requests, and more through the GitHub API. Supports repository management, file operations, branch management, issue tracking, and pull request workflows.",

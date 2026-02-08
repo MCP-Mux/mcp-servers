@@ -1,5 +1,5 @@
 {
-  "id": "com.cloudflare.mcp",
+  "id": "com.cloudflare-mcp",
   "name": "Cloudflare",
   "alias": "cf",
   "description": "Manage Cloudflare resources including Workers, KV namespaces, D1 databases, and R2 storage buckets. Deploy serverless functions, manage edge configuration, and interact with Cloudflare's developer platform.",
