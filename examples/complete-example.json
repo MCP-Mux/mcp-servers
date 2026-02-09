@@ -1,6 +1,6 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "com.anthropic-github",
+  "id": "com.github-mcp",
   "name": "GitHub",
   "alias": "gh",
   "description": "Interact with GitHub repositories, issues, pull requests, and more through the GitHub API.",

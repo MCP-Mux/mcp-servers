@@ -1,13 +1,13 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
   "id": "com.atlassian-mcp",
-  "name": "Atlassian",
+  "name": "Atlassian (Jira & Confluence)",
   "alias": "atlassian",
-  "description": "Interact with Jira issues, projects, and Confluence pages and spaces through the Atlassian API.",
-  "icon": "\ud83d\udd37",
+  "description": "Interact with Jira issues, Confluence pages, and Compass components through Atlassian's official remote MCP server.",
+  "icon": "https://avatars.githubusercontent.com/u/168166?v=4",
   "schema_version": "2.1",
   "categories": ["productivity", "developer-tools"],
-  "tags": ["jira", "confluence", "atlassian", "issues", "wiki", "project-management"],
+  "tags": ["jira", "confluence", "compass", "atlassian", "issues", "wiki", "project-management"],
 
   "transport": {
     "type": "http",
@@ -18,26 +18,28 @@
   },
 
   "auth": {
-    "type": "oauth"
+    "type": "oauth",
+    "instructions": "Authenticates via OAuth 2.1 in your browser. You must have access to the Atlassian apps requested by the MCP scopes."
   },
 
   "contributor": {
     "name": "Atlassian",
     "github": "atlassian",
-    "url": "https://atlassian.com"
+    "url": "https://developer.atlassian.com"
   },
 
   "links": {
-    "homepage": "https://atlassian.com",
-    "documentation": "https://developer.atlassian.com/cloud/mcp/docs"
+    "repository": "https://github.com/atlassian/atlassian-mcp-server",
+    "homepage": "https://developer.atlassian.com/cloud/mcp",
+    "documentation": "https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/"
   },
 
   "platforms": ["all"],
 
   "capabilities": {
     "tools": true,
-    "resources": true,
-    "prompts": false,
+    "prompts": true,
+    "resources": false,
     "read_only_mode": false
   }
 }

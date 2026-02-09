@@ -4,7 +4,7 @@
   "name": "Exa Search",
   "alias": "exa",
   "description": "AI-powered web search that understands meaning, not just keywords. Find similar pages, search by content type, and get clean text from any URL.",
-  "icon": "🔎",
+  "icon": "https://avatars.githubusercontent.com/u/77906174?v=4",
   "schema_version": "2.1",
   "categories": ["search", "ai-ml"],
   "tags": ["exa", "search", "web-search", "semantic-search", "ai-search", "research"],
@@ -21,11 +21,11 @@
         {
           "id": "EXA_API_KEY",
           "label": "Exa API Key",
-          "description": "API key for the Exa Search API",
+          "description": "API key for the Exa Search API. Free tier available with limited requests.",
           "type": "password",
           "required": true,
           "secret": true,
-          "placeholder": "exa-...",
+          "placeholder": "exa-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
           "obtain": {
             "url": "https://dashboard.exa.ai/api-keys",
             "instructions": "1. Go to dashboard.exa.ai\n2. Sign up or log in to your account\n3. Navigate to API Keys section\n4. Click 'Create API Key'\n5. Copy the generated key",

@@ -3,8 +3,8 @@
   "id": "com.slack-mcp",
   "name": "Slack",
   "alias": "slack",
-  "description": "Read and send Slack messages, manage channels, and interact with your Slack workspace.",
-  "icon": "\ud83d\udcac",
+  "description": "Send and read Slack messages, manage channels, list users, add reactions, and interact with your Slack workspace.",
+  "icon": "https://avatars.githubusercontent.com/u/6962987?v=4",
   "schema_version": "2.1",
   "categories": ["communication"],
   "tags": ["slack", "messaging", "chat", "channels", "workspace", "collaboration"],
@@ -12,7 +12,7 @@
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "@anthropic/slack-mcp-server"],
+    "args": ["-y", "@modelcontextprotocol/server-slack"],
     "env": {
       "SLACK_BOT_TOKEN": "${input:SLACK_BOT_TOKEN}",
       "SLACK_TEAM_ID": "${input:SLACK_TEAM_ID}"
@@ -22,21 +22,21 @@
         {
           "id": "SLACK_BOT_TOKEN",
           "label": "Slack Bot Token",
-          "description": "Bot user OAuth token for your Slack app",
+          "description": "Bot user OAuth token for your Slack app. Requires scopes: channels:history, channels:read, chat:write, reactions:write, users:read, users.profile:read",
           "type": "password",
           "required": true,
           "secret": true,
-          "placeholder": "xoxb-...",
+          "placeholder": "xoxb-your-bot-token-here",
           "obtain": {
             "url": "https://api.slack.com/apps",
-            "instructions": "1. Go to api.slack.com/apps and create or select your app\n2. Navigate to OAuth & Permissions\n3. Add required bot scopes (channels:read, chat:write, etc.)\n4. Install the app to your workspace\n5. Copy the Bot User OAuth Token (starts with xoxb-)",
+            "instructions": "1. Go to api.slack.com/apps and create or select your app\n2. Navigate to OAuth & Permissions\n3. Add bot scopes: channels:history, channels:read, chat:write, reactions:write, users:read, users.profile:read\n4. Install the app to your workspace\n5. Copy the Bot User OAuth Token (starts with xoxb-)",
             "button_label": "Create Slack App"
           }
         },
         {
           "id": "SLACK_TEAM_ID",
           "label": "Slack Team ID",
-          "description": "Your Slack workspace team ID",
+          "description": "Your Slack workspace team ID. Found in workspace settings or the workspace URL.",
           "type": "text",
           "required": true,
           "secret": false,
@@ -57,9 +57,9 @@
   },
 
   "contributor": {
-    "name": "Slack",
-    "github": "slackapi",
-    "url": "https://slack.com"
+    "name": "Model Context Protocol",
+    "github": "modelcontextprotocol",
+    "url": "https://modelcontextprotocol.io"
   },
 
   "links": {
@@ -72,7 +72,7 @@
 
   "capabilities": {
     "tools": true,
-    "resources": true,
+    "resources": false,
     "prompts": false,
     "read_only_mode": false
   }

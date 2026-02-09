@@ -3,32 +3,32 @@
   "id": "com.notion-mcp",
   "name": "Notion",
   "alias": "notion",
-  "description": "Read and write Notion pages, databases, and blocks. Search, create, and update content in your Notion workspace.",
-  "icon": "\ud83d\udcdd",
+  "description": "Read and write Notion pages, databases, blocks, and data sources through the official Notion MCP server.",
+  "icon": "https://avatars.githubusercontent.com/u/4792552?v=4",
   "schema_version": "2.1",
   "categories": ["productivity", "documentation"],
-  "tags": ["notion", "notes", "wiki", "database", "knowledge-base", "documentation"],
+  "tags": ["notion", "notes", "wiki", "database", "pages", "blocks", "knowledge-base"],
 
   "transport": {
     "type": "stdio",
     "command": "npx",
     "args": ["-y", "@notionhq/notion-mcp-server"],
     "env": {
-      "NOTION_API_KEY": "${input:NOTION_API_KEY}"
+      "NOTION_TOKEN": "${input:NOTION_TOKEN}"
     },
     "metadata": {
       "inputs": [
         {
-          "id": "NOTION_API_KEY",
+          "id": "NOTION_TOKEN",
           "label": "Notion Integration Token",
-          "description": "Internal integration token from Notion",
+          "description": "Internal integration secret token from Notion. Share the relevant pages/databases with your integration after creating it.",
           "type": "password",
           "required": true,
           "secret": true,
-          "placeholder": "secret_...",
+          "placeholder": "ntn_xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
           "obtain": {
-            "url": "https://www.notion.so/my-integrations",
-            "instructions": "1. Go to notion.so/my-integrations\n2. Click 'New integration'\n3. Give it a name and select your workspace\n4. Copy the Internal Integration Token\n5. Share desired pages/databases with the integration",
+            "url": "https://www.notion.so/profile/integrations",
+            "instructions": "1. Go to notion.so/profile/integrations\n2. Click 'New integration'\n3. Give it a name and select your workspace\n4. Copy the Internal Integration Secret (starts with ntn_)\n5. Share desired pages/databases with the integration",
             "button_label": "Create Integration"
           }
         }
@@ -38,7 +38,7 @@
 
   "auth": {
     "type": "api_key",
-    "instructions": "Create an integration at notion.so/my-integrations and copy the Internal Integration Token"
+    "instructions": "Create an integration at notion.so/profile/integrations and share pages with it"
   },
 
   "contributor": {
@@ -60,5 +60,7 @@
     "resources": true,
     "prompts": false,
     "read_only_mode": false
-  }
+  },
+
+  "changelog_url": "https://github.com/makenotion/notion-mcp-server/releases"
 }

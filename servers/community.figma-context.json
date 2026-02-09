@@ -3,16 +3,16 @@
   "id": "community.figma-context",
   "name": "Figma",
   "alias": "figma",
-  "description": "Read and inspect Figma designs, components, and styles. Extract layout details, design tokens, and asset metadata from any Figma file.",
-  "icon": "🎨",
+  "description": "Read and inspect Figma designs, components, and styles. Extract layout details, design tokens, and asset metadata from any Figma file via the Framelink MCP server.",
+  "icon": "https://avatars.githubusercontent.com/u/5155369?v=4",
   "schema_version": "2.1",
   "categories": ["developer-tools", "productivity"],
-  "tags": ["figma", "design", "ui", "components", "design-tokens", "frontend"],
+  "tags": ["figma", "design", "ui", "components", "design-tokens", "frontend", "framelink"],
 
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "figma-developer-mcp"],
+    "args": ["-y", "figma-developer-mcp", "--stdio"],
     "env": {
       "FIGMA_API_KEY": "${input:FIGMA_API_KEY}"
     },
@@ -21,11 +21,11 @@
         {
           "id": "FIGMA_API_KEY",
           "label": "Figma Personal Access Token",
-          "description": "Personal access token for the Figma API",
+          "description": "Personal access token for the Figma API. Generated from your Figma account settings.",
           "type": "password",
           "required": true,
           "secret": true,
-          "placeholder": "figd_...",
+          "placeholder": "figd_your_personal_access_token_here",
           "obtain": {
             "url": "https://www.figma.com/developers/api#access-tokens",
             "instructions": "1. Go to figma.com and log in\n2. Open Settings > Account\n3. Scroll to Personal access tokens\n4. Click 'Generate new token'\n5. Give it a description and copy the token",
@@ -42,13 +42,13 @@
   },
 
   "contributor": {
-    "name": "Figma Community",
-    "github": "nicholaslee119",
-    "url": "https://figma.com"
+    "name": "GLips",
+    "github": "GLips",
+    "url": "https://github.com/GLips/Figma-Context-MCP"
   },
 
   "links": {
-    "repository": "https://github.com/nicholaslee119/figma-developer-mcp",
+    "repository": "https://github.com/GLips/Figma-Context-MCP",
     "homepage": "https://figma.com",
     "documentation": "https://www.figma.com/developers/api"
   },

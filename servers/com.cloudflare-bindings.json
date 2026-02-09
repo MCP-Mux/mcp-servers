@@ -1,0 +1,45 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.cloudflare-bindings",
+  "name": "Cloudflare Workers Bindings",
+  "alias": "cf-bindings",
+  "description": "Manage Cloudflare Workers platform resources including KV namespaces, R2 buckets, D1 databases, Hyperdrive configs, and Workers scripts.",
+  "icon": "https://avatars.githubusercontent.com/u/314135?v=4",
+  "schema_version": "2.1",
+  "categories": ["cloud", "developer-tools"],
+  "tags": ["cloudflare", "workers", "kv", "r2", "d1", "hyperdrive", "storage", "serverless"],
+
+  "transport": {
+    "type": "http",
+    "url": "https://bindings.mcp.cloudflare.com/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+
+  "auth": {
+    "type": "oauth",
+    "instructions": "Authenticates via Cloudflare OAuth in your browser. Grants access to Workers, KV, R2, D1, and account info."
+  },
+
+  "contributor": {
+    "name": "Cloudflare",
+    "github": "cloudflare",
+    "url": "https://developers.cloudflare.com"
+  },
+
+  "links": {
+    "repository": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "homepage": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+    "documentation": "https://github.com/cloudflare/mcp-server-cloudflare/tree/main/apps/workers-bindings#readme"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": true,
+    "read_only_mode": false
+  }
+}

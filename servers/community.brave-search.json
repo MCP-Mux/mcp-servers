@@ -3,16 +3,16 @@
   "id": "community.brave-search",
   "name": "Brave Search",
   "alias": "brave",
-  "description": "Perform web searches and retrieve results using the Brave Search API. Supports web, news, and image search.",
-  "icon": "\ud83d\udd0d",
+  "description": "Search the web using the Brave Search API. Supports web search, news search, and local POI search with privacy-focused results.",
+  "icon": "https://avatars.githubusercontent.com/u/12301619?v=4",
   "schema_version": "2.1",
   "categories": ["search"],
-  "tags": ["brave", "search", "web-search", "news", "images", "research"],
+  "tags": ["brave", "search", "web-search", "news", "privacy", "research"],
 
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "@anthropic/brave-search-mcp-server"],
+    "args": ["-y", "@brave/brave-search-mcp-server"],
     "env": {
       "BRAVE_API_KEY": "${input:BRAVE_API_KEY}"
     },
@@ -21,14 +21,14 @@
         {
           "id": "BRAVE_API_KEY",
           "label": "Brave Search API Key",
-          "description": "API key for the Brave Search API",
+          "description": "API key for the Brave Search API. Free tier available with 2,000 queries/month.",
           "type": "password",
           "required": true,
           "secret": true,
-          "placeholder": "BSA...",
+          "placeholder": "BSAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
           "obtain": {
             "url": "https://brave.com/search/api/",
-            "instructions": "1. Go to brave.com/search/api\n2. Sign up or log in\n3. Subscribe to a plan (free tier available)\n4. Copy your API key from the dashboard",
+            "instructions": "1. Go to brave.com/search/api\n2. Sign up or log in\n3. Subscribe to a plan (free tier available with 2,000 queries/month)\n4. Copy your API key from the dashboard",
             "button_label": "Get API Key"
           }
         }
@@ -42,13 +42,13 @@
   },
 
   "contributor": {
-    "name": "Anthropic",
-    "github": "anthropics",
-    "url": "https://anthropic.com"
+    "name": "Brave",
+    "github": "brave",
+    "url": "https://brave.com"
   },
 
   "links": {
-    "repository": "https://github.com/modelcontextprotocol/servers",
+    "repository": "https://github.com/brave/brave-search-mcp-server",
     "homepage": "https://brave.com/search/api/",
     "documentation": "https://api.search.brave.com/app/documentation"
   },
