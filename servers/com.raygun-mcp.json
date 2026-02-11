@@ -1,0 +1,64 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.raygun-mcp",
+  "name": "Raygun",
+  "alias": "raygun",
+  "description": "Query and manage Raygun error groups, applications, deployments, and user sessions for error monitoring and crash reporting.",
+  "icon": "https://avatars.githubusercontent.com/u/1767684?v=4",
+  "schema_version": "2.1",
+  "categories": ["monitoring", "developer-tools"],
+  "tags": ["raygun", "errors", "monitoring", "crash-reporting", "debugging", "observability"],
+
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@raygun.io/mcp-server-raygun"],
+    "env": {
+      "RAYGUN_PAT_TOKEN": "${input:RAYGUN_PAT_TOKEN}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "RAYGUN_PAT_TOKEN",
+          "label": "Raygun Personal Access Token",
+          "description": "Personal Access Token for the Raygun API.",
+          "type": "password",
+          "required": true,
+          "secret": true,
+          "placeholder": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+          "obtain": {
+            "url": "https://app.raygun.com/user/tokens",
+            "instructions": "1. Log in to app.raygun.com\n2. Go to My Settings\n3. Create a new Personal Access Token\n4. Copy the token immediately (it won't be shown again)",
+            "button_label": "Get PAT Token"
+          }
+        }
+      ]
+    }
+  },
+
+  "auth": {
+    "type": "api_key",
+    "instructions": "Create a Personal Access Token in My Settings at https://app.raygun.com"
+  },
+
+  "contributor": {
+    "name": "Raygun",
+    "github": "MindscapeHQ",
+    "url": "https://raygun.com"
+  },
+
+  "links": {
+    "repository": "https://github.com/MindscapeHQ/mcp-server-raygun",
+    "homepage": "https://raygun.com",
+    "documentation": "https://raygun.com/documentation/product-guides/raygun-api/"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
