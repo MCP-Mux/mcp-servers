@@ -1,0 +1,64 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "io.pinecone-mcp",
+  "name": "Pinecone",
+  "alias": "pinecone",
+  "description": "Manage Pinecone vector database indexes and records. Create indexes, upsert vectors, query by semantic similarity, and manage namespaces.",
+  "icon": "https://avatars.githubusercontent.com/u/54333248?v=4",
+  "schema_version": "2.1",
+  "categories": ["database", "ai-ml"],
+  "tags": ["pinecone", "vector-database", "embeddings", "semantic-search", "rag"],
+
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@pinecone-database/mcp"],
+    "env": {
+      "PINECONE_API_KEY": "${input:PINECONE_API_KEY}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "PINECONE_API_KEY",
+          "label": "Pinecone API Key",
+          "description": "API key for the Pinecone vector database service.",
+          "type": "password",
+          "required": true,
+          "secret": true,
+          "placeholder": "pcsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          "obtain": {
+            "url": "https://app.pinecone.io/",
+            "instructions": "1. Go to app.pinecone.io and sign up\n2. Open your project\n3. Go to API Keys section\n4. Copy your API key",
+            "button_label": "Get API Key"
+          }
+        }
+      ]
+    }
+  },
+
+  "auth": {
+    "type": "api_key",
+    "instructions": "Get a Pinecone API key at https://app.pinecone.io/"
+  },
+
+  "contributor": {
+    "name": "Pinecone",
+    "github": "pinecone-io",
+    "url": "https://www.pinecone.io"
+  },
+
+  "links": {
+    "repository": "https://github.com/pinecone-io/pinecone-mcp",
+    "homepage": "https://www.pinecone.io",
+    "documentation": "https://docs.pinecone.io/guides/operations/mcp-server"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
