@@ -1,0 +1,64 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.hubspot-mcp",
+  "name": "HubSpot",
+  "alias": "hubspot",
+  "description": "Manage HubSpot CRM data including contacts, companies, deals, and tickets. Search records, create associations, and manage pipelines.",
+  "icon": "https://avatars.githubusercontent.com/u/326419?v=4",
+  "schema_version": "2.1",
+  "categories": ["productivity", "cloud"],
+  "tags": ["hubspot", "crm", "contacts", "deals", "marketing", "sales"],
+
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@hubspot/mcp-server"],
+    "env": {
+      "PRIVATE_APP_ACCESS_TOKEN": "${input:PRIVATE_APP_ACCESS_TOKEN}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "PRIVATE_APP_ACCESS_TOKEN",
+          "label": "HubSpot Private App Token",
+          "description": "Access token from a HubSpot private app with the necessary scopes.",
+          "type": "password",
+          "required": true,
+          "secret": true,
+          "placeholder": "pat-na1-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+          "obtain": {
+            "url": "https://developers.hubspot.com/docs/api/private-apps",
+            "instructions": "1. Go to your HubSpot account Settings\n2. Navigate to Integrations > Private Apps\n3. Click 'Create a private app'\n4. Configure scopes (CRM, contacts, etc.)\n5. Click 'Create app' and copy the access token",
+            "button_label": "Create Private App"
+          }
+        }
+      ]
+    }
+  },
+
+  "auth": {
+    "type": "api_key",
+    "instructions": "Create a HubSpot private app at Settings > Integrations > Private Apps"
+  },
+
+  "contributor": {
+    "name": "HubSpot",
+    "github": "HubSpot",
+    "url": "https://www.hubspot.com"
+  },
+
+  "links": {
+    "repository": "https://github.com/HubSpot/hubspot-mcp-server",
+    "homepage": "https://www.hubspot.com",
+    "documentation": "https://developers.hubspot.com/mcp"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
