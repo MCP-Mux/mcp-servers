@@ -1,0 +1,84 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.jira",
+  "name": "Jira",
+  "alias": "jira",
+  "description": "Manage Jira issues, projects, sprints, and boards. Search issues with JQL, create and update tickets, and transition workflows.",
+  "icon": "https://avatars.githubusercontent.com/u/4284487?v=4",
+  "schema_version": "2.1",
+  "categories": ["productivity", "developer-tools"],
+  "tags": ["jira", "atlassian", "issues", "project-management", "agile", "sprints"],
+
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@aashari/mcp-server-atlassian-jira"],
+    "env": {
+      "ATLASSIAN_SITE_NAME": "${input:ATLASSIAN_SITE_NAME}",
+      "ATLASSIAN_USER_EMAIL": "${input:ATLASSIAN_USER_EMAIL}",
+      "ATLASSIAN_API_TOKEN": "${input:ATLASSIAN_API_TOKEN}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "ATLASSIAN_SITE_NAME",
+          "label": "Atlassian Site Name",
+          "description": "Your Atlassian site name (the subdomain in your-site.atlassian.net).",
+          "type": "text",
+          "required": true,
+          "secret": false,
+          "placeholder": "your-site"
+        },
+        {
+          "id": "ATLASSIAN_USER_EMAIL",
+          "label": "Atlassian User Email",
+          "description": "Email address associated with your Atlassian account.",
+          "type": "text",
+          "required": true,
+          "secret": false,
+          "placeholder": "you@example.com"
+        },
+        {
+          "id": "ATLASSIAN_API_TOKEN",
+          "label": "Atlassian API Token",
+          "description": "API token for Atlassian Cloud authentication.",
+          "type": "password",
+          "required": true,
+          "secret": true,
+          "placeholder": "xxxxxxxxxxxxxxxxxxxxxxxx",
+          "obtain": {
+            "url": "https://id.atlassian.com/manage-profile/security/api-tokens",
+            "instructions": "1. Go to id.atlassian.com/manage-profile/security/api-tokens\n2. Click 'Create API token'\n3. Name your token and click 'Create'\n4. Copy the token",
+            "button_label": "Create API Token"
+          }
+        }
+      ]
+    }
+  },
+
+  "auth": {
+    "type": "api_key",
+    "instructions": "Create an API token at https://id.atlassian.com/manage-profile/security/api-tokens"
+  },
+
+  "contributor": {
+    "name": "aashari",
+    "github": "aashari",
+    "url": "https://github.com/aashari"
+  },
+
+  "links": {
+    "repository": "https://github.com/aashari/mcp-server-atlassian-jira",
+    "homepage": "https://www.atlassian.com/software/jira",
+    "documentation": "https://github.com/aashari/mcp-server-atlassian-jira#readme"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
