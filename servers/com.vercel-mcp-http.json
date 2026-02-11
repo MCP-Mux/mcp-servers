@@ -1,0 +1,45 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.vercel-mcp-http",
+  "name": "Vercel (Remote)",
+  "alias": "vercel-remote",
+  "description": "Manage Vercel deployments, projects, domains, and serverless functions through the hosted remote MCP server. No local installation required.",
+  "icon": "https://avatars.githubusercontent.com/u/14985020?v=4",
+  "schema_version": "2.1",
+  "categories": ["cloud", "developer-tools"],
+  "tags": ["vercel", "deployment", "hosting", "serverless", "edge", "remote"],
+
+  "transport": {
+    "type": "http",
+    "url": "https://mcp.vercel.com",
+    "metadata": {
+      "inputs": []
+    }
+  },
+
+  "auth": {
+    "type": "oauth",
+    "instructions": "Connects via OAuth. Your MCP host will initiate the Vercel OAuth flow. For hosts without OAuth support, use the local stdio version instead."
+  },
+
+  "contributor": {
+    "name": "Vercel",
+    "github": "vercel",
+    "url": "https://vercel.com"
+  },
+
+  "links": {
+    "repository": "https://github.com/vercel/mcp-handler",
+    "homepage": "https://vercel.com",
+    "documentation": "https://vercel.com/docs/mcp/vercel-mcp"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
