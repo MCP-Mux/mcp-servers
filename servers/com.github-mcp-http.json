@@ -3,7 +3,7 @@
   "id": "com.github-mcp-http",
   "name": "GitHub (Remote)",
   "alias": "gh-remote",
-  "description": "Interact with GitHub repositories, issues, pull requests, actions, and code security through GitHub's hosted remote MCP server. No local installation required. Supports OAuth or Personal Access Token (Bearer) authentication.",
+  "description": "Interact with GitHub repositories, issues, pull requests, actions, and code security through GitHub's hosted remote MCP server. No local installation required. Authenticates with a Personal Access Token (PAT) via Bearer header.",
   "icon": "https://avatars.githubusercontent.com/u/9919?v=4",
   "schema_version": "2.1",
   "categories": ["developer-tools", "version-control"],
@@ -12,14 +12,17 @@
   "transport": {
     "type": "http",
     "url": "https://api.githubcopilot.com/mcp/",
+    "headers": {
+      "Authorization": "Bearer ${input:GITHUB_TOKEN}"
+    },
     "metadata": {
       "inputs": [
         {
           "id": "GITHUB_TOKEN",
           "label": "GitHub Personal Access Token",
-          "description": "Personal Access Token for bearer authentication. Required if your MCP host does not support GitHub OAuth. Create a fine-grained PAT with the scopes needed for the tools you want to use.",
+          "description": "Personal Access Token for GitHub. Create a fine-grained PAT with the scopes needed for the tools you want to use.",
           "type": "password",
-          "required": false,
+          "required": true,
           "secret": true,
           "placeholder": "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
           "obtain": {
@@ -33,8 +36,8 @@
   },
 
   "auth": {
-    "type": "oauth",
-    "instructions": "Primary: OAuth via a pre-registered GitHub OAuth App (VS Code 1.101+, Claude Desktop, Cursor, Windsurf). GitHub does not support DCR. Alternative: Provide a GitHub Personal Access Token (PAT) as a Bearer token in the Authorization header for hosts that don't support GitHub OAuth."
+    "type": "api_key",
+    "instructions": "Create a GitHub Personal Access Token (fine-grained) at https://github.com/settings/tokens with the scopes needed for the tools you want to use. The token is sent as a Bearer token in the Authorization header."
   },
 
   "contributor": {
