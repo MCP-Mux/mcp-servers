@@ -1,0 +1,64 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.postman-mcp",
+  "name": "Postman",
+  "alias": "postman",
+  "description": "Manage Postman collections, workspaces, environments, and API specifications. Search APIs, generate client code, and run collections.",
+  "icon": "https://avatars.githubusercontent.com/u/10251060?v=4",
+  "schema_version": "2.1",
+  "categories": ["developer-tools"],
+  "tags": ["postman", "api", "testing", "collections", "api-specs", "code-generation"],
+
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@postman/postman-mcp-server@latest"],
+    "env": {
+      "POSTMAN_API_KEY": "${input:POSTMAN_API_KEY}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "POSTMAN_API_KEY",
+          "label": "Postman API Key",
+          "description": "API key for the Postman API. Required to access your workspaces, collections, and environments.",
+          "type": "password",
+          "required": true,
+          "secret": true,
+          "placeholder": "PMAK-xxxxxxxxxxxxxxxxxxxxxxxx",
+          "obtain": {
+            "url": "https://go.postman.co/settings/me/api-keys",
+            "instructions": "1. Log in to postman.com\n2. Click your avatar > Settings > API keys\n3. Click 'Generate API Key'\n4. Name your key and click 'Generate'\n5. Copy the key",
+            "button_label": "Generate API Key"
+          }
+        }
+      ]
+    }
+  },
+
+  "auth": {
+    "type": "api_key",
+    "instructions": "Generate a Postman API key at https://go.postman.co/settings/me/api-keys"
+  },
+
+  "contributor": {
+    "name": "Postman",
+    "github": "postmanlabs",
+    "url": "https://www.postman.com"
+  },
+
+  "links": {
+    "repository": "https://github.com/postmanlabs/postman-mcp-server",
+    "homepage": "https://www.postman.com",
+    "documentation": "https://learning.postman.com/docs/developer/postman-api/postman-mcp-server/set-up-postman-mcp-server"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
