@@ -1,0 +1,45 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.cloudflare-observability",
+  "name": "Cloudflare Observability",
+  "alias": "cf-obs",
+  "description": "Query Workers logs, analyze invocation metrics, and debug errors across your Cloudflare Workers through Cloudflare's official Observability MCP server with OAuth.",
+  "icon": "https://avatars.githubusercontent.com/u/314135?v=4",
+  "schema_version": "2.1",
+  "categories": ["monitoring", "cloud"],
+  "tags": ["cloudflare", "observability", "workers", "logs", "metrics", "debugging", "monitoring"],
+
+  "transport": {
+    "type": "http",
+    "url": "https://observability.mcp.cloudflare.com/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+
+  "auth": {
+    "type": "oauth",
+    "instructions": "Connect via OAuth when prompted by your MCP client. You will be redirected to Cloudflare to authorize access to your Workers observability data."
+  },
+
+  "contributor": {
+    "name": "Cloudflare",
+    "github": "cloudflare",
+    "url": "https://developers.cloudflare.com"
+  },
+
+  "links": {
+    "repository": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "homepage": "https://developers.cloudflare.com",
+    "documentation": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}
