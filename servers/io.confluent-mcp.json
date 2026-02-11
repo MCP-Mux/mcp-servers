@@ -1,0 +1,104 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "io.confluent-mcp",
+  "name": "Confluent",
+  "alias": "confluent",
+  "description": "Manage Confluent Cloud and Kafka resources. Create topics, produce and consume messages, run Flink SQL queries, and manage schemas.",
+  "icon": "https://avatars.githubusercontent.com/u/9439498?v=4",
+  "schema_version": "2.1",
+  "categories": ["cloud", "database"],
+  "tags": ["confluent", "kafka", "streaming", "flink", "events", "schema-registry"],
+
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@confluentinc/mcp-confluent"],
+    "env": {
+      "CONFLUENT_CLOUD_API_KEY": "${input:CONFLUENT_CLOUD_API_KEY}",
+      "CONFLUENT_CLOUD_API_SECRET": "${input:CONFLUENT_CLOUD_API_SECRET}",
+      "BOOTSTRAP_SERVERS": "${input:BOOTSTRAP_SERVERS}",
+      "KAFKA_API_KEY": "${input:KAFKA_API_KEY}",
+      "KAFKA_API_SECRET": "${input:KAFKA_API_SECRET}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "CONFLUENT_CLOUD_API_KEY",
+          "label": "Confluent Cloud API Key",
+          "description": "Cloud API key for Confluent Cloud resource management.",
+          "type": "password",
+          "required": true,
+          "secret": true,
+          "placeholder": "XXXXXXXXXXXXXXXX",
+          "obtain": {
+            "url": "https://confluent.cloud/settings/api-keys",
+            "instructions": "1. Go to confluent.cloud > Settings > API Keys\n2. Click 'Create Key'\n3. Select 'Cloud resource management'\n4. Copy the key and secret",
+            "button_label": "Create API Key"
+          }
+        },
+        {
+          "id": "CONFLUENT_CLOUD_API_SECRET",
+          "label": "Confluent Cloud API Secret",
+          "description": "Cloud API secret paired with the Cloud API key.",
+          "type": "password",
+          "required": true,
+          "secret": true,
+          "placeholder": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        },
+        {
+          "id": "BOOTSTRAP_SERVERS",
+          "label": "Kafka Bootstrap Servers",
+          "description": "Kafka bootstrap server address for your Confluent Cloud cluster.",
+          "type": "text",
+          "required": true,
+          "secret": false,
+          "placeholder": "pkc-xxxxx.us-east-1.aws.confluent.cloud:9092"
+        },
+        {
+          "id": "KAFKA_API_KEY",
+          "label": "Kafka Cluster API Key",
+          "description": "API key specific to your Kafka cluster.",
+          "type": "password",
+          "required": true,
+          "secret": true,
+          "placeholder": "XXXXXXXXXXXXXXXX"
+        },
+        {
+          "id": "KAFKA_API_SECRET",
+          "label": "Kafka Cluster API Secret",
+          "description": "API secret paired with the Kafka cluster API key.",
+          "type": "password",
+          "required": true,
+          "secret": true,
+          "placeholder": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        }
+      ]
+    }
+  },
+
+  "auth": {
+    "type": "api_key",
+    "instructions": "Create API keys at https://confluent.cloud/settings/api-keys for both Cloud and Kafka cluster access"
+  },
+
+  "contributor": {
+    "name": "Confluent",
+    "github": "confluentinc",
+    "url": "https://www.confluent.io"
+  },
+
+  "links": {
+    "repository": "https://github.com/confluentinc/mcp-confluent",
+    "homepage": "https://www.confluent.io",
+    "documentation": "https://docs.confluent.io"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
