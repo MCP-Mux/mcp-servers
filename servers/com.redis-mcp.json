@@ -1,0 +1,79 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.redis-mcp",
+  "name": "Redis",
+  "alias": "redis",
+  "description": "Interact with Redis databases. Execute commands, manage keys, and work with data structures across standalone, cluster, and Sentinel modes.",
+  "icon": "https://avatars.githubusercontent.com/u/1529926?v=4",
+  "schema_version": "2.1",
+  "categories": ["database"],
+  "tags": ["redis", "cache", "key-value", "database", "in-memory", "data-structures"],
+
+  "transport": {
+    "type": "stdio",
+    "command": "uvx",
+    "args": ["redis-mcp-server"],
+    "env": {
+      "REDIS_HOST": "${input:REDIS_HOST}",
+      "REDIS_PORT": "${input:REDIS_PORT}",
+      "REDIS_PWD": "${input:REDIS_PWD}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "REDIS_HOST",
+          "label": "Redis Host",
+          "description": "Hostname or IP of your Redis instance.",
+          "type": "text",
+          "required": true,
+          "secret": false,
+          "placeholder": "localhost"
+        },
+        {
+          "id": "REDIS_PORT",
+          "label": "Redis Port",
+          "description": "Port of your Redis instance.",
+          "type": "text",
+          "required": false,
+          "secret": false,
+          "placeholder": "6379"
+        },
+        {
+          "id": "REDIS_PWD",
+          "label": "Redis Password",
+          "description": "Password for Redis authentication. Leave empty for local instances without auth.",
+          "type": "password",
+          "required": false,
+          "secret": true,
+          "placeholder": ""
+        }
+      ]
+    }
+  },
+
+  "auth": {
+    "type": "optional_api_key",
+    "instructions": "Provide Redis connection details. Password is optional for local instances."
+  },
+
+  "contributor": {
+    "name": "Redis",
+    "github": "redis",
+    "url": "https://redis.io"
+  },
+
+  "links": {
+    "repository": "https://github.com/redis/mcp-redis",
+    "homepage": "https://redis.io",
+    "documentation": "https://github.com/redis/mcp-redis#readme"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
