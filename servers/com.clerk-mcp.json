@@ -1,0 +1,45 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.clerk-mcp",
+  "name": "Clerk",
+  "alias": "clerk",
+  "description": "Manage users, organizations, sessions, and authentication through Clerk's remote MCP server. Query user data, manage roles, and configure auth settings.",
+  "icon": "https://avatars.githubusercontent.com/u/49538330?v=4",
+  "schema_version": "2.1",
+  "categories": ["developer-tools"],
+  "tags": ["clerk", "authentication", "users", "identity", "auth", "sessions", "organizations"],
+
+  "transport": {
+    "type": "http",
+    "url": "https://mcp.clerk.com/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+
+  "auth": {
+    "type": "oauth",
+    "instructions": "Connects via OAuth. Your MCP host will initiate the Clerk OAuth flow to authorize access to your Clerk instance."
+  },
+
+  "contributor": {
+    "name": "Clerk",
+    "github": "clerk",
+    "url": "https://clerk.com"
+  },
+
+  "links": {
+    "repository": "https://github.com/clerk/mcp-tools",
+    "homepage": "https://clerk.com",
+    "documentation": "https://clerk.com/docs/guides/ai/mcp/clerk-mcp-server"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": true,
+    "read_only_mode": false
+  }
+}
