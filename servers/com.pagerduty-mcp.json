@@ -1,0 +1,64 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.pagerduty-mcp",
+  "name": "PagerDuty",
+  "alias": "pagerduty",
+  "description": "Manage PagerDuty incidents, services, on-call schedules, and users. List open incidents, acknowledge, resolve, and trigger new ones.",
+  "icon": "https://avatars.githubusercontent.com/u/766800?v=4",
+  "schema_version": "2.1",
+  "categories": ["monitoring", "communication"],
+  "tags": ["pagerduty", "incidents", "on-call", "alerting", "monitoring"],
+
+  "transport": {
+    "type": "stdio",
+    "command": "uvx",
+    "args": ["pagerduty-mcp-server"],
+    "env": {
+      "PAGERDUTY_USER_API_KEY": "${input:PAGERDUTY_USER_API_KEY}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "PAGERDUTY_USER_API_KEY",
+          "label": "PagerDuty User API Key",
+          "description": "User-level REST API key for PagerDuty.",
+          "type": "password",
+          "required": true,
+          "secret": true,
+          "placeholder": "u+xxxxxxxxxxxxxxxxxxxx",
+          "obtain": {
+            "url": "https://support.pagerduty.com/main/docs/api-access-keys#generate-a-user-token-rest-api-key",
+            "instructions": "1. Log in to PagerDuty\n2. Navigate to My Profile > User Settings\n3. Under API Access, click 'Create API User Token'\n4. Copy the generated key",
+            "button_label": "Get API Key"
+          }
+        }
+      ]
+    }
+  },
+
+  "auth": {
+    "type": "api_key",
+    "instructions": "Create a user API token in PagerDuty under My Profile > User Settings > API Access"
+  },
+
+  "contributor": {
+    "name": "PagerDuty",
+    "github": "PagerDuty",
+    "url": "https://www.pagerduty.com"
+  },
+
+  "links": {
+    "repository": "https://github.com/PagerDuty/pagerduty-mcp-server",
+    "homepage": "https://www.pagerduty.com",
+    "documentation": "https://developer.pagerduty.com/docs/"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
