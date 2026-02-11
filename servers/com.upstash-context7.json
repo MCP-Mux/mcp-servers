@@ -13,13 +13,32 @@
     "type": "stdio",
     "command": "npx",
     "args": ["-y", "@upstash/context7-mcp"],
+    "env": {
+      "CONTEXT7_API_KEY": "${input:CONTEXT7_API_KEY}"
+    },
     "metadata": {
-      "inputs": []
+      "inputs": [
+        {
+          "id": "CONTEXT7_API_KEY",
+          "label": "Context7 API Key",
+          "description": "Optional API key for higher rate limits. Works without a key but with limited requests.",
+          "type": "password",
+          "required": false,
+          "secret": true,
+          "placeholder": "ctx7sk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          "obtain": {
+            "url": "https://context7.com/dashboard",
+            "instructions": "1. Go to context7.com/dashboard\n2. Sign up or log in\n3. Generate a free API key\n4. Copy the key (starts with ctx7sk_)",
+            "button_label": "Get Free API Key"
+          }
+        }
+      ]
     }
   },
 
   "auth": {
-    "type": "none"
+    "type": "optional_api_key",
+    "instructions": "Get a free API key at https://context7.com/dashboard for higher rate limits. Works without a key with limited requests."
   },
 
   "contributor": {

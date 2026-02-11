@@ -18,12 +18,12 @@
       "ghcr.io/github/github-mcp-server"
     ],
     "env": {
-      "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:GITHUB_TOKEN}"
+      "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:GITHUB_PERSONAL_ACCESS_TOKEN}"
     },
     "metadata": {
       "inputs": [
         {
-          "id": "GITHUB_TOKEN",
+          "id": "GITHUB_PERSONAL_ACCESS_TOKEN",
           "label": "GitHub Personal Access Token",
           "description": "Token used to authenticate with the GitHub API. Requires repo and read:org scopes.",
           "type": "password",
