@@ -1,0 +1,44 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "town.val-mcp",
+  "name": "Val Town",
+  "alias": "valtown",
+  "description": "Deploy and manage serverless JavaScript functions on Val Town. Create vals, manage projects, and deploy with instant live URLs.",
+  "icon": "https://avatars.githubusercontent.com/u/114268765?v=4",
+  "schema_version": "2.1",
+  "categories": ["developer-tools", "cloud"],
+  "tags": ["val-town", "serverless", "javascript", "deployment", "functions"],
+
+  "transport": {
+    "type": "http",
+    "url": "https://api.val.town/v3/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+
+  "auth": {
+    "type": "oauth",
+    "instructions": "Connects via OAuth. Your MCP host will initiate the Val Town OAuth flow to authorize access to your account."
+  },
+
+  "contributor": {
+    "name": "Val Town",
+    "github": "val-town",
+    "url": "https://val.town"
+  },
+
+  "links": {
+    "homepage": "https://val.town",
+    "documentation": "https://docs.val.town/guides/prompting/mcp/"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
