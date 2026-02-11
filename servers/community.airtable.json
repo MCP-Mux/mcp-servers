@@ -1,0 +1,64 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.airtable",
+  "name": "Airtable",
+  "alias": "airtable",
+  "description": "Interact with Airtable bases, tables, and records. List schemas, search records, create and update data, and manage comments.",
+  "icon": "https://avatars.githubusercontent.com/u/4953590?v=4",
+  "schema_version": "2.1",
+  "categories": ["database", "productivity"],
+  "tags": ["airtable", "database", "spreadsheet", "no-code", "records"],
+
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "airtable-mcp-server"],
+    "env": {
+      "AIRTABLE_API_KEY": "${input:AIRTABLE_API_KEY}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "AIRTABLE_API_KEY",
+          "label": "Airtable Personal Access Token",
+          "description": "Personal Access Token for the Airtable API. Requires schema.bases:read and data.records:read scopes at minimum.",
+          "type": "password",
+          "required": true,
+          "secret": true,
+          "placeholder": "patXXXXXXXXXXXXXX.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          "obtain": {
+            "url": "https://airtable.com/create/tokens",
+            "instructions": "1. Go to airtable.com/create/tokens\n2. Click '+ Create new token'\n3. Add scopes: schema.bases:read, data.records:read (and write scopes if needed)\n4. Select which bases the token can access\n5. Click 'Create token' and copy it",
+            "button_label": "Create Token"
+          }
+        }
+      ]
+    }
+  },
+
+  "auth": {
+    "type": "api_key",
+    "instructions": "Create a Personal Access Token at https://airtable.com/create/tokens"
+  },
+
+  "contributor": {
+    "name": "domdomegg",
+    "github": "domdomegg",
+    "url": "https://github.com/domdomegg"
+  },
+
+  "links": {
+    "repository": "https://github.com/domdomegg/airtable-mcp-server",
+    "homepage": "https://airtable.com",
+    "documentation": "https://github.com/domdomegg/airtable-mcp-server#readme"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
