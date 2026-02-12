@@ -12,10 +12,7 @@
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "@upstash/context7-mcp"],
-    "env": {
-      "CONTEXT7_API_KEY": "${input:CONTEXT7_API_KEY}"
-    },
+    "args": ["-y", "@upstash/context7-mcp", "--api-key", "${input:CONTEXT7_API_KEY}"],
     "metadata": {
       "inputs": [
         {
