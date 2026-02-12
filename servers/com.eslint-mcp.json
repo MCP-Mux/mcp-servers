@@ -1,0 +1,45 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.eslint-mcp",
+  "name": "ESLint",
+  "alias": "eslint",
+  "description": "Run ESLint code analysis through MCP. Lint JavaScript and TypeScript files, get fix suggestions, and check code quality against configurable rules.",
+  "icon": "https://avatars.githubusercontent.com/u/6019716?v=4",
+  "schema_version": "2.1",
+  "categories": ["developer-tools"],
+  "tags": ["eslint", "linting", "javascript", "typescript", "code-quality", "static-analysis"],
+
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@eslint/mcp"],
+    "metadata": {
+      "inputs": []
+    }
+  },
+
+  "auth": {
+    "type": "none"
+  },
+
+  "contributor": {
+    "name": "ESLint",
+    "github": "eslint",
+    "url": "https://eslint.org"
+  },
+
+  "links": {
+    "repository": "https://github.com/eslint/rewrite",
+    "homepage": "https://eslint.org",
+    "documentation": "https://eslint.org/docs/latest/"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}
