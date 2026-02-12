@@ -1,0 +1,59 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.aws-docs",
+  "name": "AWS Documentation",
+  "alias": "aws-docs",
+  "description": "Access the latest AWS documentation, API references, What's New posts, and getting started guides. Stay up to date with AWS services and best practices.",
+  "icon": "https://avatars.githubusercontent.com/u/74862790?v=4",
+  "schema_version": "2.1",
+  "categories": ["documentation", "cloud"],
+  "tags": ["aws", "amazon", "documentation", "cloud", "reference", "api"],
+
+  "transport": {
+    "type": "stdio",
+    "command": "uvx",
+    "args": ["awslabs.aws-documentation-mcp-server@latest"],
+    "env": {
+      "FASTMCP_LOG_LEVEL": "${input:FASTMCP_LOG_LEVEL}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "FASTMCP_LOG_LEVEL",
+          "label": "Log Level",
+          "description": "Logging verbosity level.",
+          "type": "text",
+          "required": false,
+          "secret": false,
+          "default": "ERROR",
+          "placeholder": "ERROR"
+        }
+      ]
+    }
+  },
+
+  "auth": {
+    "type": "none"
+  },
+
+  "contributor": {
+    "name": "AWS Labs",
+    "github": "awslabs",
+    "url": "https://aws.amazon.com"
+  },
+
+  "links": {
+    "repository": "https://github.com/awslabs/mcp",
+    "homepage": "https://docs.aws.amazon.com",
+    "documentation": "https://github.com/awslabs/mcp#readme"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}

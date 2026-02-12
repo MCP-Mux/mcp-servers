@@ -1,0 +1,46 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.youtube",
+  "name": "YouTube",
+  "alias": "youtube",
+  "description": "Download and extract transcripts from YouTube videos. Get video captions for analysis, summarization, and content extraction.",
+  "icon": "https://avatars.githubusercontent.com/u/182288589?v=4",
+  "schema_version": "2.1",
+  "categories": ["search", "documentation"],
+  "tags": ["youtube", "video", "transcripts", "captions", "media"],
+
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@anaisbetts/mcp-youtube"],
+    "metadata": {
+      "inputs": []
+    }
+  },
+
+  "auth": {
+    "type": "none",
+    "instructions": "Requires yt-dlp to be installed locally (via Homebrew: brew install yt-dlp, or WinGet: winget install yt-dlp)."
+  },
+
+  "contributor": {
+    "name": "anaisbetts",
+    "github": "anaisbetts",
+    "url": "https://github.com/anaisbetts"
+  },
+
+  "links": {
+    "repository": "https://github.com/anaisbetts/mcp-youtube",
+    "homepage": "https://youtube.com",
+    "documentation": "https://github.com/anaisbetts/mcp-youtube#readme"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}
