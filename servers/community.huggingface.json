@@ -1,0 +1,63 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.huggingface",
+  "name": "Hugging Face",
+  "alias": "huggingface",
+  "description": "Access the Hugging Face ecosystem through MCP. Browse models, datasets, and Spaces. Run inference, manage repositories, and explore the ML community.",
+  "icon": "https://avatars.githubusercontent.com/u/25720743?v=4",
+  "schema_version": "2.1",
+  "categories": ["ai-ml"],
+  "tags": ["huggingface", "models", "datasets", "ml", "inference", "transformers"],
+
+  "transport": {
+    "type": "http",
+    "url": "https://huggingface.co/mcp",
+    "headers": {
+      "Authorization": "Bearer ${input:HF_TOKEN}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "HF_TOKEN",
+          "label": "Hugging Face Token",
+          "description": "Hugging Face access token for authenticated API access.",
+          "type": "password",
+          "required": true,
+          "secret": true,
+          "placeholder": "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          "obtain": {
+            "url": "https://huggingface.co/settings/tokens",
+            "instructions": "1. Go to huggingface.co\n2. Navigate to Settings > Access Tokens\n3. Click 'New token'\n4. Select appropriate permissions\n5. Copy the token (starts with hf_)",
+            "button_label": "Create Token"
+          }
+        }
+      ]
+    }
+  },
+
+  "auth": {
+    "type": "api_key",
+    "instructions": "Get an access token from https://huggingface.co/settings/tokens"
+  },
+
+  "contributor": {
+    "name": "Hugging Face",
+    "github": "huggingface",
+    "url": "https://huggingface.co"
+  },
+
+  "links": {
+    "repository": "https://github.com/huggingface/hf-mcp-server",
+    "homepage": "https://huggingface.co",
+    "documentation": "https://github.com/huggingface/hf-mcp-server#readme"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}

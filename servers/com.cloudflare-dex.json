@@ -1,0 +1,46 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.cloudflare-dex",
+  "name": "Cloudflare Digital Experience Monitoring",
+  "alias": "cf-dex",
+  "description": "Monitor digital employee experience with Cloudflare DEX. Track application performance, connectivity issues, and user experience metrics.",
+  "icon": "https://avatars.githubusercontent.com/u/314135?v=4",
+  "schema_version": "2.1",
+  "categories": ["monitoring", "cloud"],
+  "tags": ["cloudflare", "dex", "monitoring", "experience", "performance", "zero-trust"],
+
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "mcp-remote", "https://dex.mcp.cloudflare.com/mcp"],
+    "metadata": {
+      "inputs": []
+    }
+  },
+
+  "auth": {
+    "type": "oauth",
+    "instructions": "Authentication is handled via OAuth when connecting to the Cloudflare MCP endpoint."
+  },
+
+  "contributor": {
+    "name": "Cloudflare",
+    "github": "cloudflare",
+    "url": "https://www.cloudflare.com"
+  },
+
+  "links": {
+    "repository": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "homepage": "https://www.cloudflare.com",
+    "documentation": "https://developers.cloudflare.com/cloudflare-one/insights/dex/"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}

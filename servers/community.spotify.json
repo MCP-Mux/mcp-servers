@@ -1,0 +1,85 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.spotify",
+  "name": "Spotify",
+  "alias": "spotify",
+  "description": "Control Spotify playback, search music, manage playlists, and handle queue operations. Requires Spotify Premium account.",
+  "icon": "https://avatars.githubusercontent.com/u/251374?v=4",
+  "schema_version": "2.1",
+  "categories": ["productivity"],
+  "tags": ["spotify", "music", "playback", "playlists", "streaming"],
+
+  "transport": {
+    "type": "stdio",
+    "command": "uvx",
+    "args": ["--python", "3.12", "--from", "git+https://github.com/varunneal/spotify-mcp", "spotify-mcp"],
+    "env": {
+      "SPOTIFY_CLIENT_ID": "${input:SPOTIFY_CLIENT_ID}",
+      "SPOTIFY_CLIENT_SECRET": "${input:SPOTIFY_CLIENT_SECRET}",
+      "SPOTIFY_REDIRECT_URI": "${input:SPOTIFY_REDIRECT_URI}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "SPOTIFY_CLIENT_ID",
+          "label": "Spotify Client ID",
+          "description": "Client ID from your Spotify Developer app.",
+          "type": "text",
+          "required": true,
+          "secret": false,
+          "placeholder": "your-spotify-client-id",
+          "obtain": {
+            "url": "https://developer.spotify.com/dashboard",
+            "instructions": "1. Go to developer.spotify.com/dashboard\n2. Create a new app\n3. Set redirect URI to http://127.0.0.1:8080/callback\n4. Copy the Client ID",
+            "button_label": "Create App"
+          }
+        },
+        {
+          "id": "SPOTIFY_CLIENT_SECRET",
+          "label": "Spotify Client Secret",
+          "description": "Client Secret from your Spotify Developer app.",
+          "type": "password",
+          "required": true,
+          "secret": true,
+          "placeholder": "your-spotify-client-secret"
+        },
+        {
+          "id": "SPOTIFY_REDIRECT_URI",
+          "label": "Redirect URI",
+          "description": "OAuth redirect URI. Must match your Spotify app configuration.",
+          "type": "url",
+          "required": false,
+          "secret": false,
+          "default": "http://127.0.0.1:8080/callback",
+          "placeholder": "http://127.0.0.1:8080/callback"
+        }
+      ]
+    }
+  },
+
+  "auth": {
+    "type": "oauth",
+    "instructions": "Create a Spotify Developer app at https://developer.spotify.com/dashboard and configure OAuth credentials. Requires Spotify Premium."
+  },
+
+  "contributor": {
+    "name": "varunneal",
+    "github": "varunneal",
+    "url": "https://github.com/varunneal"
+  },
+
+  "links": {
+    "repository": "https://github.com/varunneal/spotify-mcp",
+    "homepage": "https://spotify.com",
+    "documentation": "https://github.com/varunneal/spotify-mcp#readme"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}

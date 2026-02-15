@@ -1,0 +1,46 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.aws-cfn",
+  "name": "AWS CloudFormation",
+  "alias": "aws-cfn",
+  "description": "Work with AWS CloudFormation templates. Validate, lint, and generate CloudFormation templates with best practice guidance and schema validation.",
+  "icon": "https://avatars.githubusercontent.com/u/74862790?v=4",
+  "schema_version": "2.1",
+  "categories": ["cloud", "developer-tools"],
+  "tags": ["aws", "cloudformation", "infrastructure", "iac", "templates", "stacks"],
+
+  "transport": {
+    "type": "stdio",
+    "command": "uvx",
+    "args": ["awslabs.cfn-mcp-server@latest"],
+    "metadata": {
+      "inputs": []
+    }
+  },
+
+  "auth": {
+    "type": "none",
+    "instructions": "Uses AWS credentials from environment (AWS CLI, environment variables, or IAM role). Run 'aws configure' to set up."
+  },
+
+  "contributor": {
+    "name": "AWS Labs",
+    "github": "awslabs",
+    "url": "https://aws.amazon.com"
+  },
+
+  "links": {
+    "repository": "https://github.com/awslabs/mcp",
+    "homepage": "https://aws.amazon.com/cloudformation/",
+    "documentation": "https://github.com/awslabs/mcp#readme"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}
