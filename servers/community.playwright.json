@@ -19,10 +19,16 @@
           "id": "PLAYWRIGHT_MCP_BROWSER",
           "label": "Browser",
           "description": "Browser to use for automation. Defaults to Chrome if not specified.",
-          "type": "text",
+          "type": "select",
           "required": false,
           "secret": false,
-          "placeholder": "chrome"
+          "placeholder": "chrome",
+          "options": [
+            { "value": "chrome", "label": "Chrome" },
+            { "value": "firefox", "label": "Firefox" },
+            { "value": "webkit", "label": "WebKit" },
+            { "value": "msedge", "label": "Microsoft Edge" }
+          ]
         },
         {
           "id": "PLAYWRIGHT_MCP_HEADLESS",

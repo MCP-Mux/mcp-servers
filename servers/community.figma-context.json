@@ -22,7 +22,7 @@
           "id": "FIGMA_API_KEY",
           "label": "Figma Personal Access Token",
           "description": "Personal access token for the Figma API. Generated from your Figma account settings.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "figd_your_personal_access_token_here",

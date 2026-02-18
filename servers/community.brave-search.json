@@ -22,7 +22,7 @@
           "id": "BRAVE_API_KEY",
           "label": "Brave Search API Key",
           "description": "API key for the Brave Search API. Free tier available with 2,000 queries/month.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "BSAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",

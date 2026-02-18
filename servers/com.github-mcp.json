@@ -26,7 +26,7 @@
           "id": "GITHUB_TOKEN",
           "label": "GitHub Personal Access Token",
           "description": "Token used to authenticate with the GitHub API. Requires repo and read:org scopes.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",

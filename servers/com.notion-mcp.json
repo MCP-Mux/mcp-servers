@@ -22,7 +22,7 @@
           "id": "NOTION_TOKEN",
           "label": "Notion Integration Token",
           "description": "Internal integration secret token from Notion. Share the relevant pages/databases with your integration after creating it.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "ntn_xxxxxxxxxxxxxxxxxxxxxxxxxxxx",

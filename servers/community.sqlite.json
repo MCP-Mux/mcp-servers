@@ -19,7 +19,7 @@
           "id": "DB_PATH",
           "label": "Database File Path",
           "description": "Path to the SQLite database file. The server will create the file if it doesn't exist.",
-          "type": "text",
+          "type": "file_path",
           "required": true,
           "secret": false,
           "placeholder": "C:\\data\\mydb.sqlite  or  /home/you/data/mydb.sqlite"
