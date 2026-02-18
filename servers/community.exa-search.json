@@ -22,7 +22,7 @@
           "id": "EXA_API_KEY",
           "label": "Exa API Key",
           "description": "API key for the Exa Search API. Free tier available with limited requests.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "exa-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",

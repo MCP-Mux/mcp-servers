@@ -19,7 +19,7 @@
           "id": "ALLOWED_DIR",
           "label": "Allowed Directory",
           "description": "Path to the directory the server is allowed to access. The server will only read/write files within this directory.",
-          "type": "text",
+          "type": "directory_path",
           "required": true,
           "secret": false,
           "placeholder": "C:\\Users\\you\\projects  or  /home/you/projects"

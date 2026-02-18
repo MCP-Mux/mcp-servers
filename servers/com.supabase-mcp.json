@@ -22,7 +22,7 @@
           "id": "SUPABASE_ACCESS_TOKEN",
           "label": "Supabase Access Token",
           "description": "Personal access token for the Supabase Management API",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "sbp_...",

@@ -200,7 +200,7 @@
           "description": "Human-readable label"
         },
         "type": {
-          "enum": ["text", "password", "number", "boolean", "url"],
+          "enum": ["text", "number", "boolean", "url", "select", "file_path", "directory_path"],
           "default": "text",
           "description": "Input field type"
         },
@@ -244,6 +244,20 @@
             }
           },
           "description": "Instructions for obtaining this input value"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["value", "label"],
+            "properties": {
+              "value": { "type": "string", "description": "Option value" },
+              "label": { "type": "string", "description": "Display label" },
+              "description": { "type": "string", "description": "Optional description" }
+            },
+            "additionalProperties": false
+          },
+          "description": "Predefined options for select input type"
         }
       },
       "additionalProperties": false

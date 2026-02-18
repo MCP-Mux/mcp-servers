@@ -44,7 +44,7 @@
           "id": "GRAFANA_TOKEN",
           "label": "Grafana Service Account Token",
           "description": "Service account token with appropriate permissions. Create a service account with the Editor role for full read/write access.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "glsa_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
@@ -67,7 +67,7 @@
           "id": "GRAFANA_PASSWORD",
           "label": "Grafana Password",
           "description": "Password for basic authentication. Used together with GRAFANA_USERNAME.",
-          "type": "password",
+          "type": "text",
           "required": false,
           "secret": true
         },

@@ -23,7 +23,7 @@
           "id": "SLACK_BOT_TOKEN",
           "label": "Slack Bot Token",
           "description": "Bot user OAuth token for your Slack app. Requires scopes: channels:history, channels:read, chat:write, reactions:write, users:read, users.profile:read",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "xoxb-your-bot-token-here",
