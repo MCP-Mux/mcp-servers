@@ -6,13 +6,24 @@
   "description": "Generate speech, clone voices, create sound effects, and manage audio with the ElevenLabs API. Text-to-speech, voice design, and audio isolation.",
   "icon": "https://avatars.githubusercontent.com/u/94471909?v=4",
   "schema_version": "2.1",
-  "categories": ["ai-ml"],
-  "tags": ["elevenlabs", "voice", "text-to-speech", "tts", "audio", "speech-synthesis", "voice-cloning"],
-
+  "categories": [
+    "ai-ml"
+  ],
+  "tags": [
+    "elevenlabs",
+    "voice",
+    "text-to-speech",
+    "tts",
+    "audio",
+    "speech-synthesis",
+    "voice-cloning"
+  ],
   "transport": {
     "type": "stdio",
     "command": "uvx",
-    "args": ["elevenlabs-mcp"],
+    "args": [
+      "elevenlabs-mcp"
+    ],
     "env": {
       "ELEVENLABS_API_KEY": "${input:ELEVENLABS_API_KEY}"
     },
@@ -22,7 +33,7 @@
           "id": "ELEVENLABS_API_KEY",
           "label": "ElevenLabs API Key",
           "description": "API key for the ElevenLabs platform.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "sk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
@@ -35,26 +46,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Create an API key at https://elevenlabs.io/app/settings/api-keys"
   },
-
   "contributor": {
     "name": "ElevenLabs",
     "github": "elevenlabs",
     "url": "https://elevenlabs.io"
   },
-
   "links": {
     "repository": "https://github.com/elevenlabs/elevenlabs-mcp",
     "homepage": "https://elevenlabs.io",
     "documentation": "https://github.com/elevenlabs/elevenlabs-mcp#readme"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,
