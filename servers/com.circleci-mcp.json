@@ -6,13 +6,24 @@
   "description": "Manage CircleCI pipelines, jobs, and workflows. Trigger builds, view job logs, analyze test results, and debug failed pipelines.",
   "icon": "https://avatars.githubusercontent.com/u/26607840?v=4",
   "schema_version": "2.1",
-  "categories": ["developer-tools"],
-  "tags": ["circleci", "ci-cd", "pipelines", "builds", "testing", "deployment"],
-
+  "categories": [
+    "developer-tools"
+  ],
+  "tags": [
+    "circleci",
+    "ci-cd",
+    "pipelines",
+    "builds",
+    "testing",
+    "deployment"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "@circleci/mcp-server-circleci"],
+    "args": [
+      "-y",
+      "@circleci/mcp-server-circleci"
+    ],
     "env": {
       "CIRCLECI_TOKEN": "${input:CIRCLECI_TOKEN}"
     },
@@ -22,7 +33,7 @@
           "id": "CIRCLECI_TOKEN",
           "label": "CircleCI API Token",
           "description": "Personal API token for CircleCI.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "CCIPAT_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
@@ -35,26 +46,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Create a Personal API Token at https://app.circleci.com/settings/user/tokens"
   },
-
   "contributor": {
     "name": "CircleCI",
     "github": "CircleCI-Public",
     "url": "https://circleci.com"
   },
-
   "links": {
     "repository": "https://github.com/CircleCI-Public/mcp-server-circleci",
     "homepage": "https://circleci.com",
     "documentation": "https://circleci.com/docs/guides/toolkit/using-the-circleci-mcp-server/"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,
