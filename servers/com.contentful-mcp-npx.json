@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "com.contentful-mcp",
-  "name": "Contentful",
+  "id": "com.contentful-mcp-npx",
+  "name": "Contentful (npx)",
   "alias": "contentful",
   "description": "Manage Contentful spaces, content types, entries, and assets. Create and update structured content through the Content Management API.",
   "icon": "https://avatars.githubusercontent.com/u/472182?v=4",
