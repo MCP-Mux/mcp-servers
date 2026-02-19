@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "com.postman-mcp",
-  "name": "Postman",
+  "id": "com.postman-mcp-npx",
+  "name": "Postman (npx)",
   "alias": "postman",
   "description": "Manage Postman collections, workspaces, environments, and API specifications. Search APIs, generate client code, and run collections.",
   "icon": "https://avatars.githubusercontent.com/u/10251060?v=4",
