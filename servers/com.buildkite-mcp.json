@@ -6,13 +6,31 @@
   "description": "Manage Buildkite pipelines, builds, jobs, and agents. Trigger builds, view logs, manage clusters, and monitor CI/CD workflows.",
   "icon": "https://avatars.githubusercontent.com/u/5055988?v=4",
   "schema_version": "2.1",
-  "categories": ["developer-tools"],
-  "tags": ["buildkite", "ci-cd", "pipelines", "builds", "testing", "deployment"],
-
+  "categories": [
+    "developer-tools"
+  ],
+  "tags": [
+    "buildkite",
+    "ci-cd",
+    "pipelines",
+    "builds",
+    "testing",
+    "deployment"
+  ],
   "transport": {
     "type": "stdio",
     "command": "docker",
-    "args": ["run", "--pull=always", "-q", "-i", "--rm", "-e", "BUILDKITE_API_TOKEN", "buildkite/mcp-server", "stdio"],
+    "args": [
+      "run",
+      "--pull=always",
+      "-q",
+      "-i",
+      "--rm",
+      "-e",
+      "BUILDKITE_API_TOKEN",
+      "buildkite/mcp-server",
+      "stdio"
+    ],
     "env": {
       "BUILDKITE_API_TOKEN": "${input:BUILDKITE_API_TOKEN}"
     },
@@ -22,7 +40,7 @@
           "id": "BUILDKITE_API_TOKEN",
           "label": "Buildkite API Token",
           "description": "API access token for the Buildkite REST API.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "bkua_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
@@ -35,26 +53,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Create an API access token at https://buildkite.com/user/api-access-tokens"
   },
-
   "contributor": {
     "name": "Buildkite",
     "github": "buildkite",
     "url": "https://buildkite.com"
   },
-
   "links": {
     "repository": "https://github.com/buildkite/buildkite-mcp-server",
     "homepage": "https://buildkite.com",
     "documentation": "https://buildkite.com/docs/apis/mcp-server"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,
