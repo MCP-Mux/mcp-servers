@@ -31,14 +31,14 @@
       "mongodb/mongodb-mcp-server:latest"
     ],
     "env": {
-      "MDB_MCP_CONNECTION_STRING": "${input:MONGODB_URI}",
-      "MDB_MCP_API_CLIENT_ID": "${input:ATLAS_CLIENT_ID}",
-      "MDB_MCP_API_CLIENT_SECRET": "${input:ATLAS_CLIENT_SECRET}"
+      "MDB_MCP_CONNECTION_STRING": "${input:MDB_MCP_CONNECTION_STRING}",
+      "MDB_MCP_API_CLIENT_ID": "${input:MDB_MCP_API_CLIENT_ID}",
+      "MDB_MCP_API_CLIENT_SECRET": "${input:MDB_MCP_API_CLIENT_SECRET}"
     },
     "metadata": {
       "inputs": [
         {
-          "id": "MONGODB_URI",
+          "id": "MDB_MCP_CONNECTION_STRING",
           "label": "MongoDB Connection String",
           "description": "MongoDB connection URI. Use host.docker.internal instead of localhost for local instances (e.g., mongodb://host.docker.internal:27017/mydb).",
           "type": "text",
@@ -52,7 +52,7 @@
           }
         },
         {
-          "id": "ATLAS_CLIENT_ID",
+          "id": "MDB_MCP_API_CLIENT_ID",
           "label": "Atlas API Client ID",
           "description": "MongoDB Atlas Service Account client ID for Atlas management operations. Optional — only needed for Atlas administration.",
           "type": "text",
@@ -61,7 +61,7 @@
           "placeholder": "mdb_sa_id_..."
         },
         {
-          "id": "ATLAS_CLIENT_SECRET",
+          "id": "MDB_MCP_API_CLIENT_SECRET",
           "label": "Atlas API Client Secret",
           "description": "MongoDB Atlas Service Account client secret. Required when Atlas API Client ID is provided.",
           "type": "text",
