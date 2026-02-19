@@ -39,8 +39,8 @@
           "secret": true,
           "placeholder": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
           "obtain": {
-            "url": "https://developers.webflow.com/data/reference/authorize-user",
-            "instructions": "1. Go to Webflow > Site Settings > Integrations\n2. Click 'Generate API token'\n3. Select the permissions you need\n4. Copy the token",
+            "url": "https://developers.webflow.com/data/reference/authentication/site-token",
+            "instructions": "1. Go to your Webflow site settings\n2. Navigate to Apps & integrations\n3. Click on API access\n4. Click 'Generate API token'\n5. Copy the generated token",
             "button_label": "Generate Token"
           }
         }
