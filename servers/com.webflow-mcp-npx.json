@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "com.webflow-mcp",
-  "name": "Webflow",
+  "id": "com.webflow-mcp-npx",
+  "name": "Webflow (npx)",
   "alias": "webflow",
   "description": "Manage Webflow sites, collections, and CMS items. Create and update pages, manage forms, and interact with e-commerce data.",
   "icon": "https://avatars.githubusercontent.com/u/1229663?v=4",
