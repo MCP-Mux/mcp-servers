@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "io.confluent-mcp",
-  "name": "Confluent",
+  "id": "io.confluent-mcp-npx",
+  "name": "Confluent (npx)",
   "alias": "confluent",
   "description": "Manage Confluent Cloud and Kafka resources. Create topics, produce and consume messages, run Flink SQL queries, and manage schemas.",
   "icon": "https://avatars.githubusercontent.com/u/9439498?v=4",
