@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "com.mem0-mcp",
-  "name": "Mem0",
+  "id": "com.mem0-mcp-npx",
+  "name": "Mem0 (npx)",
   "alias": "mem0",
   "description": "Add persistent long-term memory to AI agents. Store, search, update, and delete memories across sessions using the official Mem0 Memory API.",
   "icon": "https://avatars.githubusercontent.com/u/137054526?v=4",
