@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "com.redis-mcp",
-  "name": "Redis",
+  "id": "com.redis-mcp-uvx",
+  "name": "Redis (uvx)",
   "alias": "redis",
   "description": "Interact with Redis databases. Execute commands, manage keys, and work with data structures across standalone, cluster, and Sentinel modes.",
   "icon": "https://avatars.githubusercontent.com/u/1529926?v=4",
