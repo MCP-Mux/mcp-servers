@@ -6,13 +6,25 @@
   "description": "AI-optimized search, web content extraction, site mapping, and crawling through the official Tavily MCP server. Purpose-built for LLM research workflows.",
   "icon": "https://avatars.githubusercontent.com/u/170207473?v=4",
   "schema_version": "2.1",
-  "categories": ["search"],
-  "tags": ["tavily", "search", "web-search", "research", "extraction", "crawling", "ai-search"],
-
+  "categories": [
+    "search"
+  ],
+  "tags": [
+    "tavily",
+    "search",
+    "web-search",
+    "research",
+    "extraction",
+    "crawling",
+    "ai-search"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "tavily-mcp@latest"],
+    "args": [
+      "-y",
+      "tavily-mcp@latest"
+    ],
     "env": {
       "TAVILY_API_KEY": "${input:TAVILY_API_KEY}"
     },
@@ -22,7 +34,7 @@
           "id": "TAVILY_API_KEY",
           "label": "Tavily API Key",
           "description": "API key for the Tavily Search API. Free tier includes 1,000 API credits per month.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "tvly-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
@@ -35,26 +47,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Get a Tavily API key at https://app.tavily.com/home"
   },
-
   "contributor": {
     "name": "Tavily",
     "github": "tavily-ai",
     "url": "https://tavily.com"
   },
-
   "links": {
     "repository": "https://github.com/tavily-ai/tavily-mcp",
     "homepage": "https://tavily.com",
     "documentation": "https://docs.tavily.com/documentation/mcp"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,
