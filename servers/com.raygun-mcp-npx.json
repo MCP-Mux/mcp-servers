@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "com.raygun-mcp",
-  "name": "Raygun",
+  "id": "com.raygun-mcp-npx",
+  "name": "Raygun (npx)",
   "alias": "raygun",
   "description": "Query and manage Raygun error groups, applications, deployments, and user sessions for error monitoring and crash reporting.",
   "icon": "https://avatars.githubusercontent.com/u/1767684?v=4",
