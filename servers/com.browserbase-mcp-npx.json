@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "com.browserbase-mcp",
-  "name": "Browserbase",
+  "id": "com.browserbase-mcp-npx",
+  "name": "Browserbase (npx)",
   "alias": "browserbase",
   "description": "Cloud browser automation using Browserbase and Stagehand. Navigate, click, extract data, and take screenshots in cloud-hosted browsers.",
   "icon": "https://avatars.githubusercontent.com/u/158221360?v=4",
