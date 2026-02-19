@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "com.mapbox-mcp",
-  "name": "Mapbox",
+  "id": "com.mapbox-mcp-npx",
+  "name": "Mapbox (npx)",
   "alias": "mapbox",
   "description": "Search for places, geocode addresses, get directions, and generate map visualizations using the Mapbox APIs.",
   "icon": "https://avatars.githubusercontent.com/u/600935?v=4",
