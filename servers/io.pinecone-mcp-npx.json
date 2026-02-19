@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "io.pinecone-mcp",
-  "name": "Pinecone",
+  "id": "io.pinecone-mcp-npx",
+  "name": "Pinecone (npx)",
   "alias": "pinecone",
   "description": "Manage Pinecone vector database indexes and records. Create indexes, upsert vectors, query by semantic similarity, and manage namespaces.",
   "icon": "https://avatars.githubusercontent.com/u/54333248?v=4",
