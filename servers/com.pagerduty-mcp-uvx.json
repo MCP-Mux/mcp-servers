@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "com.pagerduty-mcp",
-  "name": "PagerDuty",
+  "id": "com.pagerduty-mcp-uvx",
+  "name": "PagerDuty (uvx)",
   "alias": "pagerduty",
   "description": "Manage PagerDuty incidents, services, on-call schedules, and users. List open incidents, acknowledge, resolve, and trigger new ones.",
   "icon": "https://avatars.githubusercontent.com/u/766800?v=4",
