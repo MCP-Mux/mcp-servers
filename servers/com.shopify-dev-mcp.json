@@ -6,37 +6,46 @@
   "description": "Search Shopify developer documentation, learn about APIs, fetch full docs, and validate Liquid themes. No API key required.",
   "icon": "https://avatars.githubusercontent.com/u/8085?v=4",
   "schema_version": "2.1",
-  "categories": ["developer-tools", "documentation"],
-  "tags": ["shopify", "e-commerce", "api", "documentation", "themes", "liquid"],
-
+  "categories": [
+    "developer-tools",
+    "documentation"
+  ],
+  "tags": [
+    "shopify",
+    "e-commerce",
+    "api",
+    "documentation",
+    "themes",
+    "liquid"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "@shopify/dev-mcp@latest"],
+    "args": [
+      "-y",
+      "@shopify/dev-mcp@latest"
+    ],
     "metadata": {
       "inputs": []
     }
   },
-
   "auth": {
     "type": "none",
     "instructions": "No API key required. This server provides access to Shopify developer documentation and theme validation tools."
   },
-
   "contributor": {
     "name": "Shopify",
     "github": "Shopify",
     "url": "https://shopify.dev"
   },
-
   "links": {
     "repository": "https://github.com/Shopify/dev-mcp",
     "homepage": "https://shopify.dev",
     "documentation": "https://shopify.dev/docs/apps/build/devmcp"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,
