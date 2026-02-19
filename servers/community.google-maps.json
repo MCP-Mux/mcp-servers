@@ -4,15 +4,26 @@
   "name": "Google Maps",
   "alias": "google-maps",
   "description": "Search for places, get directions, geocode addresses, and compute distance matrices using the Google Maps Platform APIs.",
-  "icon": "https://avatars.githubusercontent.com/u/182288589?v=4",
+  "icon": "https://avatars.githubusercontent.com/u/1342004?v=4",
   "schema_version": "2.1",
-  "categories": ["search"],
-  "tags": ["google-maps", "maps", "geocoding", "directions", "places", "location"],
-
+  "categories": [
+    "search"
+  ],
+  "tags": [
+    "google-maps",
+    "maps",
+    "geocoding",
+    "directions",
+    "places",
+    "location"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-google-maps"],
+    "args": [
+      "-y",
+      "@modelcontextprotocol/server-google-maps"
+    ],
     "env": {
       "GOOGLE_MAPS_API_KEY": "${input:GOOGLE_MAPS_API_KEY}"
     },
@@ -22,7 +33,7 @@
           "id": "GOOGLE_MAPS_API_KEY",
           "label": "Google Maps API Key",
           "description": "API key for Google Maps Platform. Enable Places, Directions, and Geocoding APIs.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "AIzaxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
@@ -35,26 +46,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Create a Google Maps API key at https://console.cloud.google.com/apis/credentials"
   },
-
   "contributor": {
     "name": "Model Context Protocol",
     "github": "modelcontextprotocol",
     "url": "https://modelcontextprotocol.io"
   },
-
   "links": {
     "repository": "https://github.com/modelcontextprotocol/servers",
     "homepage": "https://developers.google.com/maps",
     "documentation": "https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps#readme"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,
