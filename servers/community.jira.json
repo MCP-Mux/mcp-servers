@@ -6,13 +6,25 @@
   "description": "Manage Jira issues, projects, sprints, and boards. Search issues with JQL, create and update tickets, and transition workflows.",
   "icon": "https://avatars.githubusercontent.com/u/4284487?v=4",
   "schema_version": "2.1",
-  "categories": ["productivity", "developer-tools"],
-  "tags": ["jira", "atlassian", "issues", "project-management", "agile", "sprints"],
-
+  "categories": [
+    "productivity",
+    "developer-tools"
+  ],
+  "tags": [
+    "jira",
+    "atlassian",
+    "issues",
+    "project-management",
+    "agile",
+    "sprints"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "@aashari/mcp-server-atlassian-jira"],
+    "args": [
+      "-y",
+      "@aashari/mcp-server-atlassian-jira"
+    ],
     "env": {
       "ATLASSIAN_SITE_NAME": "${input:ATLASSIAN_SITE_NAME}",
       "ATLASSIAN_USER_EMAIL": "${input:ATLASSIAN_USER_EMAIL}",
@@ -42,7 +54,7 @@
           "id": "ATLASSIAN_API_TOKEN",
           "label": "Atlassian API Token",
           "description": "API token for Atlassian Cloud authentication.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "xxxxxxxxxxxxxxxxxxxxxxxx",
@@ -55,26 +67,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Create an API token at https://id.atlassian.com/manage-profile/security/api-tokens"
   },
-
   "contributor": {
     "name": "aashari",
     "github": "aashari",
     "url": "https://github.com/aashari"
   },
-
   "links": {
     "repository": "https://github.com/aashari/mcp-server-atlassian-jira",
     "homepage": "https://www.atlassian.com/software/jira",
     "documentation": "https://github.com/aashari/mcp-server-atlassian-jira#readme"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,
