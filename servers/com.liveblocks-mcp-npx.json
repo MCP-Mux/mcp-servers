@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "com.liveblocks-mcp",
-  "name": "Liveblocks",
+  "id": "com.liveblocks-mcp-npx",
+  "name": "Liveblocks (npx)",
   "alias": "liveblocks",
   "description": "Manage Liveblocks real-time collaboration rooms, threads, comments, and notifications. Configure presence, storage, and permissions.",
   "icon": "https://avatars.githubusercontent.com/u/76756571?v=4",
