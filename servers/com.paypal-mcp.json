@@ -6,13 +6,25 @@
   "description": "Process payments, manage orders, create invoices, handle disputes, and manage products and subscriptions through the PayPal API.",
   "icon": "https://avatars.githubusercontent.com/u/476675?v=4",
   "schema_version": "2.1",
-  "categories": ["cloud"],
-  "tags": ["paypal", "payments", "invoices", "orders", "subscriptions", "checkout"],
-
+  "categories": [
+    "cloud"
+  ],
+  "tags": [
+    "paypal",
+    "payments",
+    "invoices",
+    "orders",
+    "subscriptions",
+    "checkout"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "@paypal/mcp", "--tools=all"],
+    "args": [
+      "-y",
+      "@paypal/mcp",
+      "--tools=all"
+    ],
     "env": {
       "PAYPAL_ACCESS_TOKEN": "${input:PAYPAL_ACCESS_TOKEN}",
       "PAYPAL_ENVIRONMENT": "${input:PAYPAL_ENVIRONMENT}"
@@ -23,7 +35,7 @@
           "id": "PAYPAL_ACCESS_TOKEN",
           "label": "PayPal Access Token",
           "description": "OAuth 2.0 access token for the PayPal REST API.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "A21AAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
@@ -45,26 +57,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Generate an access token from your PayPal app at https://developer.paypal.com/dashboard/applications"
   },
-
   "contributor": {
     "name": "PayPal",
     "github": "paypal",
     "url": "https://www.paypal.com"
   },
-
   "links": {
     "repository": "https://github.com/paypal/paypal-mcp-server",
     "homepage": "https://www.paypal.com",
     "documentation": "https://developer.paypal.com/docs"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,
