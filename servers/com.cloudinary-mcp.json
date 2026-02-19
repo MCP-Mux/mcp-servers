@@ -6,13 +6,30 @@
   "description": "Upload, search, transform, and manage media assets in Cloudinary. Supports images and videos with powerful transformation capabilities.",
   "icon": "https://avatars.githubusercontent.com/u/1460763?v=4",
   "schema_version": "2.1",
-  "categories": ["cloud", "developer-tools"],
-  "tags": ["cloudinary", "media", "images", "video", "upload", "cdn", "transformation"],
-
+  "categories": [
+    "cloud",
+    "developer-tools"
+  ],
+  "tags": [
+    "cloudinary",
+    "media",
+    "images",
+    "video",
+    "upload",
+    "cdn",
+    "transformation"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "--package", "@cloudinary/asset-management-mcp", "--", "mcp", "start"],
+    "args": [
+      "-y",
+      "--package",
+      "@cloudinary/asset-management-mcp",
+      "--",
+      "mcp",
+      "start"
+    ],
     "env": {
       "CLOUDINARY_CLOUD_NAME": "${input:CLOUDINARY_CLOUD_NAME}",
       "CLOUDINARY_API_KEY": "${input:CLOUDINARY_API_KEY}",
@@ -38,7 +55,7 @@
           "id": "CLOUDINARY_API_KEY",
           "label": "Cloudinary API Key",
           "description": "API key for the Cloudinary API.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "123456789012345",
@@ -52,7 +69,7 @@
           "id": "CLOUDINARY_API_SECRET",
           "label": "Cloudinary API Secret",
           "description": "API secret for the Cloudinary API. Keep this private.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
@@ -65,26 +82,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Get your Cloud Name, API Key, and API Secret from https://console.cloudinary.com/settings/api-keys"
   },
-
   "contributor": {
     "name": "Cloudinary",
     "github": "cloudinary",
     "url": "https://cloudinary.com"
   },
-
   "links": {
     "repository": "https://github.com/cloudinary/mcp-servers",
     "homepage": "https://cloudinary.com",
     "documentation": "https://cloudinary.com/documentation/cloudinary_llm_mcp"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,
