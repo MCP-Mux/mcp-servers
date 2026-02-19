@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "community.google-maps",
-  "name": "Google Maps",
+  "id": "community.google-maps-npx",
+  "name": "Google Maps (npx)",
   "alias": "google-maps",
   "description": "Search for places, get directions, geocode addresses, and compute distance matrices using the Google Maps Platform APIs.",
   "icon": "https://avatars.githubusercontent.com/u/1342004?v=4",
