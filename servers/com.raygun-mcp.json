@@ -39,8 +39,8 @@
           "secret": true,
           "placeholder": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
           "obtain": {
-            "url": "https://app.raygun.com/user/tokens",
-            "instructions": "1. Log in to app.raygun.com\n2. Go to My Settings\n3. Create a new Personal Access Token\n4. Copy the token immediately (it won't be shown again)",
+            "url": "https://app.raygun.com/user",
+            "instructions": "1. Log in to app.raygun.com\n2. Go to My Settings (click your profile)\n3. Scroll to Personal Access Tokens section\n4. Click 'Create new PAT'\n5. Copy the generated token",
             "button_label": "Get PAT Token"
           }
         }
