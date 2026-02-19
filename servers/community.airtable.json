@@ -6,13 +6,24 @@
   "description": "Interact with Airtable bases, tables, and records. List schemas, search records, create and update data, and manage comments.",
   "icon": "https://avatars.githubusercontent.com/u/4953590?v=4",
   "schema_version": "2.1",
-  "categories": ["database", "productivity"],
-  "tags": ["airtable", "database", "spreadsheet", "no-code", "records"],
-
+  "categories": [
+    "database",
+    "productivity"
+  ],
+  "tags": [
+    "airtable",
+    "database",
+    "spreadsheet",
+    "no-code",
+    "records"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "airtable-mcp-server"],
+    "args": [
+      "-y",
+      "airtable-mcp-server"
+    ],
     "env": {
       "AIRTABLE_API_KEY": "${input:AIRTABLE_API_KEY}"
     },
@@ -22,7 +33,7 @@
           "id": "AIRTABLE_API_KEY",
           "label": "Airtable Personal Access Token",
           "description": "Personal Access Token for the Airtable API. Requires schema.bases:read and data.records:read scopes at minimum.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "patXXXXXXXXXXXXXX.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
@@ -35,26 +46,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Create a Personal Access Token at https://airtable.com/create/tokens"
   },
-
   "contributor": {
     "name": "domdomegg",
     "github": "domdomegg",
     "url": "https://github.com/domdomegg"
   },
-
   "links": {
     "repository": "https://github.com/domdomegg/airtable-mcp-server",
     "homepage": "https://airtable.com",
     "documentation": "https://github.com/domdomegg/airtable-mcp-server#readme"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,
