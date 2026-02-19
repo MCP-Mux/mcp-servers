@@ -1,9 +1,9 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "com.mongodb-mcp",
-  "name": "MongoDB",
-  "alias": "mongodb",
-  "description": "Connect to MongoDB databases and Atlas clusters. Query collections, inspect schemas, manage indexes, and run aggregation pipelines through the official MongoDB MCP server.",
+  "id": "com.mongodb-mcp-docker",
+  "name": "MongoDB (Docker)",
+  "alias": "mongodb-docker",
+  "description": "Connect to MongoDB databases and Atlas clusters via Docker. Query collections, inspect schemas, manage indexes, and run aggregation pipelines in an isolated container.",
   "icon": "https://avatars.githubusercontent.com/u/11214950?v=4",
   "schema_version": "2.1",
   "categories": [
@@ -14,16 +14,21 @@
     "database",
     "nosql",
     "atlas",
+    "docker",
     "aggregation",
-    "collections",
-    "documents"
+    "collections"
   ],
   "transport": {
     "type": "stdio",
-    "command": "npx",
+    "command": "docker",
     "args": [
-      "-y",
-      "mongodb-mcp-server@latest"
+      "run",
+      "--rm",
+      "-i",
+      "-e", "MDB_MCP_CONNECTION_STRING",
+      "-e", "MDB_MCP_API_CLIENT_ID",
+      "-e", "MDB_MCP_API_CLIENT_SECRET",
+      "mongodb/mongodb-mcp-server:latest"
     ],
     "env": {
       "MDB_MCP_CONNECTION_STRING": "${input:MONGODB_URI}",
@@ -35,30 +40,25 @@
         {
           "id": "MONGODB_URI",
           "label": "MongoDB Connection String",
-          "description": "MongoDB connection URI for your database. Supports local instances, Atlas clusters, and replica sets. Leave empty to use the runtime connect tool.",
+          "description": "MongoDB connection URI. Use host.docker.internal instead of localhost for local instances (e.g., mongodb://host.docker.internal:27017/mydb).",
           "type": "text",
           "required": false,
           "secret": true,
           "placeholder": "mongodb+srv://username:password@cluster.mongodb.net/mydb",
           "obtain": {
             "url": "https://www.mongodb.com/docs/manual/reference/connection-string/",
-            "instructions": "1. For MongoDB Atlas: Go to your cluster > Connect > Drivers\n2. Copy the connection string\n3. Replace <password> with your database password\n4. For local MongoDB: use mongodb://localhost:27017/mydb",
+            "instructions": "1. For MongoDB Atlas: Go to your cluster > Connect > Drivers\n2. Copy the connection string\n3. For local MongoDB inside Docker: use mongodb://host.docker.internal:27017/mydb",
             "button_label": "Learn More"
           }
         },
         {
           "id": "ATLAS_CLIENT_ID",
           "label": "Atlas API Client ID",
-          "description": "MongoDB Atlas Service Account client ID for Atlas management operations (create clusters, manage users, IP access lists). Optional — only needed for Atlas administration.",
+          "description": "MongoDB Atlas Service Account client ID for Atlas management operations. Optional — only needed for Atlas administration.",
           "type": "text",
           "required": false,
           "secret": true,
-          "placeholder": "mdb_sa_id_...",
-          "obtain": {
-            "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
-            "instructions": "1. Go to MongoDB Atlas > Organization Settings > Service Accounts\n2. Create a new Service Account with required roles\n3. Copy the Client ID",
-            "button_label": "Configure API Access"
-          }
+          "placeholder": "mdb_sa_id_..."
         },
         {
           "id": "ATLAS_CLIENT_SECRET",
@@ -67,12 +67,7 @@
           "type": "text",
           "required": false,
           "secret": true,
-          "placeholder": "mdb_sa_sk_...",
-          "obtain": {
-            "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
-            "instructions": "1. Go to MongoDB Atlas > Organization Settings > Service Accounts\n2. Create or select a Service Account\n3. Copy the Client Secret (shown only once at creation)",
-            "button_label": "Configure API Access"
-          }
+          "placeholder": "mdb_sa_sk_..."
         }
       ]
     }
