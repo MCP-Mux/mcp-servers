@@ -40,8 +40,8 @@
           "secret": true,
           "placeholder": "EAAAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
           "obtain": {
-            "url": "https://developer.squareup.com/apps",
-            "instructions": "1. Go to developer.squareup.com/apps\n2. Select or create an application\n3. Go to the Credentials section\n4. Copy your Access Token (sandbox or production)",
+            "url": "https://developer.squareup.com/console/en/apps",
+            "instructions": "1. Go to developer.squareup.com and log in\n2. Navigate to Apps in the developer console\n3. Select or create an application\n4. Go to Credentials\n5. Copy your access token",
             "button_label": "Get Access Token"
           }
         }
@@ -60,7 +60,7 @@
   "links": {
     "repository": "https://github.com/square/square-mcp-server",
     "homepage": "https://squareup.com",
-    "documentation": "https://developer.squareup.com/docs/mcp"
+    "documentation": "https://developer.squareup.com/docs/devtools/mcp"
   },
   "platforms": [
     "all"
