@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "com.upstash-mcp",
-  "name": "Upstash",
+  "id": "com.upstash-mcp-npx",
+  "name": "Upstash (npx)",
   "alias": "upstash",
   "description": "Create and manage Upstash Redis databases. List databases, create backups, view usage stats, and manage credentials.",
   "icon": "https://avatars.githubusercontent.com/u/74989412?v=4",
