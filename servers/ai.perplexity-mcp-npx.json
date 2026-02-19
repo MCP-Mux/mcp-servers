@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "ai.perplexity-mcp",
-  "name": "Perplexity",
+  "id": "ai.perplexity-mcp-npx",
+  "name": "Perplexity (npx)",
   "alias": "perplexity",
   "description": "AI-powered search using Perplexity models. Provides web search, deep research, and reasoning capabilities with real-time web context.",
   "icon": "https://avatars.githubusercontent.com/u/185426709?v=4",
