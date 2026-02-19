@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
-  "id": "io.qdrant-mcp",
-  "name": "Qdrant",
+  "id": "io.qdrant-mcp-uvx",
+  "name": "Qdrant (uvx)",
   "alias": "qdrant",
   "description": "Store and retrieve information from Qdrant vector database using semantic search. Supports local and cloud Qdrant instances.",
   "icon": "https://avatars.githubusercontent.com/u/73504361?v=4",
