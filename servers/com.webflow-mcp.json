@@ -6,13 +6,25 @@
   "description": "Manage Webflow sites, collections, and CMS items. Create and update pages, manage forms, and interact with e-commerce data.",
   "icon": "https://avatars.githubusercontent.com/u/1229663?v=4",
   "schema_version": "2.1",
-  "categories": ["developer-tools", "cloud"],
-  "tags": ["webflow", "website", "cms", "e-commerce", "no-code", "design"],
-
+  "categories": [
+    "developer-tools",
+    "cloud"
+  ],
+  "tags": [
+    "webflow",
+    "website",
+    "cms",
+    "e-commerce",
+    "no-code",
+    "design"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "webflow-mcp-server@latest"],
+    "args": [
+      "-y",
+      "webflow-mcp-server@latest"
+    ],
     "env": {
       "WEBFLOW_TOKEN": "${input:WEBFLOW_TOKEN}"
     },
@@ -22,7 +34,7 @@
           "id": "WEBFLOW_TOKEN",
           "label": "Webflow API Token",
           "description": "API token for the Webflow Data API v2.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
@@ -35,26 +47,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Generate an API token in Webflow Site Settings > Integrations"
   },
-
   "contributor": {
     "name": "Webflow",
     "github": "webflow",
     "url": "https://webflow.com"
   },
-
   "links": {
     "repository": "https://github.com/webflow/mcp-server",
     "homepage": "https://webflow.com",
     "documentation": "https://developers.webflow.com/mcp/reference/overview"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,
