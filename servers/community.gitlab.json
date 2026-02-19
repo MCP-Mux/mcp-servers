@@ -4,15 +4,27 @@
   "name": "GitLab",
   "alias": "gitlab",
   "description": "Manage GitLab repositories, issues, merge requests, and files. Search projects, create branches, push files, and manage code reviews.",
-  "icon": "https://avatars.githubusercontent.com/u/182288589?v=4",
+  "icon": "https://avatars.githubusercontent.com/u/1086321?v=4",
   "schema_version": "2.1",
-  "categories": ["version-control", "developer-tools"],
-  "tags": ["gitlab", "git", "version-control", "merge-requests", "issues", "ci-cd"],
-
+  "categories": [
+    "version-control",
+    "developer-tools"
+  ],
+  "tags": [
+    "gitlab",
+    "git",
+    "version-control",
+    "merge-requests",
+    "issues",
+    "ci-cd"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-gitlab"],
+    "args": [
+      "-y",
+      "@modelcontextprotocol/server-gitlab"
+    ],
     "env": {
       "GITLAB_PERSONAL_ACCESS_TOKEN": "${input:GITLAB_PERSONAL_ACCESS_TOKEN}",
       "GITLAB_API_URL": "${input:GITLAB_API_URL}"
@@ -23,7 +35,7 @@
           "id": "GITLAB_PERSONAL_ACCESS_TOKEN",
           "label": "GitLab Personal Access Token",
           "description": "Personal Access Token for the GitLab API. Requires 'api' scope.",
-          "type": "password",
+          "type": "text",
           "required": true,
           "secret": true,
           "placeholder": "glpat-xxxxxxxxxxxxxxxxxxxx",
@@ -45,26 +57,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Create a Personal Access Token with 'api' scope at https://gitlab.com/-/user_settings/personal_access_tokens"
   },
-
   "contributor": {
     "name": "Model Context Protocol",
     "github": "modelcontextprotocol",
     "url": "https://modelcontextprotocol.io"
   },
-
   "links": {
     "repository": "https://github.com/modelcontextprotocol/servers",
     "homepage": "https://gitlab.com",
     "documentation": "https://github.com/modelcontextprotocol/servers/tree/main/src/gitlab#readme"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,
