@@ -4,7 +4,7 @@
   "name": "Context7 (Docker)",
   "alias": "context7-docker",
   "description": "Fetch up-to-date, version-specific documentation and code examples for any library directly into LLM prompts via Docker. Prevents hallucinated APIs by pulling current docs from the source.",
-  "icon": "https://avatars.githubusercontent.com/u/1529926?v=4",
+  "icon": "https://avatars.githubusercontent.com/u/74989412?v=4",
   "schema_version": "2.1",
   "categories": [
     "developer-tools",
