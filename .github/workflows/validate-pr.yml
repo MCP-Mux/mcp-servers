@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - "servers/**"
+      - "categories.json"
+      - "schemas/**"
 
 jobs:
   validate:
@@ -40,3 +42,6 @@ jobs:
 
       - name: Check for conflicts
         run: npm run check-conflicts
+
+      - name: Run full test suite
+        run: npm test
