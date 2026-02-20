@@ -1,8 +1,8 @@
 {
   "$schema": "../schemas/server-definition.schema.json",
   "id": "com.linear-mcp-http",
-  "name": "Linear (Remote)",
-  "alias": "linear-remote",
+  "name": "Linear (HTTP)",
+  "alias": "linear-http",
   "description": "Manage Linear issues, projects, cycles, and teams through the hosted remote MCP server. No local installation required. Connects via OAuth.",
   "icon": "https://avatars.githubusercontent.com/u/46686594?v=4",
   "schema_version": "2.1",
