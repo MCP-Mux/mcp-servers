@@ -4,7 +4,7 @@
   "name": "Context7 (npx)",
   "alias": "context7",
   "description": "Fetch up-to-date, version-specific documentation and code examples for any library directly into LLM prompts. Prevents hallucinated APIs by pulling current docs from the source.",
-  "icon": "https://avatars.githubusercontent.com/u/1529926?v=4",
+  "icon": "https://avatars.githubusercontent.com/u/74989412?v=4",
   "schema_version": "2.1",
   "categories": [
     "developer-tools",
@@ -24,11 +24,10 @@
     "command": "npx",
     "args": [
       "-y",
-      "@upstash/context7-mcp"
+      "@upstash/context7-mcp@latest",
+      "--api-key",
+      "${input:CONTEXT7_API_KEY}"
     ],
-    "env": {
-      "CONTEXT7_API_KEY": "${input:CONTEXT7_API_KEY}"
-    },
     "metadata": {
       "inputs": [
         {
