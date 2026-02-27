@@ -4,7 +4,7 @@
   "name": "Instant Domain Search (HTTP)",
   "alias": "instant-domain-search",
   "description": "Check domain availability, generate domain name variations, and validate bulk domain lists using real-time registry queries with sub-10ms performance.",
-  "icon": "🌐",
+  "icon": "https://instantdomainsearch.com/logo.svg",
   "schema_version": "2.1",
   "categories": [
     "search"
