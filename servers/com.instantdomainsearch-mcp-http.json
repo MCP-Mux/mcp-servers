@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.instantdomainsearch-mcp-http",
+  "name": "Instant Domain Search (HTTP)",
+  "alias": "instant-domain-search",
+  "description": "Check domain availability, generate domain name variations, and validate bulk domain lists using real-time registry queries with sub-10ms performance.",
+  "icon": "🌐",
+  "schema_version": "2.1",
+  "categories": [
+    "search"
+  ],
+  "tags": [
+    "domain",
+    "dns",
+    "domain-search",
+    "tld",
+    "availability",
+    "domain-names"
+  ],
+
+  "transport": {
+    "type": "http",
+    "url": "https://instantdomainsearch.com/mcp/streamable-http"
+  },
+
+  "auth": {
+    "type": "none",
+    "instructions": "No authentication required. The service is completely free with no API keys needed."
+  },
+
+  "contributor": {
+    "name": "Instant Domain Search",
+    "url": "https://instantdomainsearch.com"
+  },
+
+  "links": {
+    "homepage": "https://instantdomainsearch.com",
+    "documentation": "https://instantdomainsearch.com/mcp"
+  },
+
+  "platforms": [
+    "all"
+  ],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}
