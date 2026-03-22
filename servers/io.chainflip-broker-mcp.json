@@ -1,0 +1,44 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "io.chainflip-broker-mcp",
+  "name": "Chainflip Broker as a Service",
+  "alias": "chainflip-broker",
+  "description": "Cross-chain cryptocurrency swaps via Chainflip. Get quotes, execute simple or DCA swaps, and track swap progress across blockchains.",
+  "icon": "https://docs.chainflip-broker.io/icons/android-chrome-512x512.png",
+  "schema_version": "2.1",
+  "categories": ["productivity"],
+  "tags": ["chainflip", "crypto", "swap", "defi", "cross-chain", "cryptocurrency"],
+
+  "transport": {
+    "type": "http",
+    "url": "https://chainflip-broker.io/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+
+  "auth": {
+    "type": "none"
+  },
+
+  "contributor": {
+    "name": "Chainflip Broker",
+    "github": "CumpsD",
+    "url": "https://chainflip-broker.io"
+  },
+
+  "links": {
+    "repository": "https://github.com/CumpsD/broker-as-a-service",
+    "homepage": "https://chainflip-broker.io",
+    "documentation": "https://docs.chainflip-broker.io/resources/ai-documentation/"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "prompts": true,
+    "resources": false,
+    "read_only_mode": false
+  }
+}
