@@ -1,0 +1,77 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "app.businys-mcp-npx",
+  "name": "Businys",
+  "alias": "businys",
+  "description": "221 MCP tools across 26 practices for independent professionals. Manage clients, bookings, invoices, contracts, programs, sessions, and more. Open platform with full data export on all paid tiers.",
+  "icon": "https://businys.app/icon.png",
+  "schema_version": "2.1",
+  "categories": [
+    "business",
+    "productivity",
+    "crm"
+  ],
+  "tags": [
+    "smb",
+    "invoicing",
+    "clients",
+    "bookings",
+    "contracts",
+    "fitness",
+    "photography",
+    "ai",
+    "open-platform"
+  ],
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@businys/mcp-server"
+    ],
+    "env": {
+      "HIATYS_API_KEY": "${input:HIATYS_API_KEY}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "HIATYS_API_KEY",
+          "label": "Businys API Key",
+          "description": "Your Businys API key. Generate one in Settings → Integrations → API Keys.",
+          "type": "text",
+          "required": true,
+          "secret": true,
+          "placeholder": "biz_live_xxxxxxxxxxxxxxxxxxxx",
+          "obtain": {
+            "url": "https://businys.app/settings/integrations",
+            "instructions": "1. Go to businys.app/settings/integrations\n2. Click 'API Keys'\n3. Click 'New API Key'\n4. Copy the key",
+            "button_label": "Create API Key"
+          }
+        }
+      ]
+    }
+  },
+  "auth": {
+    "type": "api_key",
+    "instructions": "Generate an API key at https://businys.app/settings/integrations → API Keys."
+  },
+  "contributor": {
+    "name": "Hiatys Systems",
+    "github": "hiatys",
+    "url": "https://hiatys.com"
+  },
+  "links": {
+    "repository": "https://github.com/hiatys/businys-mcp",
+    "homepage": "https://businys.app",
+    "documentation": "https://businys.app/docs/mcp"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": true,
+    "read_only_mode": false
+  }
+}
