@@ -1,0 +1,27 @@
+{
+  "id": "app.businys",
+  "name": "Businys",
+  "description": "221 MCP tools across 26 practices for independent professionals. Manage clients, bookings, invoices, contracts, programs, and more. Open platform with full data export on all plans.",
+  "icon": "https://businys.app/icon.png",
+  "categories": ["business", "productivity", "crm"],
+  "tags": ["smb", "invoicing", "clients", "bookings", "contracts", "fitness", "photography", "ai", "open-platform"],
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@businys/mcp-server"]
+  },
+  "auth": {
+    "type": "api-key",
+    "instructions": "Generate an API key in Businys Settings → Integrations → API Keys"
+  },
+  "contributor": {
+    "name": "Hiatys Systems",
+    "url": "https://hiatys.com",
+    "github": "hiatys"
+  },
+  "links": {
+    "repository": "https://github.com/hiatys/businys-mcp",
+    "homepage": "https://businys.app",
+    "documentation": "https://businys.app/docs/mcp"
+  }
+}
