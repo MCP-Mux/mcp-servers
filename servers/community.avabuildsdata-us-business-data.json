@@ -1,0 +1,45 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.avabuildsdata-us-business-data",
+  "name": "US Business Data (Remote)",
+  "alias": "us-business-data",
+  "description": "Search US business data via MCP: Yellow Pages leads, Secretary of State business entity records (17 states), and building permits/construction leads.",
+  "icon": "🏢",
+  "schema_version": "2.1",
+  "categories": ["search"],
+  "tags": ["business", "leads", "yellow-pages", "secretary-of-state", "building-permits", "government-data", "lead-generation", "scraping"],
+
+  "transport": {
+    "type": "http",
+    "url": "https://mcp.apify.com?tools=pink_comic/yellowpages-scraper,pink_comic/us-business-entity-search,pink_comic/building-permits-construction-leads",
+    "metadata": {
+      "inputs": []
+    }
+  },
+
+  "auth": {
+    "type": "oauth",
+    "instructions": "Connects via Apify OAuth. Your MCP host will initiate the OAuth flow. Alternatively, pass your Apify API token as a Bearer token in the Authorization header."
+  },
+
+  "contributor": {
+    "name": "avabuildsdata",
+    "github": "avabuildsdata",
+    "url": "https://github.com/avabuildsdata/mcp-us-business-data"
+  },
+
+  "links": {
+    "repository": "https://github.com/avabuildsdata/mcp-us-business-data",
+    "homepage": "https://apify.com/pink_comic",
+    "documentation": "https://github.com/avabuildsdata/mcp-us-business-data#readme"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}
