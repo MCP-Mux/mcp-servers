@@ -3,7 +3,7 @@
   "id": "com.aidevboard-mcp-http",
   "name": "AI Dev Jobs",
   "alias": "aidevjobs",
-  "description": "AI and ML job search across 5,500+ curated roles from 280+ companies. Filter by title, location, company, level, and work arrangement.",
+  "description": "AI and ML job search across 8,600+ curated roles from 510+ companies. 9 tools including filter-by-tag, salary benchmarks, candidate-profile matching, posted-within-days freshness filter, trending-tags and trending-companies pulse, plus full company detail. Daily scraper refresh from 560+ ATS sources.",
   "icon": "https://aidevboard.com/favicon.svg",
   "schema_version": "2.1",
   "categories": [
@@ -40,7 +40,7 @@
   },
 
   "links": {
-    "repository": "https://github.com/unitedideas/aidevboard",
+    "repository": "https://github.com/unitedideas/ai-dev-jobs",
     "homepage": "https://aidevboard.com",
     "documentation": "https://aidevboard.com/llms.txt"
   },
