@@ -1,0 +1,79 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "ai.suprsonic-mcp-npx",
+  "name": "Suprsonic (npx)",
+  "alias": "suprsonic",
+  "description": "Unified agent API. One API key, dozens of capabilities: search, scrape, profiles, emails, images, TTS, STT, messaging, and more. Zero provider auth.",
+  "icon": "https://suprsonic.ai/images/o-mega_icon_2.0_blue.png",
+  "schema_version": "2.1",
+  "categories": [
+    "search",
+    "web-scraping",
+    "ai-ml",
+    "communication"
+  ],
+  "tags": [
+    "suprsonic",
+    "unified-api",
+    "search",
+    "scrape",
+    "web-scraping",
+    "enrichment",
+    "tts",
+    "stt",
+    "ai-agent",
+    "mcp"
+  ],
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "suprsonic-mcp"
+    ],
+    "env": {
+      "SUPRSONIC_API_KEY": "${input:SUPRSONIC_API_KEY}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "SUPRSONIC_API_KEY",
+          "label": "Suprsonic API Key",
+          "description": "API key for Suprsonic. Get one free at suprsonic.ai/app/apis.",
+          "type": "text",
+          "required": true,
+          "secret": true,
+          "placeholder": "omk_xxxxxxxxxxxxxxxxxxxxxxxx",
+          "obtain": {
+            "url": "https://suprsonic.ai/app/apis",
+            "instructions": "1. Go to suprsonic.ai and sign in\n2. Go to the API Keys tab\n3. Click Create API Key\n4. Copy the key (starts with omk_)",
+            "button_label": "Get API Key"
+          }
+        }
+      ]
+    }
+  },
+  "auth": {
+    "type": "api_key",
+    "instructions": "Get a Suprsonic API key at https://suprsonic.ai/app/apis"
+  },
+  "contributor": {
+    "name": "O-mega Enterprise",
+    "github": "O-mega-Enterprise",
+    "url": "https://suprsonic.ai"
+  },
+  "links": {
+    "repository": "https://github.com/O-mega-Enterprise/suprsonic-mcp",
+    "homepage": "https://suprsonic.ai",
+    "documentation": "https://suprsonic.ai/docs/api"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
