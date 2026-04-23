@@ -4,7 +4,7 @@ Community-maintained registry of [MCP (Model Context Protocol)](https://modelcon
 
 Each server is defined as a single JSON file. When merged to `main`, definitions are bundled and published to the McpMux discovery API so every McpMux user can install them in one click.
 
-**[Browse servers on mcpmux.com](https://mcpmux.com)** · **[Download McpMux](https://mcpmux.com/download)** · **[Explore features](https://mcpmux.com/features)**
+**[Browse servers on mcpmux.com](https://mcpmux.com)** · **[Download McpMux](https://mcpmux.com/download)** · **[Explore features](https://mcpmux.com/features)** · **[Join our Discord](https://discord.gg/b4RDmwAHAN)**
 
 ## Quick Start
 
@@ -512,6 +512,7 @@ pnpm build                       # Generate bundle/bundle.json
 | **Discover Servers** | [mcpmux.com](https://mcpmux.com) — browse, search, and install MCP servers |
 | **Features** | [mcpmux.com/features](https://mcpmux.com/features) — Spaces, Feature Sets, encrypted credentials, and more |
 | **Source Code** | [github.com/mcpmux/mcp-mux](https://github.com/mcpmux/mcp-mux) |
+| **Community Chat** | [Discord](https://discord.gg/b4RDmwAHAN) — questions, help, and release news |
 
 ---
 
