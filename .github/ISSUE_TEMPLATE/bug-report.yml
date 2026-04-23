@@ -1,0 +1,56 @@
+name: Bug in a Server Definition
+description: Report a problem with an existing server definition in the registry
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this to report a broken or incorrect server definition already in the registry.
+
+        Bugs in the McpMux desktop app itself belong in the [mcp-mux repo](https://github.com/mcpmux/mcp-mux/issues/new/choose).
+
+  - type: input
+    id: server_id
+    attributes:
+      label: Server ID
+      description: The `id` field from the JSON definition (e.g., `community.brave-search`).
+      placeholder: community.example-server
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What's wrong?
+      description: Broken command, missing field, wrong URL, bad `obtain` instructions, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: How can a maintainer confirm the problem?
+      placeholder: |
+        1. Install server `community.example-server` in McpMux
+        2. Attempt to call tool `...`
+        3. Observe error `...`
+    validations:
+      required: false
+
+  - type: input
+    id: mcpmux_version
+    attributes:
+      label: McpMux Version (if applicable)
+      placeholder: e.g., 0.3.0
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Screenshots
+      description: Paste any relevant log output, error messages, or screenshots.
+    validations:
+      required: false
