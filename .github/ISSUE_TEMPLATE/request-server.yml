@@ -1,0 +1,75 @@
+name: Request a Server
+description: Suggest an MCP server we should add to the registry
+title: "[Request] "
+labels: ["server-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Know of an MCP server that should be in the McpMux registry? Tell us about it here.
+
+        If you already have a working definition, use the **Submit a Server** template (or open a PR) instead — that's the fastest path.
+
+  - type: input
+    id: name
+    attributes:
+      label: Server Name
+      description: What is this server called?
+      placeholder: e.g., Linear, Stripe, Obsidian
+    validations:
+      required: true
+
+  - type: input
+    id: repository
+    attributes:
+      label: Upstream Repository or Homepage
+      description: Link to the MCP server's source code or docs (leave blank if you don't know of one yet)
+      placeholder: https://github.com/... or https://example.com/mcp
+    validations:
+      required: false
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: What would you use it for?
+      description: A concrete example helps us prioritise.
+      placeholder: e.g., "Let Claude read my Linear issues so I can triage from chat."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: transport
+    attributes:
+      label: Transport (if known)
+      options:
+        - Not sure
+        - stdio (local command)
+        - http (remote URL)
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: categories
+    attributes:
+      label: Categories (pick any that fit)
+      options:
+        - label: Developer Tools
+        - label: Version Control
+        - label: Cloud Services
+        - label: Productivity
+        - label: Database
+        - label: Search & Web
+        - label: Communication
+        - label: File System
+        - label: Documentation
+        - label: AI & Machine Learning
+        - label: Monitoring & Observability
+        - label: Security
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Anything else we should know? Pricing, auth requirements, whether one already exists but needs polish, related issues, etc.
+    validations:
+      required: false

@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Contributing Guide (Pull Request path)
+    url: https://github.com/mcpmux/mcp-servers/blob/main/CONTRIBUTING.md
+    about: The fastest way to add a server — five-command quickstart for opening a PR
+  - name: Questions & Help
+    url: https://github.com/mcpmux/mcp-mux/discussions/categories/q-a
+    about: Ask questions about the registry or McpMux in GitHub Discussions
+  - name: Browse Existing Servers
+    url: https://mcpmux.com
+    about: Search the registry at mcpmux.com before opening a request
