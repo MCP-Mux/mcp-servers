@@ -4,7 +4,7 @@
   "name": "GitHub",
   "alias": "gh",
   "description": "Interact with GitHub repositories, issues, pull requests, and more through the GitHub API.",
-  "logo": "🐙",
+  "logo": "https://avatars.githubusercontent.com/u/9919?v=4",
   "schema_version": "2.1",
   "categories": [
     "developer-tools",

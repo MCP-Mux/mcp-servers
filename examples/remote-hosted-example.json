@@ -4,7 +4,7 @@
   "name": "Atlassian (Jira & Confluence)",
   "alias": "atlassian",
   "description": "Interact with Jira issues and Confluence pages",
-  "logo": "🔷",
+  "logo": "https://avatars.githubusercontent.com/u/168166?v=4",
   "schema_version": "2.1",
   "categories": [
     "productivity",

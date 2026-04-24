@@ -4,7 +4,7 @@
   "name": "Cloudflare Docs",
   "alias": "cfdocs",
   "description": "Search and browse Cloudflare documentation",
-  "logo": "📚",
+  "logo": "https://avatars.githubusercontent.com/u/314135?v=4",
   "schema_version": "2.1",
   "categories": [
     "documentation",
