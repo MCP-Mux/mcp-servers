@@ -1,0 +1,59 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.longbridge-mcp-http",
+  "name": "Longbridge (Remote)",
+  "alias": "longbridge-remote",
+  "description": "Longbridge brokerage MCP — 110 tools for US/HK real-time quotes, options, order routing, fundamentals, analyst ratings, calendars, price alerts, DCA plans, portfolio analytics and community sharelists. Hosted streamable-http with OAuth 2.1 via RFC 9728.",
+  "icon": "https://raw.githubusercontent.com/longbridge/longbridge-mcp/main/docs/logo.png",
+  "schema_version": "2.1",
+  "categories": ["productivity"],
+  "tags": [
+    "longbridge",
+    "brokerage",
+    "stocks",
+    "options",
+    "us-stocks",
+    "hk-stocks",
+    "trading",
+    "quotes",
+    "fundamentals",
+    "portfolio",
+    "dca",
+    "alerts",
+    "remote"
+  ],
+
+  "transport": {
+    "type": "http",
+    "url": "https://openapi.longbridge.com/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+
+  "auth": {
+    "type": "oauth",
+    "instructions": "Connects via OAuth. Your MCP host will initiate the Longbridge OAuth flow by following the RFC 9728 protected-resource-metadata challenge. Alternatively pass a Bearer access token via the Authorization header."
+  },
+
+  "contributor": {
+    "name": "Longbridge",
+    "github": "longbridge",
+    "url": "https://longbridge.com"
+  },
+
+  "links": {
+    "repository": "https://github.com/longbridge/longbridge-mcp",
+    "homepage": "https://longbridge.com",
+    "documentation": "https://open.longbridge.com/docs"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
