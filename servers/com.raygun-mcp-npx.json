@@ -4,7 +4,7 @@
   "name": "Raygun (npx)",
   "alias": "raygun",
   "description": "Query and manage Raygun error groups, applications, deployments, and user sessions for error monitoring and crash reporting.",
-  "icon": "https://avatars.githubusercontent.com/u/1767684?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/1767684?v=4",
   "schema_version": "2.1",
   "categories": [
     "monitoring",

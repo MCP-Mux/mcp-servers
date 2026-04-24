@@ -4,7 +4,7 @@
   "name": "Vercel",
   "alias": "vercel",
   "description": "Access Vercel project deployments, runtime logs, and configuration through Vercel's official hosted remote MCP server with OAuth. Currently read-only.",
-  "icon": "https://avatars.githubusercontent.com/u/14985020?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/14985020?v=4",
   "schema_version": "2.1",
   "categories": [
     "cloud",

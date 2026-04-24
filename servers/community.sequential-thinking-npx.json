@@ -4,7 +4,7 @@
   "name": "Sequential Thinking (npx)",
   "alias": "think",
   "description": "Dynamic step-by-step problem solving with branching, revision, and hypothesis validation. Helps LLMs break down complex problems through structured reasoning.",
-  "icon": "https://avatars.githubusercontent.com/u/182288589?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/182288589?v=4",
   "schema_version": "2.1",
   "categories": [
     "ai-ml",

@@ -4,7 +4,7 @@
   "name": "Shopify Dev (npx)",
   "alias": "shopify",
   "description": "Search Shopify developer documentation, learn about APIs, fetch full docs, and validate Liquid themes. No API key required.",
-  "icon": "https://avatars.githubusercontent.com/u/8085?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/8085?v=4",
   "schema_version": "2.1",
   "categories": [
     "developer-tools",

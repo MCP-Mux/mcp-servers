@@ -4,7 +4,7 @@
   "name": "Replicate (npx)",
   "alias": "replicate",
   "description": "Run AI models on Replicate. Create predictions, search for models, manage deployments, and generate images, audio, and text.",
-  "icon": "https://avatars.githubusercontent.com/u/60410876?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/60410876?v=4",
   "schema_version": "2.1",
   "categories": [
     "ai-ml",

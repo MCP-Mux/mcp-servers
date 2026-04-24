@@ -4,11 +4,23 @@
   "name": "Cloudflare Docs",
   "alias": "cf-docs",
   "description": "Search Cloudflare developer documentation using semantic search. Covers Workers, Pages, R2, D1, KV, Durable Objects, Zero Trust, and all Cloudflare products.",
-  "icon": "https://avatars.githubusercontent.com/u/314135?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/314135?v=4",
   "schema_version": "2.1",
-  "categories": ["documentation", "cloud"],
-  "tags": ["cloudflare", "docs", "documentation", "workers", "pages", "r2", "d1", "cdn", "cloud"],
-
+  "categories": [
+    "documentation",
+    "cloud"
+  ],
+  "tags": [
+    "cloudflare",
+    "docs",
+    "documentation",
+    "workers",
+    "pages",
+    "r2",
+    "d1",
+    "cdn",
+    "cloud"
+  ],
   "transport": {
     "type": "http",
     "url": "https://docs.mcp.cloudflare.com/mcp",
@@ -16,25 +28,22 @@
       "inputs": []
     }
   },
-
   "auth": {
     "type": "none"
   },
-
   "contributor": {
     "name": "Cloudflare",
     "github": "cloudflare",
     "url": "https://developers.cloudflare.com"
   },
-
   "links": {
     "repository": "https://github.com/cloudflare/mcp-server-cloudflare",
     "homepage": "https://developers.cloudflare.com",
     "documentation": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,

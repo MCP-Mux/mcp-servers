@@ -4,15 +4,27 @@
   "name": "SQLite",
   "alias": "sqlite",
   "description": "Query and manage SQLite databases. Execute SQL statements, inspect schemas, and explore data in local SQLite files.",
-  "icon": "https://avatars.githubusercontent.com/u/182288589?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/182288589?v=4",
   "schema_version": "2.1",
-  "categories": ["database"],
-  "tags": ["sqlite", "database", "sql", "query", "local", "data"],
-
+  "categories": [
+    "database"
+  ],
+  "tags": [
+    "sqlite",
+    "database",
+    "sql",
+    "query",
+    "local",
+    "data"
+  ],
   "transport": {
     "type": "stdio",
     "command": "uvx",
-    "args": ["mcp-server-sqlite", "--db-path", "${input:DB_PATH}"],
+    "args": [
+      "mcp-server-sqlite",
+      "--db-path",
+      "${input:DB_PATH}"
+    ],
     "metadata": {
       "inputs": [
         {
@@ -27,25 +39,22 @@
       ]
     }
   },
-
   "auth": {
     "type": "none"
   },
-
   "contributor": {
     "name": "Model Context Protocol",
     "github": "modelcontextprotocol",
     "url": "https://modelcontextprotocol.io"
   },
-
   "links": {
     "repository": "https://github.com/modelcontextprotocol/servers",
     "homepage": "https://www.sqlite.org",
     "documentation": "https://github.com/modelcontextprotocol/servers/blob/main/src/sqlite/README.md"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": true,

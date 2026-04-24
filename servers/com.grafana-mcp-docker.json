@@ -4,23 +4,45 @@
   "name": "Grafana (Docker)",
   "alias": "grafana",
   "description": "Search dashboards, query Prometheus and Loki datasources, manage alerts, and investigate incidents on any Grafana instance (self-hosted or Grafana Cloud) via Docker.",
-  "icon": "https://avatars.githubusercontent.com/u/7195757?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/7195757?v=4",
   "schema_version": "2.1",
-  "categories": ["monitoring", "developer-tools"],
-  "tags": ["grafana", "grafana-cloud", "monitoring", "dashboards", "prometheus", "loki", "alerts", "observability", "metrics", "incidents", "oncall"],
-
+  "categories": [
+    "monitoring",
+    "developer-tools"
+  ],
+  "tags": [
+    "grafana",
+    "grafana-cloud",
+    "monitoring",
+    "dashboards",
+    "prometheus",
+    "loki",
+    "alerts",
+    "observability",
+    "metrics",
+    "incidents",
+    "oncall"
+  ],
   "transport": {
     "type": "stdio",
     "command": "docker",
     "args": [
-      "run", "-i", "--rm",
-      "-e", "GRAFANA_URL",
-      "-e", "GRAFANA_SERVICE_ACCOUNT_TOKEN",
-      "-e", "GRAFANA_USERNAME",
-      "-e", "GRAFANA_PASSWORD",
-      "-e", "GRAFANA_ORG_ID",
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "GRAFANA_URL",
+      "-e",
+      "GRAFANA_SERVICE_ACCOUNT_TOKEN",
+      "-e",
+      "GRAFANA_USERNAME",
+      "-e",
+      "GRAFANA_PASSWORD",
+      "-e",
+      "GRAFANA_ORG_ID",
       "grafana/mcp-grafana",
-      "-t", "stdio"
+      "-t",
+      "stdio"
     ],
     "env": {
       "GRAFANA_URL": "${input:GRAFANA_URL}",
@@ -84,32 +106,28 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Create a service account token in your Grafana instance under Administration > Service accounts"
   },
-
   "contributor": {
     "name": "Grafana Labs",
     "github": "grafana",
     "url": "https://grafana.com"
   },
-
   "links": {
     "repository": "https://github.com/grafana/mcp-grafana",
     "homepage": "https://grafana.com",
     "documentation": "https://github.com/grafana/mcp-grafana#readme"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,
     "prompts": false,
     "read_only_mode": false
   },
-
   "changelog_url": "https://github.com/grafana/mcp-grafana/releases"
 }

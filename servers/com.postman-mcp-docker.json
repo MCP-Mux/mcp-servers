@@ -4,7 +4,7 @@
   "name": "Postman (Docker)",
   "alias": "postman-docker",
   "description": "Manage Postman collections, workspaces, environments, and API specifications via Docker. Search APIs, generate client code, and run collections.",
-  "icon": "https://avatars.githubusercontent.com/u/10251060?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/10251060?v=4",
   "schema_version": "2.1",
   "categories": [
     "developer-tools"
@@ -20,8 +20,11 @@
     "type": "stdio",
     "command": "docker",
     "args": [
-      "run", "-i", "--rm",
-      "-e", "POSTMAN_API_KEY",
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "POSTMAN_API_KEY",
       "mcp/postman"
     ],
     "env": {

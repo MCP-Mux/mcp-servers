@@ -4,7 +4,7 @@
   "name": "Mapbox (npx)",
   "alias": "mapbox",
   "description": "Search for places, geocode addresses, get directions, and generate map visualizations using the Mapbox APIs.",
-  "icon": "https://avatars.githubusercontent.com/u/600935?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/600935?v=4",
   "schema_version": "2.1",
   "categories": [
     "search"

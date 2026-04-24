@@ -4,7 +4,7 @@
   "name": "Resend (npx)",
   "alias": "resend",
   "description": "Send emails using the Resend API. Supports plain text and HTML content, attachments, scheduling, and recipient management.",
-  "icon": "https://avatars.githubusercontent.com/u/109384852?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/109384852?v=4",
   "schema_version": "2.1",
   "categories": [
     "communication"

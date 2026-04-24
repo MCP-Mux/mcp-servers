@@ -4,7 +4,7 @@
   "name": "Trigger.dev (npx)",
   "alias": "trigger",
   "description": "Manage Trigger.dev background jobs and workflows. List tasks, trigger runs, monitor execution, and deploy projects to different environments.",
-  "icon": "https://avatars.githubusercontent.com/u/95297378?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/95297378?v=4",
   "schema_version": "2.1",
   "categories": [
     "developer-tools",

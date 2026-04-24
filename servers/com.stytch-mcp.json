@@ -4,7 +4,7 @@
   "name": "Stytch",
   "alias": "stytch",
   "description": "Manage Stytch authentication projects through the hosted remote MCP server. Configure auth methods, manage users, and set up SSO.",
-  "icon": "https://avatars.githubusercontent.com/u/69983493?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/69983493?v=4",
   "schema_version": "2.1",
   "categories": [
     "developer-tools"

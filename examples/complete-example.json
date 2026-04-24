@@ -4,16 +4,27 @@
   "name": "GitHub",
   "alias": "gh",
   "description": "Interact with GitHub repositories, issues, pull requests, and more through the GitHub API.",
-  "icon": "🐙",
+  "logo": "🐙",
   "schema_version": "2.1",
-  "categories": ["developer-tools", "version-control"],
-  "tags": ["git", "code", "issues", "pr", "repos"],
-
+  "categories": [
+    "developer-tools",
+    "version-control"
+  ],
+  "tags": [
+    "git",
+    "code",
+    "issues",
+    "pr",
+    "repos"
+  ],
   "transport": {
     "type": "stdio",
     "command": "docker",
     "args": [
-      "run", "-i", "--rm", "-e",
+      "run",
+      "-i",
+      "--rm",
+      "-e",
       "GITHUB_PERSONAL_ACCESS_TOKEN",
       "ghcr.io/github/github-mcp-server"
     ],
@@ -39,25 +50,22 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Create a token at https://github.com/settings/tokens with repo scope"
   },
-
   "contributor": {
     "name": "Model Context Protocol",
     "github": "modelcontextprotocol",
     "url": "https://modelcontextprotocol.io"
   },
-
   "links": {
     "repository": "https://github.com/modelcontextprotocol/servers",
     "documentation": "https://modelcontextprotocol.io/docs"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": true,

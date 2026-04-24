@@ -4,7 +4,7 @@
   "name": "Contentful (npx)",
   "alias": "contentful",
   "description": "Manage Contentful spaces, content types, entries, and assets. Create and update structured content through the Content Management API.",
-  "icon": "https://avatars.githubusercontent.com/u/472182?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/472182?v=4",
   "schema_version": "2.1",
   "categories": [
     "developer-tools",

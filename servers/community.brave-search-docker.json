@@ -4,17 +4,29 @@
   "name": "Brave Search (Docker)",
   "alias": "brave-docker",
   "description": "Search the web using the Brave Search API via Docker container. Supports web search, news search, and local POI search with privacy-focused results.",
-  "icon": "https://avatars.githubusercontent.com/u/12301619?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/12301619?v=4",
   "schema_version": "2.1",
-  "categories": ["search"],
-  "tags": ["brave", "search", "web-search", "news", "privacy", "research", "docker"],
-
+  "categories": [
+    "search"
+  ],
+  "tags": [
+    "brave",
+    "search",
+    "web-search",
+    "news",
+    "privacy",
+    "research",
+    "docker"
+  ],
   "transport": {
     "type": "stdio",
     "command": "docker",
     "args": [
-      "run", "-i", "--rm",
-      "-e", "BRAVE_API_KEY",
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "BRAVE_API_KEY",
       "mcp/brave-search"
     ],
     "env": {
@@ -39,26 +51,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Get a Brave Search API key at https://brave.com/search/api/"
   },
-
   "contributor": {
     "name": "Brave",
     "github": "brave",
     "url": "https://brave.com"
   },
-
   "links": {
     "repository": "https://github.com/brave/brave-search-mcp-server",
     "homepage": "https://brave.com/search/api/",
     "documentation": "https://api.search.brave.com/app/documentation"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,

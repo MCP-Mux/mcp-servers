@@ -4,15 +4,25 @@
   "name": "Notion",
   "alias": "notion",
   "description": "Read and write Notion pages, databases, and blocks",
-  "icon": "📝",
+  "logo": "📝",
   "schema_version": "2.1",
-  "categories": ["productivity", "documentation"],
-  "tags": ["notion", "notes", "wiki", "database"],
-
+  "categories": [
+    "productivity",
+    "documentation"
+  ],
+  "tags": [
+    "notion",
+    "notes",
+    "wiki",
+    "database"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "@notionhq/notion-mcp-server"],
+    "args": [
+      "-y",
+      "@notionhq/notion-mcp-server"
+    ],
     "env": {
       "NOTION_API_KEY": "${input:NOTION_API_KEY}"
     },
@@ -35,25 +45,22 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Create an integration at notion.so/my-integrations"
   },
-
   "contributor": {
     "name": "Notion",
     "github": "makenotion",
     "url": "https://notion.so"
   },
-
   "links": {
     "repository": "https://github.com/makenotion/notion-mcp-server",
     "documentation": "https://developers.notion.com"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": true,

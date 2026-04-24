@@ -4,11 +4,23 @@
   "name": "AgentDeals",
   "alias": "agentdeals",
   "description": "Search and compare 1,641+ developer infrastructure deals — free tiers, startup credits, and pricing changes across 67 categories. Track which vendors removed free tiers, find cost-optimized stacks, and monitor pricing changes.",
-  "icon": "https://raw.githubusercontent.com/robhunter/agentdeals/main/assets/logo-400.png",
+  "logo": "https://raw.githubusercontent.com/robhunter/agentdeals/main/assets/logo-400.png",
   "schema_version": "2.1",
-  "categories": ["developer-tools", "business"],
-  "tags": ["free-tiers", "pricing", "developer-tools", "saas", "cost-optimization", "infrastructure", "deals", "startup-credits", "remote"],
-
+  "categories": [
+    "developer-tools",
+    "business"
+  ],
+  "tags": [
+    "free-tiers",
+    "pricing",
+    "developer-tools",
+    "saas",
+    "cost-optimization",
+    "infrastructure",
+    "deals",
+    "startup-credits",
+    "remote"
+  ],
   "transport": {
     "type": "http",
     "url": "https://agentdeals.dev/mcp",
@@ -16,21 +28,19 @@
       "inputs": []
     }
   },
-
   "contributor": {
     "name": "robhunter",
     "github": "robhunter",
     "url": "https://agentdeals.dev"
   },
-
   "links": {
     "repository": "https://github.com/robhunter/agentdeals",
     "homepage": "https://agentdeals.dev",
     "documentation": "https://agentdeals.dev/setup"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": true,

@@ -4,7 +4,7 @@
   "name": "Redis (Docker)",
   "alias": "redis-docker",
   "description": "Interact with Redis databases via Docker. Execute commands, manage keys, and work with data structures across standalone, cluster, and Sentinel modes.",
-  "icon": "https://avatars.githubusercontent.com/u/1529926?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/1529926?v=4",
   "schema_version": "2.1",
   "categories": [
     "database"
@@ -21,10 +21,15 @@
     "type": "stdio",
     "command": "docker",
     "args": [
-      "run", "-i", "--rm",
-      "-e", "REDIS_HOST",
-      "-e", "REDIS_PORT",
-      "-e", "REDIS_PWD",
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "REDIS_HOST",
+      "-e",
+      "REDIS_PORT",
+      "-e",
+      "REDIS_PWD",
       "mcp/redis"
     ],
     "env": {

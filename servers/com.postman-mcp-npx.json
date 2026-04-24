@@ -4,7 +4,7 @@
   "name": "Postman (npx)",
   "alias": "postman",
   "description": "Manage Postman collections, workspaces, environments, and API specifications. Search APIs, generate client code, and run collections.",
-  "icon": "https://avatars.githubusercontent.com/u/10251060?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/10251060?v=4",
   "schema_version": "2.1",
   "categories": [
     "developer-tools"

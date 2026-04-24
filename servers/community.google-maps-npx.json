@@ -4,7 +4,7 @@
   "name": "Google Maps (npx)",
   "alias": "google-maps",
   "description": "Search for places, get directions, geocode addresses, and compute distance matrices using the Google Maps Platform APIs.",
-  "icon": "https://avatars.githubusercontent.com/u/1342004?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/1342004?v=4",
   "schema_version": "2.1",
   "categories": [
     "search"

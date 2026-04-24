@@ -25,9 +25,18 @@
       "type": "string",
       "description": "Short description of what the server does"
     },
+    "logo": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://",
+      "description": "URL to a logo image (PNG/SVG). Must be an HTTP(S) URL - emoji are no longer accepted. Prefer a GitHub avatar (https://avatars.githubusercontent.com/u/{id}?v=4) or a stable brand asset."
+    },
     "icon": {
       "type": "string",
-      "description": "Emoji or URL to icon image"
+      "format": "uri",
+      "pattern": "^https?://",
+      "deprecated": true,
+      "description": "Deprecated: use `logo` instead. Kept for backward compatibility with older bundles; when present it must be an HTTP(S) URL."
     },
     "schema_version": {
       "type": "string",

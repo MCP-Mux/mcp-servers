@@ -4,11 +4,20 @@
   "name": "Honeycomb",
   "alias": "honeycomb",
   "description": "Query and analyze observability data in Honeycomb. Run queries, manage datasets, analyze traces, and create SLOs via Honeycomb's hosted MCP server.",
-  "icon": "https://avatars.githubusercontent.com/u/15988027?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/15988027?v=4",
   "schema_version": "2.1",
-  "categories": ["monitoring", "developer-tools"],
-  "tags": ["honeycomb", "observability", "traces", "monitoring", "apm", "slo"],
-
+  "categories": [
+    "monitoring",
+    "developer-tools"
+  ],
+  "tags": [
+    "honeycomb",
+    "observability",
+    "traces",
+    "monitoring",
+    "apm",
+    "slo"
+  ],
   "transport": {
     "type": "http",
     "url": "https://mcp.honeycomb.io/mcp",
@@ -16,26 +25,23 @@
       "inputs": []
     }
   },
-
   "auth": {
     "type": "oauth",
     "instructions": "Connect via OAuth when prompted by your MCP client. You will be redirected to Honeycomb to authorize access. Requires Honeycomb Intelligence enrollment."
   },
-
   "contributor": {
     "name": "Honeycomb",
     "github": "honeycombio",
     "url": "https://www.honeycomb.io"
   },
-
   "links": {
     "repository": "https://github.com/honeycombio/honeycomb-mcp",
     "homepage": "https://www.honeycomb.io",
     "documentation": "https://docs.honeycomb.io/integrations/mcp/"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,

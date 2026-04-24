@@ -4,15 +4,28 @@
   "name": "Supabase (npx)",
   "alias": "supabase-npx",
   "description": "Manage Supabase projects, databases, edge functions, storage, and authentication locally via npx. Uses a personal access token.",
-  "icon": "\u26a1",
+  "logo": "https://avatars.githubusercontent.com/u/54469796?v=4",
   "schema_version": "2.1",
-  "categories": ["database", "cloud"],
-  "tags": ["supabase", "postgres", "database", "auth", "storage", "edge-functions", "backend"],
-
+  "categories": [
+    "database",
+    "cloud"
+  ],
+  "tags": [
+    "supabase",
+    "postgres",
+    "database",
+    "auth",
+    "storage",
+    "edge-functions",
+    "backend"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "@supabase/mcp-server"],
+    "args": [
+      "-y",
+      "@supabase/mcp-server"
+    ],
     "env": {
       "SUPABASE_ACCESS_TOKEN": "${input:SUPABASE_ACCESS_TOKEN}"
     },
@@ -35,26 +48,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Generate a personal access token at https://supabase.com/dashboard/account/tokens"
   },
-
   "contributor": {
     "name": "Supabase",
     "github": "supabase",
     "url": "https://supabase.com"
   },
-
   "links": {
     "repository": "https://github.com/supabase/mcp-server",
     "homepage": "https://supabase.com",
     "documentation": "https://supabase.com/docs"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": true,

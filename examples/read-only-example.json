@@ -4,11 +4,18 @@
   "name": "Cloudflare Docs",
   "alias": "cfdocs",
   "description": "Search and browse Cloudflare documentation",
-  "icon": "📚",
+  "logo": "📚",
   "schema_version": "2.1",
-  "categories": ["documentation", "cloud"],
-  "tags": ["cloudflare", "docs", "documentation", "search"],
-
+  "categories": [
+    "documentation",
+    "cloud"
+  ],
+  "tags": [
+    "cloudflare",
+    "docs",
+    "documentation",
+    "search"
+  ],
   "transport": {
     "type": "http",
     "url": "https://docs.mcp.cloudflare.com/mcp",
@@ -16,24 +23,21 @@
       "inputs": []
     }
   },
-
   "auth": {
     "type": "none"
   },
-
   "contributor": {
     "name": "Cloudflare",
     "github": "cloudflare",
     "url": "https://developers.cloudflare.com"
   },
-
   "links": {
     "repository": "https://github.com/cloudflare/mcp-server-cloudflare",
     "documentation": "https://developers.cloudflare.com/mcp"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": true,

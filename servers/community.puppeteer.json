@@ -4,38 +4,48 @@
   "name": "Puppeteer",
   "alias": "puppeteer",
   "description": "Automate browser interactions, take screenshots, scrape web pages, and run JavaScript in a headless Chrome browser.",
-  "icon": "https://avatars.githubusercontent.com/u/182288589?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/182288589?v=4",
   "schema_version": "2.1",
-  "categories": ["developer-tools", "search"],
-  "tags": ["puppeteer", "browser", "automation", "scraping", "screenshots", "headless", "chrome"],
-
+  "categories": [
+    "developer-tools",
+    "search"
+  ],
+  "tags": [
+    "puppeteer",
+    "browser",
+    "automation",
+    "scraping",
+    "screenshots",
+    "headless",
+    "chrome"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+    "args": [
+      "-y",
+      "@modelcontextprotocol/server-puppeteer"
+    ],
     "metadata": {
       "inputs": []
     }
   },
-
   "auth": {
     "type": "none"
   },
-
   "contributor": {
     "name": "Model Context Protocol",
     "github": "modelcontextprotocol",
     "url": "https://modelcontextprotocol.io"
   },
-
   "links": {
     "repository": "https://github.com/modelcontextprotocol/servers",
     "homepage": "https://pptr.dev",
     "documentation": "https://github.com/modelcontextprotocol/servers/blob/main/src/puppeteer/README.md"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": true,

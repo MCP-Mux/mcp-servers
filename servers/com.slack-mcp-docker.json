@@ -4,18 +4,31 @@
   "name": "Slack (Docker)",
   "alias": "slack-docker",
   "description": "Send and read Slack messages, manage channels, list users, add reactions, and interact with your Slack workspace via Docker container.",
-  "icon": "https://avatars.githubusercontent.com/u/6962987?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/6962987?v=4",
   "schema_version": "2.1",
-  "categories": ["communication"],
-  "tags": ["slack", "messaging", "chat", "channels", "workspace", "collaboration", "docker"],
-
+  "categories": [
+    "communication"
+  ],
+  "tags": [
+    "slack",
+    "messaging",
+    "chat",
+    "channels",
+    "workspace",
+    "collaboration",
+    "docker"
+  ],
   "transport": {
     "type": "stdio",
     "command": "docker",
     "args": [
-      "run", "-i", "--rm",
-      "-e", "SLACK_BOT_TOKEN",
-      "-e", "SLACK_TEAM_ID",
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "SLACK_BOT_TOKEN",
+      "-e",
+      "SLACK_TEAM_ID",
       "mcp/slack"
     ],
     "env": {
@@ -55,26 +68,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Create a Slack app at https://api.slack.com/apps and get the Bot User OAuth Token"
   },
-
   "contributor": {
     "name": "Model Context Protocol",
     "github": "modelcontextprotocol",
     "url": "https://modelcontextprotocol.io"
   },
-
   "links": {
     "repository": "https://github.com/modelcontextprotocol/servers",
     "homepage": "https://slack.com",
     "documentation": "https://api.slack.com/docs"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,

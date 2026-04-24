@@ -4,7 +4,7 @@
   "name": "Square (HTTP)",
   "alias": "square-http",
   "description": "Interact with Square APIs via the hosted remote MCP server. Connects with OAuth for secure access to payments, orders, and more.",
-  "icon": "https://avatars.githubusercontent.com/u/82592?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/82592?v=4",
   "schema_version": "2.1",
   "categories": [
     "developer-tools",

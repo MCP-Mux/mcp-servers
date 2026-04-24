@@ -4,7 +4,7 @@
   "name": "PayPal (npx)",
   "alias": "paypal",
   "description": "Process payments, manage orders, create invoices, handle disputes, and manage products and subscriptions through the PayPal API.",
-  "icon": "https://avatars.githubusercontent.com/u/476675?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/476675?v=4",
   "schema_version": "2.1",
   "categories": [
     "cloud"

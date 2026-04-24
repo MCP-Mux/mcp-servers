@@ -4,7 +4,7 @@
   "name": "Prisma (npx)",
   "alias": "prisma",
   "description": "Manage Prisma databases with migrations, schema introspection, and Prisma Studio. Create Prisma Postgres databases and check migration status.",
-  "icon": "https://avatars.githubusercontent.com/u/17219288?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/17219288?v=4",
   "schema_version": "2.1",
   "categories": [
     "database",

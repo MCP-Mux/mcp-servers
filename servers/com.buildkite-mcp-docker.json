@@ -4,7 +4,7 @@
   "name": "Buildkite (Docker)",
   "alias": "buildkite",
   "description": "Manage Buildkite pipelines, builds, jobs, and agents. Trigger builds, view logs, manage clusters, and monitor CI/CD workflows.",
-  "icon": "https://avatars.githubusercontent.com/u/5055988?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/5055988?v=4",
   "schema_version": "2.1",
   "categories": [
     "developer-tools"

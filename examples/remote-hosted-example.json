@@ -4,11 +4,19 @@
   "name": "Atlassian (Jira & Confluence)",
   "alias": "atlassian",
   "description": "Interact with Jira issues and Confluence pages",
-  "icon": "🔷",
+  "logo": "🔷",
   "schema_version": "2.1",
-  "categories": ["productivity", "developer-tools"],
-  "tags": ["jira", "confluence", "atlassian", "issues", "wiki"],
-
+  "categories": [
+    "productivity",
+    "developer-tools"
+  ],
+  "tags": [
+    "jira",
+    "confluence",
+    "atlassian",
+    "issues",
+    "wiki"
+  ],
   "transport": {
     "type": "http",
     "url": "https://mcp.atlassian.com/v1/mcp",
@@ -16,24 +24,21 @@
       "inputs": []
     }
   },
-
   "auth": {
     "type": "oauth"
   },
-
   "contributor": {
     "name": "Atlassian",
     "github": "atlassian",
     "url": "https://developer.atlassian.com"
   },
-
   "links": {
     "homepage": "https://developer.atlassian.com/cloud/mcp",
     "documentation": "https://developer.atlassian.com/cloud/mcp/docs"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "prompts": true,

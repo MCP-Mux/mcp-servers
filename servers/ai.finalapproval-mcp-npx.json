@@ -4,7 +4,7 @@
   "name": "FinalApproval (npx)",
   "alias": "finalapproval",
   "description": "Human-in-the-loop approval gate for AI agents. Your agent calls submit_approval before any irreversible action; a human reviews on a branded page and a signed webhook fires back with the decision.",
-  "icon": "https://finalapproval.ai/favicon.ico",
+  "logo": "https://finalapproval.ai/favicon.ico",
   "schema_version": "2.1",
   "categories": [
     "developer-tools",

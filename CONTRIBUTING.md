@@ -149,7 +149,7 @@ Strongly encouraged — the registry UI shows them prominently and users filter 
 | `$schema` | string | `"../schemas/server-definition.schema.json"` — gives editors autocomplete. |
 | `description` | string | One sentence, plain English. Shown in listings. |
 | `alias` | string | Short CLI alias, pattern `^[a-z0-9-]+$`. Must not collide with any `id` or other alias. |
-| `icon` | string | Emoji (e.g. `"🐙"`) or a stable image URL (avatars, project logos). McpMux does **not** host icon files. |
+| `logo` | string | Stable HTTP(S) URL to a logo image (avatar or project PNG/SVG). Emoji are **not** accepted — use a GitHub avatar URL like `https://avatars.githubusercontent.com/u/{id}?v=4`. McpMux does **not** host logo files. (The legacy field name `icon` is still accepted for backward compatibility, but `logo` is the preferred name.) |
 | `schema_version` | string | Currently `"2.1"`. Bump when the project publishes a new contributor schema version. |
 | `categories` | string[] | IDs from [`categories.json`](categories.json). At least one. |
 | `tags` | string[] | Lowercase keywords for search (`"git"`, `"search"`, `"wiki"`). 3–8 is a good target. |
@@ -582,11 +582,12 @@ The registry is community-built but consumed via the McpMux brand, so we're care
 - **Implied endorsement is not:** "Official GitHub MCP", "Certified by Notion", "Endorsed by Linear" — unless you actually represent the trademark owner and have been verified.
 - Phrases to prefer: *works with*, *for*, *connects to*, *integrates with*.
 
-### Icons
+### Logos
 
-- McpMux does not host icon files. The `icon` field is either an emoji or a URL to an image.
+- McpMux does not host logo files. The `logo` field must be an HTTP(S) URL to an image. Emoji are not accepted.
 - **Only reference assets you have the right to use.** Corporate logos are usually fine for descriptive, non-commercial use in a directory listing; but don't hot-link assets with restrictive terms.
 - Prefer GitHub avatars (`https://avatars.githubusercontent.com/u/<id>?v=4`) or official brand URLs over random CDN copies that may rotate.
+- The legacy field name `icon` is still accepted for backward compatibility, but new submissions should use `logo`.
 
 ### Official / verified claims
 
@@ -603,7 +604,7 @@ By opening a PR you agree that:
 1. You have the right to reference any URLs you include.
 2. You're not claiming official status or endorsement you don't have.
 3. You accept responsibility for trademark compliance of your submission.
-4. You grant McpMux a license to display your definition — including rendering any referenced icon URLs — on the discover site and desktop app.
+4. You grant McpMux a license to display your definition — including rendering any referenced logo URLs — on the discover site and desktop app.
 5. McpMux may modify or remove your submission in response to trademark concerns.
 
 ---

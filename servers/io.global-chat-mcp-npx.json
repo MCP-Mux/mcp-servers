@@ -4,7 +4,7 @@
   "name": "Global Chat MCP Server",
   "alias": "global-chat",
   "description": "Cross-protocol AI agent discovery. Search and register agents across MCP, A2A, and agents.txt protocols. Aggregates 100K+ agents from 15+ registries into a single searchable interface.",
-  "icon": "https://global-chat.io/icon-512.png",
+  "logo": "https://global-chat.io/icon-512.png",
   "schema_version": "2.1",
   "categories": [
     "developer-tools",
@@ -19,7 +19,6 @@
     "registry",
     "developer-tools"
   ],
-
   "transport": {
     "type": "stdio",
     "command": "npx",
@@ -28,27 +27,22 @@
       "@global-chat/mcp-server"
     ]
   },
-
   "auth": {
     "type": "none"
   },
-
   "contributor": {
     "name": "nicobailon",
     "github": "nicobailon",
     "url": "https://global-chat.io"
   },
-
   "links": {
     "repository": "https://github.com/nicobailon/global-chat",
     "homepage": "https://global-chat.io",
     "documentation": "https://github.com/nicobailon/global-chat#mcp-server"
   },
-
   "platforms": [
     "all"
   ],
-
   "capabilities": {
     "tools": true,
     "resources": false,

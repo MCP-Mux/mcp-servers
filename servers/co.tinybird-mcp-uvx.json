@@ -4,7 +4,7 @@
   "name": "Tinybird (uvx)",
   "alias": "tinybird",
   "description": "Query and manage Tinybird analytics data sources and endpoints. Run SQL queries, explore schemas, and publish API endpoints.",
-  "icon": "https://avatars.githubusercontent.com/u/53208553?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/53208553?v=4",
   "schema_version": "2.1",
   "categories": [
     "database",
