@@ -1,0 +1,44 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.qr-business-cards-mcp-http",
+  "name": "QR Business Cards (Remote)",
+  "alias": "qr-business-cards",
+  "description": "Create professional QR business card profiles, retrieve existing profiles, and check card package pricing. AI agents can create digital profiles with contact info and social links on behalf of users. No local installation required.",
+  "schema_version": "2.1",
+  "categories": ["productivity"],
+  "tags": ["qr-code", "business-cards", "networking", "contact", "profile", "remote"],
+
+  "transport": {
+    "type": "http",
+    "url": "https://qr-business-cards.com/api/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+
+  "auth": {
+    "type": "none",
+    "instructions": "No authentication required. The MCP server is publicly accessible."
+  },
+
+  "contributor": {
+    "name": "ajfrai",
+    "github": "ajfrai",
+    "url": "https://qr-business-cards.com"
+  },
+
+  "links": {
+    "repository": "https://github.com/ajfrai/qr-business-cards-mcp",
+    "homepage": "https://qr-business-cards.com",
+    "documentation": "https://qr-business-cards.com/developers"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
