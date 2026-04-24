@@ -7,9 +7,8 @@
   "logo": "https://businys.app/icon.png",
   "schema_version": "2.1",
   "categories": [
-    "business",
     "productivity",
-    "crm"
+    "communication"
   ],
   "tags": [
     "smb",

@@ -4,6 +4,10 @@ on:
   pull_request:
     paths:
       - "servers/**"
+      - "categories.json"
+      - "schemas/**"
+      - "scripts/**"
+      - "tests/**"
 
 jobs:
   validate:
@@ -23,13 +27,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Get changed files
+      - name: Get changed server files
         id: changed
         uses: tj-actions/changed-files@v44
         with:
           files: "servers/*.json"
 
       - name: Validate changed server files
+        # Runs schema validation AND category-reference checks via scripts/validate.js.
+        # A category ID not present in categories.json fails here, since the
+        # bundler's server_categories table has a FK to categories.id and a
+        # typo would silently break sync for that server.
         run: |
           if [ -n "${{ steps.changed.outputs.all_changed_files }}" ]; then
             npm run validate -- ${{ steps.changed.outputs.all_changed_files }}
@@ -40,3 +48,9 @@ jobs:
 
       - name: Check for conflicts
         run: npm run check-conflicts
+
+      - name: Run full test suite
+        # Covers cross-file consistency checks (categories.json, bundle build,
+        # deprecated `icon` field, logo URL format) that per-file validation
+        # can't express.
+        run: npm test
