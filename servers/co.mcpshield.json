@@ -1,0 +1,32 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "co.mcpshield",
+  "name": "MCPShield",
+  "alias": "mcpshield",
+  "description": "Security scanner for MCP servers - detects tool poisoning, prompt injection, and 90+ vulnerability patterns.",
+  "icon": "🛡️",
+  "schema_version": "2.1",
+  "categories": ["security", "developer-tools"],
+  "tags": ["security", "scanner", "tool-poisoning", "prompt-injection", "mcp"],
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["mcpshield-cli", "scan"]
+  },
+  "contributor": {
+    "name": "MCPShield",
+    "github": "MCPShield-Dev",
+    "url": "https://www.mcpshield.co"
+  },
+  "links": {
+    "repository": "https://github.com/MCPShield-Dev/mcpshield",
+    "documentation": "https://www.mcpshield.co/docs"
+  },
+  "platforms": ["all"],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}
