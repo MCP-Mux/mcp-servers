@@ -1,0 +1,56 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "ai.nothumansearch-mcp-http",
+  "name": "Not Human Search",
+  "alias": "nothumansearch",
+  "description": "AI tool discovery engine. Search 1,900+ agent-ready sites and MCP servers by keyword, category, or capability. 10 tools including live MCP endpoint verification via JSON-RPC probe, a recently-indexed feed, and per-signal filters (MCP / OpenAPI / llms.txt).",
+  "icon": "https://nothumansearch.ai/favicon.svg",
+  "schema_version": "2.1",
+  "categories": [
+    "search",
+    "ai-ml",
+    "developer-tools"
+  ],
+  "tags": [
+    "ai-tools",
+    "mcp-servers",
+    "search",
+    "discovery",
+    "ai-directory",
+    "tool-discovery"
+  ],
+
+  "transport": {
+    "type": "http",
+    "url": "https://nothumansearch.ai/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+
+  "auth": {
+    "type": "none",
+    "instructions": "No authentication required. All endpoints are publicly accessible."
+  },
+
+  "contributor": {
+    "name": "unitedideas",
+    "github": "unitedideas",
+    "url": "https://nothumansearch.ai"
+  },
+
+  "links": {
+    "repository": "https://github.com/unitedideas/nothumansearch",
+    "homepage": "https://nothumansearch.ai",
+    "documentation": "https://nothumansearch.ai/llms.txt"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}

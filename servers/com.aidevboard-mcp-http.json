@@ -1,0 +1,56 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.aidevboard-mcp-http",
+  "name": "AI Dev Jobs",
+  "alias": "aidevjobs",
+  "description": "AI and ML job search across 8,600+ curated roles from 510+ companies. 9 tools including filter-by-tag, salary benchmarks, candidate-profile matching, posted-within-days freshness filter, trending-tags and trending-companies pulse, plus full company detail. Daily scraper refresh from 560+ ATS sources.",
+  "icon": "https://aidevboard.com/favicon.svg",
+  "schema_version": "2.1",
+  "categories": [
+    "search",
+    "ai-ml"
+  ],
+  "tags": [
+    "jobs",
+    "ai-jobs",
+    "ml-jobs",
+    "career",
+    "hiring",
+    "job-search",
+    "job-board"
+  ],
+
+  "transport": {
+    "type": "http",
+    "url": "https://aidevboard.com/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+
+  "auth": {
+    "type": "none",
+    "instructions": "No authentication required. All endpoints are publicly accessible."
+  },
+
+  "contributor": {
+    "name": "unitedideas",
+    "github": "unitedideas",
+    "url": "https://aidevboard.com"
+  },
+
+  "links": {
+    "repository": "https://github.com/unitedideas/ai-dev-jobs",
+    "homepage": "https://aidevboard.com",
+    "documentation": "https://aidevboard.com/llms.txt"
+  },
+
+  "platforms": ["all"],
+
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}
