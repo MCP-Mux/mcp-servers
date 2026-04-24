@@ -4,11 +4,21 @@
   "name": "Supabase (Remote)",
   "alias": "supabase",
   "description": "Manage Supabase projects, databases, edge functions, storage, and authentication through Supabase's hosted remote MCP server. Authenticates via OAuth, no local setup required.",
-  "icon": "\u26a1",
+  "logo": "https://avatars.githubusercontent.com/u/54469796?v=4",
   "schema_version": "2.1",
-  "categories": ["database", "cloud"],
-  "tags": ["supabase", "postgres", "database", "auth", "storage", "edge-functions", "backend"],
-
+  "categories": [
+    "database",
+    "cloud"
+  ],
+  "tags": [
+    "supabase",
+    "postgres",
+    "database",
+    "auth",
+    "storage",
+    "edge-functions",
+    "backend"
+  ],
   "transport": {
     "type": "http",
     "url": "https://mcp.supabase.com/mcp",
@@ -16,26 +26,23 @@
       "inputs": []
     }
   },
-
   "auth": {
     "type": "oauth",
     "instructions": "Authenticates via OAuth 2.1 in your browser using your Supabase account. No token setup needed."
   },
-
   "contributor": {
     "name": "Supabase",
     "github": "supabase",
     "url": "https://supabase.com"
   },
-
   "links": {
     "repository": "https://github.com/supabase-community/supabase-mcp",
     "homepage": "https://supabase.com",
     "documentation": "https://supabase.com/docs/guides/ai/mcp"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": true,

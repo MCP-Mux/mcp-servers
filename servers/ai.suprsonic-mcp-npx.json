@@ -4,7 +4,7 @@
   "name": "Suprsonic (npx)",
   "alias": "suprsonic",
   "description": "Unified agent API. One API key, dozens of capabilities: search, scrape, profiles, emails, images, TTS, STT, messaging, and more. Zero provider auth.",
-  "icon": "https://suprsonic.ai/images/o-mega_icon_2.0_blue.png",
+  "logo": "https://suprsonic.ai/images/o-mega_icon_2.0_blue.png",
   "schema_version": "2.1",
   "categories": [
     "search",

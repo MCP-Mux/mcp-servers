@@ -4,7 +4,7 @@
   "name": "Memory (npx)",
   "alias": "memory",
   "description": "Persistent memory using a local knowledge graph. Store entities, relations, and observations that persist across conversations.",
-  "icon": "https://avatars.githubusercontent.com/u/182288589?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/182288589?v=4",
   "schema_version": "2.1",
   "categories": [
     "ai-ml"

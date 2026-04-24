@@ -4,7 +4,7 @@
   "name": "Context7 (Docker)",
   "alias": "context7-docker",
   "description": "Fetch up-to-date, version-specific documentation and code examples for any library directly into LLM prompts via Docker. Prevents hallucinated APIs by pulling current docs from the source.",
-  "icon": "https://avatars.githubusercontent.com/u/74989412?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/74989412?v=4",
   "schema_version": "2.1",
   "categories": [
     "developer-tools",
@@ -17,13 +17,15 @@
     "docker",
     "upstash"
   ],
-
   "transport": {
     "type": "stdio",
     "command": "docker",
     "args": [
-      "run", "-i", "--rm",
-      "-e", "CONTEXT7_API_KEY",
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "CONTEXT7_API_KEY",
       "mcp/context7"
     ],
     "env": {
@@ -48,28 +50,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "optional_api_key",
     "instructions": "Works without a key (free tier with rate limits). Get an API key at context7.com/dashboard for higher limits."
   },
-
   "contributor": {
     "name": "Upstash",
     "github": "upstash",
     "url": "https://context7.com"
   },
-
   "links": {
     "repository": "https://github.com/upstash/context7",
     "homepage": "https://context7.com",
     "documentation": "https://context7.com/docs/resources/developer"
   },
-
   "platforms": [
     "all"
   ],
-
   "capabilities": {
     "tools": true,
     "resources": false,

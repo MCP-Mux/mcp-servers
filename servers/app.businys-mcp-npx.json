@@ -4,7 +4,7 @@
   "name": "Businys",
   "alias": "businys",
   "description": "221 MCP tools across 26 practices for independent professionals. Manage clients, bookings, invoices, contracts, programs, sessions, and more. Open platform with full data export on all paid tiers.",
-  "icon": "https://businys.app/icon.png",
+  "logo": "https://businys.app/icon.png",
   "schema_version": "2.1",
   "categories": [
     "business",

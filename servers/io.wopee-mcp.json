@@ -4,14 +4,25 @@
   "name": "Wopee MCP",
   "alias": "wopee",
   "description": "MCP server for autonomous end-to-end testing with Wopee.io. Analyzes web applications, generates and executes Playwright-based functional tests, and validates results.",
-  "icon": "https://avatars.githubusercontent.com/u/105428871?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/105428871?v=4",
   "schema_version": "2.1",
-  "categories": ["developer-tools"],
-  "tags": ["testing", "e2e", "automation", "playwright", "qa"],
+  "categories": [
+    "developer-tools"
+  ],
+  "tags": [
+    "testing",
+    "e2e",
+    "automation",
+    "playwright",
+    "qa"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "wopee-mcp"],
+    "args": [
+      "-y",
+      "wopee-mcp"
+    ],
     "env": {
       "WOPEE_API_KEY": "${input:WOPEE_API_KEY}"
     },
@@ -47,7 +58,9 @@
     "homepage": "https://wopee.io",
     "documentation": "https://github.com/Wopee-io/wopee-mcp#readme"
   },
-  "platforms": ["all"],
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,

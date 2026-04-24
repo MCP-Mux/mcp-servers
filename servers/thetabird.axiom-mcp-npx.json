@@ -4,7 +4,7 @@
   "name": "Axiom (npx)",
   "alias": "axiom",
   "description": "Query and manage Axiom datasets for log analysis and observability. Execute APL queries, list datasets, and ingest events.",
-  "icon": "https://avatars.githubusercontent.com/u/21122348?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/21122348?v=4",
   "schema_version": "2.1",
   "categories": [
     "monitoring",

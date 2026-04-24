@@ -88,7 +88,7 @@ Key features:
 
 ### Recommended Fields
 - `description` - What the server does
-- `icon` - Emoji or image URL
+- `logo` - HTTP(S) URL to a logo image (PNG/SVG). Emoji are not accepted. Legacy `icon` field name is still supported.
 - `categories` - For discoverability
 - `badges` - Trust indicators (official, verified, featured, sponsored, popular)
 - `hosting_type` - local, remote, or hybrid
@@ -143,10 +143,11 @@ Key features:
 
 ## Best Practices
 
-### Icons
-- Use emoji (📊, 🚀, 📖) for simplicity
-- Or provide URL to PNG/SVG icon
+### Logos
+- Provide an HTTP(S) URL to a PNG/SVG logo — emoji are not accepted
+- Prefer GitHub avatars (`https://avatars.githubusercontent.com/u/<id>?v=4`) or official brand URLs
 - Recommended size: 128x128px or 256x256px
+- The field name is `logo`; the legacy `icon` field name is still supported but discouraged
 
 ### Screenshots
 - Max 5 screenshots

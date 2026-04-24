@@ -4,15 +4,27 @@
   "name": "Exa Search (npx)",
   "alias": "exa-npx",
   "description": "AI-powered web search that understands meaning, not just keywords. Find similar pages, search by content type, and get clean text from any URL via npx.",
-  "icon": "https://avatars.githubusercontent.com/u/77906174?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/77906174?v=4",
   "schema_version": "2.1",
-  "categories": ["search", "ai-ml"],
-  "tags": ["exa", "search", "web-search", "semantic-search", "ai-search", "research"],
-
+  "categories": [
+    "search",
+    "ai-ml"
+  ],
+  "tags": [
+    "exa",
+    "search",
+    "web-search",
+    "semantic-search",
+    "ai-search",
+    "research"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "exa-mcp-server"],
+    "args": [
+      "-y",
+      "exa-mcp-server"
+    ],
     "env": {
       "EXA_API_KEY": "${input:EXA_API_KEY}"
     },
@@ -35,26 +47,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Get an Exa API key at dashboard.exa.ai/api-keys"
   },
-
   "contributor": {
     "name": "Exa",
     "github": "exa-labs",
     "url": "https://exa.ai"
   },
-
   "links": {
     "repository": "https://github.com/exa-labs/exa-mcp-server",
     "homepage": "https://exa.ai",
     "documentation": "https://docs.exa.ai"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,

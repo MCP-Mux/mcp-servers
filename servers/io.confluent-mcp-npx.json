@@ -4,7 +4,7 @@
   "name": "Confluent (npx)",
   "alias": "confluent",
   "description": "Manage Confluent Cloud and Kafka resources. Create topics, produce and consume messages, run Flink SQL queries, and manage schemas.",
-  "icon": "https://avatars.githubusercontent.com/u/9439498?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/9439498?v=4",
   "schema_version": "2.1",
   "categories": [
     "cloud",

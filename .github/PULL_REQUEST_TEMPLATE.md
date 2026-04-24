@@ -70,7 +70,7 @@ CONTRIBUTING.md → "Platform-Managed Fields (Do Not Set)".
 <!-- See CONTRIBUTING.md → "Trademark & Branding Policy" for details. -->
 
 - [ ] No "official" / "certified" / "endorsed" wording unless I represent the trademark owner
-- [ ] I have the right to reference the `icon` URL (emoji or an asset I'm allowed to hot-link)
+- [ ] I have the right to reference the `logo` URL (an asset I'm allowed to hot-link — emoji are not accepted)
 
 ### Tested locally (recommended for new servers)
 

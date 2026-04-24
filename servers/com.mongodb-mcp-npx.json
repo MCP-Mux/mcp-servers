@@ -4,7 +4,7 @@
   "name": "MongoDB (npx)",
   "alias": "mongodb",
   "description": "Connect to MongoDB databases and Atlas clusters. Query collections, inspect schemas, manage indexes, and run aggregation pipelines through the official MongoDB MCP server.",
-  "icon": "https://avatars.githubusercontent.com/u/11214950?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/11214950?v=4",
   "schema_version": "2.1",
   "categories": [
     "database"

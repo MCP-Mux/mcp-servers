@@ -4,11 +4,20 @@
   "name": "Sentry (Remote)",
   "alias": "sentry",
   "description": "Query and manage Sentry issues, errors, performance data, and project settings through Sentry's hosted remote MCP server. No local setup required.",
-  "icon": "\ud83d\udc1b",
+  "logo": "https://avatars.githubusercontent.com/u/1396951?v=4",
   "schema_version": "2.1",
-  "categories": ["monitoring", "developer-tools"],
-  "tags": ["sentry", "errors", "monitoring", "debugging", "performance", "observability"],
-
+  "categories": [
+    "monitoring",
+    "developer-tools"
+  ],
+  "tags": [
+    "sentry",
+    "errors",
+    "monitoring",
+    "debugging",
+    "performance",
+    "observability"
+  ],
   "transport": {
     "type": "http",
     "url": "https://mcp.sentry.dev/mcp",
@@ -16,26 +25,23 @@
       "inputs": []
     }
   },
-
   "auth": {
     "type": "oauth",
     "instructions": "Authenticate via the Sentry MCP endpoint using your Sentry account"
   },
-
   "contributor": {
     "name": "Sentry",
     "github": "getsentry",
     "url": "https://sentry.io"
   },
-
   "links": {
     "repository": "https://github.com/getsentry/sentry-mcp",
     "homepage": "https://sentry.io",
     "documentation": "https://docs.sentry.io"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": true,

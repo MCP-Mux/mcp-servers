@@ -92,7 +92,7 @@ Every definition must include these three fields:
   "$schema": "../schemas/server-definition.schema.json",
   "description": "What the server does in one sentence",
   "alias": "my-srv",             // short CLI alias (lowercase kebab-case)
-  "icon": "https://...",         // emoji or image URL
+  "logo": "https://...",         // HTTP(S) URL to a logo image (emoji not accepted)
   "schema_version": "2.1",
   "categories": ["developer-tools"],
   "tags": ["keyword1", "keyword2"],
@@ -368,7 +368,7 @@ Edit the existing JSON file in `servers/` and submit a PR. The same validation r
 ## Trademark & Branding Policy
 
 - **Names:** You may reference third-party products (e.g., "MCP Server for GitHub"). Use language like "works with", "for", or "connects to".
-- **Icons:** Emoji or external URLs only — McpMux does not host icon files. Only reference assets you have the right to use.
+- **Logos:** HTTP(S) URLs only — McpMux does not host logo files and emoji are not accepted. Only reference assets you have the right to use.
 - **Official claims:** Do NOT use "official", "certified", or "endorsed" unless you represent the trademark owner and have been verified by McpMux.
 
 See [TRADEMARK-TAKEDOWN.md](TRADEMARK-TAKEDOWN.md) for the full IP policy.
@@ -397,7 +397,7 @@ pnpm build                       # Generate bundle/bundle.json
   "name": "Brave Search",
   "alias": "brave",
   "description": "Search the web using the Brave Search API with privacy-focused results.",
-  "icon": "https://avatars.githubusercontent.com/u/12301619?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/12301619?v=4",
   "schema_version": "2.1",
   "categories": ["search"],
   "tags": ["brave", "search", "web-search", "privacy"],
@@ -466,7 +466,7 @@ pnpm build                       # Generate bundle/bundle.json
   "name": "Cloudflare Docs",
   "alias": "cf-docs",
   "description": "Search Cloudflare developer documentation using semantic search.",
-  "icon": "https://avatars.githubusercontent.com/u/314135?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/314135?v=4",
   "schema_version": "2.1",
   "categories": ["documentation", "cloud"],
   "tags": ["cloudflare", "docs", "workers", "pages"],

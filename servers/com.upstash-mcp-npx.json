@@ -4,7 +4,7 @@
   "name": "Upstash (npx)",
   "alias": "upstash",
   "description": "Create and manage Upstash Redis databases. List databases, create backups, view usage stats, and manage credentials.",
-  "icon": "https://avatars.githubusercontent.com/u/74989412?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/74989412?v=4",
   "schema_version": "2.1",
   "categories": [
     "database",

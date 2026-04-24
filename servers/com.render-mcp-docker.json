@@ -4,7 +4,7 @@
   "name": "Render (Docker)",
   "alias": "render",
   "description": "Manage Render services, deployments, and databases. Create and update web services, view logs, manage environment groups, and trigger deploys.",
-  "icon": "https://avatars.githubusercontent.com/u/114033652?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/114033652?v=4",
   "schema_version": "2.1",
   "categories": [
     "cloud",

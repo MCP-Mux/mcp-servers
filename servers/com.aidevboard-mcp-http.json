@@ -4,7 +4,7 @@
   "name": "AI Dev Jobs",
   "alias": "aidevjobs",
   "description": "AI and ML job search across 8,600+ curated roles from 510+ companies. 9 tools including filter-by-tag, salary benchmarks, candidate-profile matching, posted-within-days freshness filter, trending-tags and trending-companies pulse, plus full company detail. Daily scraper refresh from 560+ ATS sources.",
-  "icon": "https://aidevboard.com/favicon.svg",
+  "logo": "https://aidevboard.com/favicon.svg",
   "schema_version": "2.1",
   "categories": [
     "search",

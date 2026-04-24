@@ -4,15 +4,26 @@
   "name": "Brave Search (npx)",
   "alias": "brave",
   "description": "Search the web using the Brave Search API via npx. Supports web search, news search, and local POI search with privacy-focused results.",
-  "icon": "https://avatars.githubusercontent.com/u/12301619?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/12301619?v=4",
   "schema_version": "2.1",
-  "categories": ["search"],
-  "tags": ["brave", "search", "web-search", "news", "privacy", "research"],
-
+  "categories": [
+    "search"
+  ],
+  "tags": [
+    "brave",
+    "search",
+    "web-search",
+    "news",
+    "privacy",
+    "research"
+  ],
   "transport": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "@brave/brave-search-mcp-server"],
+    "args": [
+      "-y",
+      "@brave/brave-search-mcp-server"
+    ],
     "env": {
       "BRAVE_API_KEY": "${input:BRAVE_API_KEY}"
     },
@@ -35,26 +46,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Get a Brave Search API key at https://brave.com/search/api/"
   },
-
   "contributor": {
     "name": "Brave",
     "github": "brave",
     "url": "https://brave.com"
   },
-
   "links": {
     "repository": "https://github.com/brave/brave-search-mcp-server",
     "homepage": "https://brave.com/search/api/",
     "documentation": "https://api.search.brave.com/app/documentation"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,

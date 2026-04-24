@@ -4,7 +4,7 @@
   "name": "GitLab (Docker)",
   "alias": "gitlab-docker",
   "description": "Manage GitLab repositories, issues, merge requests, pipelines, wikis, milestones, and releases via Docker. 107+ tools with configurable toolsets, read-only mode, and project scoping.",
-  "icon": "https://avatars.githubusercontent.com/u/42544600?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/42544600?v=4",
   "schema_version": "2.1",
   "categories": [
     "version-control",
@@ -19,14 +19,17 @@
     "ci-cd",
     "docker"
   ],
-
   "transport": {
     "type": "stdio",
     "command": "docker",
     "args": [
-      "run", "-i", "--rm",
-      "-e", "GITLAB_PERSONAL_ACCESS_TOKEN",
-      "-e", "GITLAB_API_URL",
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "GITLAB_PERSONAL_ACCESS_TOKEN",
+      "-e",
+      "GITLAB_API_URL",
       "zereight050/gitlab-mcp"
     ],
     "env": {
@@ -62,28 +65,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Create a Personal Access Token with 'api' scope at https://gitlab.com/-/user_settings/personal_access_tokens"
   },
-
   "contributor": {
     "name": "zereight",
     "github": "zereight",
     "url": "https://github.com/zereight/gitlab-mcp"
   },
-
   "links": {
     "repository": "https://github.com/zereight/gitlab-mcp",
     "homepage": "https://gitlab.com",
     "documentation": "https://github.com/zereight/gitlab-mcp#readme"
   },
-
   "platforms": [
     "all"
   ],
-
   "capabilities": {
     "tools": true,
     "resources": false,

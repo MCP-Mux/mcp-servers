@@ -4,7 +4,7 @@
   "name": "Railway (npx)",
   "alias": "railway",
   "description": "Manage Railway projects, services, and deployments. Create services, view logs, manage environment variables, and trigger deployments.",
-  "icon": "https://avatars.githubusercontent.com/u/66716858?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/66716858?v=4",
   "schema_version": "2.1",
   "categories": [
     "cloud",

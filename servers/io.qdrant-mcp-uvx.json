@@ -4,7 +4,7 @@
   "name": "Qdrant (uvx)",
   "alias": "qdrant",
   "description": "Store and retrieve information from Qdrant vector database using semantic search. Supports local and cloud Qdrant instances.",
-  "icon": "https://avatars.githubusercontent.com/u/73504361?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/73504361?v=4",
   "schema_version": "2.1",
   "categories": [
     "database",

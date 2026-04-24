@@ -4,7 +4,7 @@
   "name": "Browserbase (npx)",
   "alias": "browserbase",
   "description": "Cloud browser automation using Browserbase and Stagehand. Navigate, click, extract data, and take screenshots in cloud-hosted browsers.",
-  "icon": "https://avatars.githubusercontent.com/u/158221360?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/158221360?v=4",
   "schema_version": "2.1",
   "categories": [
     "developer-tools",

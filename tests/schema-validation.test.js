@@ -75,8 +75,52 @@ describe("Server Definition Schema", () => {
     [{ id: "com.foo.bar", name: "X", transport: { type: "stdio", command: "x" } }, "invalid id pattern (multi-dot)"],
     [{ id: "noDot", name: "X", transport: { type: "stdio", command: "x" } }, "invalid id pattern (no dot)"],
     [{ id: "x", name: "", transport: { type: "stdio", command: "x" } }, "empty name"],
+    [{ id: "x.y", name: "X", transport: { type: "stdio", command: "x" }, logo: "🚀" }, "logo must be URL, not emoji"],
+    [{ id: "x.y", name: "X", transport: { type: "stdio", command: "x" }, logo: "not-a-url" }, "logo must be URL"],
+    [{ id: "x.y", name: "X", transport: { type: "stdio", command: "x" }, icon: "🚀" }, "icon (backcompat) must be URL, not emoji"],
   ])("rejects invalid definition: %s", (data) => {
     expect(validate(data)).toBe(false);
+  });
+
+  it("accepts valid logo URL", () => {
+    const data = {
+      id: "com.example",
+      name: "Example",
+      transport: { type: "stdio", command: "echo" },
+      logo: "https://avatars.githubusercontent.com/u/314135?v=4",
+    };
+    expect(validate(data)).toBe(true);
+  });
+
+  it("accepts legacy icon URL (backward compat)", () => {
+    const data = {
+      id: "com.example",
+      name: "Example",
+      transport: { type: "stdio", command: "echo" },
+      icon: "https://avatars.githubusercontent.com/u/314135?v=4",
+    };
+    expect(validate(data)).toBe(true);
+  });
+
+  it("no server file uses the deprecated `icon` field — use `logo` instead", async () => {
+    const offenders = serverFiles
+      .map((f) => ({ file: path.basename(f), data: loadJson(f) }))
+      .filter((s) => "icon" in s.data);
+    expect(
+      offenders.map((o) => o.file),
+      "These files still use the deprecated `icon` field; rename to `logo`"
+    ).toEqual([]);
+  });
+
+  it("every server `logo` is an HTTP(S) URL (no emoji, no relative paths)", async () => {
+    const offenders = [];
+    for (const filePath of serverFiles) {
+      const data = loadJson(filePath);
+      if (data.logo !== undefined && !/^https?:\/\//.test(data.logo)) {
+        offenders.push(`${path.basename(filePath)}: logo="${data.logo}"`);
+      }
+    }
+    expect(offenders, "Logos must be HTTP(S) URLs").toEqual([]);
   });
 
   it("validates all server files against schema", async () => {

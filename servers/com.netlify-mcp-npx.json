@@ -4,7 +4,7 @@
   "name": "Netlify (npx)",
   "alias": "netlify",
   "description": "Deploy sites, manage DNS, check build status, and configure Netlify projects. Supports site creation, environment variables, and serverless functions.",
-  "icon": "https://avatars.githubusercontent.com/u/7892489?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/7892489?v=4",
   "schema_version": "2.1",
   "categories": [
     "cloud",

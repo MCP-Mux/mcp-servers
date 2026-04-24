@@ -4,7 +4,7 @@
   "name": "CircleCI (Docker)",
   "alias": "circleci-docker",
   "description": "Manage CircleCI pipelines, jobs, and workflows via Docker. Trigger builds, view job logs, analyze test results, and debug failed pipelines.",
-  "icon": "https://avatars.githubusercontent.com/u/26607840?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/26607840?v=4",
   "schema_version": "2.1",
   "categories": [
     "developer-tools"
@@ -20,8 +20,11 @@
     "type": "stdio",
     "command": "docker",
     "args": [
-      "run", "-i", "--rm",
-      "-e", "CIRCLECI_TOKEN",
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "CIRCLECI_TOKEN",
       "circleci/mcp-server-circleci"
     ],
     "env": {

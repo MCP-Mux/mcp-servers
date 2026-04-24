@@ -4,11 +4,20 @@
   "name": "Exa Search (Remote)",
   "alias": "exa",
   "description": "AI-powered web search that understands meaning, not just keywords. Hosted remote MCP server, no local setup required.",
-  "icon": "https://avatars.githubusercontent.com/u/77906174?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/77906174?v=4",
   "schema_version": "2.1",
-  "categories": ["search", "ai-ml"],
-  "tags": ["exa", "search", "web-search", "semantic-search", "ai-search", "research"],
-
+  "categories": [
+    "search",
+    "ai-ml"
+  ],
+  "tags": [
+    "exa",
+    "search",
+    "web-search",
+    "semantic-search",
+    "ai-search",
+    "research"
+  ],
   "transport": {
     "type": "http",
     "url": "https://mcp.exa.ai/mcp",
@@ -31,26 +40,23 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Get an Exa API key at dashboard.exa.ai/api-keys"
   },
-
   "contributor": {
     "name": "Exa",
     "github": "exa-labs",
     "url": "https://exa.ai"
   },
-
   "links": {
     "repository": "https://github.com/exa-labs/exa-mcp-server",
     "homepage": "https://exa.ai",
     "documentation": "https://docs.exa.ai"
   },
-
-  "platforms": ["all"],
-
+  "platforms": [
+    "all"
+  ],
   "capabilities": {
     "tools": true,
     "resources": false,

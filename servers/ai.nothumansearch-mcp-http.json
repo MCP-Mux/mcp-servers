@@ -4,7 +4,7 @@
   "name": "Not Human Search",
   "alias": "nothumansearch",
   "description": "AI tool discovery engine. Search 1,900+ agent-ready sites and MCP servers by keyword, category, or capability. 10 tools including live MCP endpoint verification via JSON-RPC probe, a recently-indexed feed, and per-signal filters (MCP / OpenAPI / llms.txt).",
-  "icon": "https://nothumansearch.ai/favicon.svg",
+  "logo": "https://nothumansearch.ai/favicon.svg",
   "schema_version": "2.1",
   "categories": [
     "search",

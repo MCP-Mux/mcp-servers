@@ -4,7 +4,7 @@
   "name": "Google Calendar (npx)",
   "alias": "google-calendar",
   "description": "Manage Google Calendar with multi-account support, event CRUD, free/busy checks, recurring events, and natural language scheduling. 12 tools across all calendar operations.",
-  "icon": "https://avatars.githubusercontent.com/u/587318?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/587318?v=4",
   "schema_version": "2.1",
   "categories": [
     "productivity"
@@ -16,7 +16,6 @@
     "events",
     "oauth"
   ],
-
   "transport": {
     "type": "stdio",
     "command": "npx",
@@ -46,34 +45,28 @@
       ]
     }
   },
-
   "auth": {
     "type": "oauth",
     "instructions": "Create a Desktop OAuth 2.0 client in Google Cloud Console. Enable the Google Calendar API. Download the credentials JSON and provide the file path."
   },
-
   "contributor": {
     "name": "Nathan Spady",
     "github": "nspady",
     "url": "https://github.com/nspady/google-calendar-mcp"
   },
-
   "links": {
     "repository": "https://github.com/nspady/google-calendar-mcp",
     "homepage": "https://calendar.google.com",
     "documentation": "https://github.com/nspady/google-calendar-mcp#readme"
   },
-
   "platforms": [
     "all"
   ],
-
   "capabilities": {
     "tools": true,
     "resources": false,
     "prompts": false,
     "read_only_mode": false
   },
-
   "changelog_url": "https://github.com/nspady/google-calendar-mcp/releases"
 }

@@ -4,7 +4,7 @@
   "name": "Firecrawl (npx)",
   "alias": "firecrawl",
   "description": "Scrape, crawl, search, and extract structured data from websites. Converts web pages to clean markdown with JavaScript rendering support.",
-  "icon": "https://avatars.githubusercontent.com/u/135057108?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/135057108?v=4",
   "schema_version": "2.1",
   "categories": [
     "search",

@@ -4,7 +4,7 @@
   "name": "Obsidian (uvx)",
   "alias": "obsidian",
   "description": "Read, write, search, and manage notes in your Obsidian vault. List files, get contents, patch or append content, and delete files. Requires the Obsidian Local REST API community plugin.",
-  "icon": "https://avatars.githubusercontent.com/u/1137867?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/1137867?v=4",
   "schema_version": "2.1",
   "categories": [
     "productivity",
@@ -18,7 +18,6 @@
     "vault",
     "pkm"
   ],
-
   "transport": {
     "type": "stdio",
     "command": "uvx",
@@ -69,34 +68,28 @@
       ]
     }
   },
-
   "auth": {
     "type": "api_key",
     "instructions": "Install the 'Local REST API' community plugin in Obsidian and copy the API key from its settings."
   },
-
   "contributor": {
     "name": "Markus Pfundstein",
     "github": "MarkusPfundstein",
     "url": "https://github.com/MarkusPfundstein/mcp-obsidian"
   },
-
   "links": {
     "repository": "https://github.com/MarkusPfundstein/mcp-obsidian",
     "homepage": "https://obsidian.md",
     "documentation": "https://github.com/MarkusPfundstein/mcp-obsidian#readme"
   },
-
   "platforms": [
     "all"
   ],
-
   "capabilities": {
     "tools": true,
     "resources": false,
     "prompts": false,
     "read_only_mode": false
   },
-
   "changelog_url": "https://github.com/MarkusPfundstein/mcp-obsidian/releases"
 }

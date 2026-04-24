@@ -90,7 +90,7 @@ These are computed or granted by McpMux maintainers after verification.
 ## Trademark & Branding
 
 - Reference third-party products with "works with", "for", or "connects to" — never "official", "certified", "endorsed" unless you represent the trademark owner and are verified.
-- Icons are referenced by URL (emoji or external) — McpMux does not host icon files. Only link to assets you have the right to reference.
+- Logos are referenced by HTTP(S) URL in the `logo` field — McpMux does not host logo files and emoji are not accepted. Only link to assets you have the right to reference. The legacy field name `icon` is still accepted for backward compatibility.
 - See `TRADEMARK-TAKEDOWN.md` for the full IP policy.
 
 ## Commit & PR Guidelines

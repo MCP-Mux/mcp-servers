@@ -4,7 +4,7 @@
   "name": "Weaviate (uvx)",
   "alias": "weaviate",
   "description": "Manage Weaviate vector database collections and objects. Create schemas, insert data, run vector and hybrid searches with filtering.",
-  "icon": "https://avatars.githubusercontent.com/u/37794290?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/37794290?v=4",
   "schema_version": "2.1",
   "categories": [
     "database",

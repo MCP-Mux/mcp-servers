@@ -4,7 +4,7 @@
   "name": "Square (npx)",
   "alias": "square",
   "description": "Interact with Square APIs for payments, orders, catalog, inventory, customers, and bookings. Supports all Square API services.",
-  "icon": "https://avatars.githubusercontent.com/u/82592?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/82592?v=4",
   "schema_version": "2.1",
   "categories": [
     "developer-tools",

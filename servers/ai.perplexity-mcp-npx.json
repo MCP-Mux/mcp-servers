@@ -4,7 +4,7 @@
   "name": "Perplexity (npx)",
   "alias": "perplexity",
   "description": "AI-powered search using Perplexity models. Provides web search, deep research, and reasoning capabilities with real-time web context.",
-  "icon": "https://avatars.githubusercontent.com/u/185426709?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/185426709?v=4",
   "schema_version": "2.1",
   "categories": [
     "search",

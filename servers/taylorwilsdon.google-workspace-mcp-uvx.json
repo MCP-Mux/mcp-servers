@@ -4,7 +4,7 @@
   "name": "Google Workspace (uvx)",
   "alias": "google-workspace",
   "description": "Access Gmail, Google Calendar, Drive, Docs, Sheets, Slides, Forms, Tasks, Contacts, Chat, and Apps Script from a single MCP server. 100+ operations across all Google Workspace services.",
-  "icon": "https://avatars.githubusercontent.com/u/6508528?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/6508528?v=4",
   "schema_version": "2.1",
   "categories": [
     "productivity",
@@ -20,7 +20,6 @@
     "workspace",
     "oauth"
   ],
-
   "transport": {
     "type": "stdio",
     "command": "uvx",
@@ -64,34 +63,28 @@
       ]
     }
   },
-
   "auth": {
     "type": "oauth",
     "instructions": "Create a Desktop OAuth 2.0 client in Google Cloud Console. Enable the Google Workspace APIs you need (Gmail, Calendar, Drive, etc.)."
   },
-
   "contributor": {
     "name": "Taylor Wilsdon",
     "github": "taylorwilsdon",
     "url": "https://github.com/taylorwilsdon/google_workspace_mcp"
   },
-
   "links": {
     "repository": "https://github.com/taylorwilsdon/google_workspace_mcp",
     "homepage": "https://workspace.google.com",
     "documentation": "https://github.com/taylorwilsdon/google_workspace_mcp#readme"
   },
-
   "platforms": [
     "all"
   ],
-
   "capabilities": {
     "tools": true,
     "resources": true,
     "prompts": false,
     "read_only_mode": true
   },
-
   "changelog_url": "https://github.com/taylorwilsdon/google_workspace_mcp/releases"
 }

@@ -4,7 +4,7 @@
   "name": "Tavily (npx)",
   "alias": "tavily",
   "description": "AI-optimized search, web content extraction, site mapping, and crawling through the official Tavily MCP server. Purpose-built for LLM research workflows.",
-  "icon": "https://avatars.githubusercontent.com/u/170207473?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/170207473?v=4",
   "schema_version": "2.1",
   "categories": [
     "search"

@@ -4,7 +4,7 @@
   "name": "MongoDB (Docker)",
   "alias": "mongodb-docker",
   "description": "Connect to MongoDB databases and Atlas clusters via Docker. Query collections, inspect schemas, manage indexes, and run aggregation pipelines in an isolated container.",
-  "icon": "https://avatars.githubusercontent.com/u/11214950?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/11214950?v=4",
   "schema_version": "2.1",
   "categories": [
     "database"
@@ -25,9 +25,12 @@
       "run",
       "--rm",
       "-i",
-      "-e", "MDB_MCP_CONNECTION_STRING",
-      "-e", "MDB_MCP_API_CLIENT_ID",
-      "-e", "MDB_MCP_API_CLIENT_SECRET",
+      "-e",
+      "MDB_MCP_CONNECTION_STRING",
+      "-e",
+      "MDB_MCP_API_CLIENT_ID",
+      "-e",
+      "MDB_MCP_API_CLIENT_SECRET",
       "mongodb/mongodb-mcp-server:latest"
     ],
     "env": {

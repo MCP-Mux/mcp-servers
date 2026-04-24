@@ -4,7 +4,7 @@
   "name": "PostgreSQL (Docker)",
   "alias": "postgres-docker",
   "description": "Query PostgreSQL databases, analyze performance, and optimize indexes via Docker. Execute SQL, inspect schemas, get EXPLAIN plans, identify slow queries, and run health checks.",
-  "icon": "https://www.postgresql.org/media/img/about/press/elephant.png",
+  "logo": "https://www.postgresql.org/media/img/about/press/elephant.png",
   "schema_version": "2.1",
   "categories": [
     "database"
@@ -22,8 +22,11 @@
     "type": "stdio",
     "command": "docker",
     "args": [
-      "run", "-i", "--rm",
-      "-e", "DATABASE_URI",
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "DATABASE_URI",
       "crystaldba/postgres-mcp",
       "--access-mode=unrestricted"
     ],

@@ -4,7 +4,7 @@
   "name": "DigitalOcean (npx)",
   "alias": "digitalocean",
   "description": "Manage DigitalOcean infrastructure including Droplets, App Platform, databases, Kubernetes clusters, networking, and Spaces object storage.",
-  "icon": "https://avatars.githubusercontent.com/u/4650108?v=4",
+  "logo": "https://avatars.githubusercontent.com/u/4650108?v=4",
   "schema_version": "2.1",
   "categories": [
     "cloud",

@@ -4,7 +4,7 @@
   "name": "Longbridge MCP",
   "alias": "longbridge-mcp",
   "description": "Longbridge brokerage MCP — 110 tools for US/HK real-time quotes, options, order routing, fundamentals, analyst ratings, calendars, price alerts, DCA plans, portfolio analytics and community sharelists. Hosted streamable-http with OAuth 2.1 via RFC 9728.",
-  "icon": "https://raw.githubusercontent.com/longbridge/longbridge-mcp/main/docs/logo.png",
+  "logo": "https://raw.githubusercontent.com/longbridge/longbridge-mcp/main/docs/logo.png",
   "schema_version": "2.1",
   "categories": ["productivity"],
   "tags": [
