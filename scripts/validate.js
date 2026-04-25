@@ -18,9 +18,27 @@ const { glob } = require("glob");
 const ROOT = path.resolve(__dirname, "..");
 const SCHEMA_PATH = path.join(ROOT, "schemas", "server-definition.schema.json");
 const SERVERS_DIR = path.join(ROOT, "servers");
+const CATEGORIES_PATH = path.join(ROOT, "categories.json");
 
 // Fields that contributors must not set -- they are platform-managed
 const PLATFORM_FIELDS = ["badges", "stats", "sponsored", "featured"];
+
+/**
+ * Load the set of valid category IDs from categories.json. The bundler's
+ * server_categories table has a foreign key to categories.id, so any server
+ * that references an ID not in categories.json will silently fail to sync.
+ * We catch those at validate time so they never reach main.
+ */
+function loadValidCategoryIds() {
+  try {
+    const raw = fs.readFileSync(CATEGORIES_PATH, "utf-8");
+    const categories = JSON.parse(raw);
+    return new Set(categories.map((c) => c.id));
+  } catch (err) {
+    console.error(`Failed to load categories.json: ${err.message}`);
+    return null;
+  }
+}
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -75,6 +93,8 @@ async function validateFiles(files) {
   addFormats(ajv);
   const validate = ajv.compile(schema);
 
+  const validCategoryIds = loadValidCategoryIds();
+
   let hasErrors = false;
 
   for (const filePath of files) {
@@ -96,10 +116,29 @@ async function validateFiles(files) {
     }
 
     const valid = validate(data);
+    const fileErrors = [];
     if (!valid) {
-      console.error(`FAIL  ${relative}`);
       for (const err of validate.errors) {
-        console.error(`  - ${err.instancePath || "/"}: ${err.message}`);
+        fileErrors.push(`${err.instancePath || "/"}: ${err.message}`);
+      }
+    }
+
+    // Enforce that every category reference exists in categories.json.
+    // The bundler's server_categories table has a FK constraint — a typo
+    // here silently breaks sync for this server.
+    if (validCategoryIds && Array.isArray(data.categories)) {
+      const unknown = data.categories.filter((id) => !validCategoryIds.has(id));
+      for (const id of unknown) {
+        fileErrors.push(
+          `/categories: unknown category "${id}" (not in categories.json; pick one of: ${Array.from(validCategoryIds).sort().join(", ")})`
+        );
+      }
+    }
+
+    if (fileErrors.length > 0) {
+      console.error(`FAIL  ${relative}`);
+      for (const msg of fileErrors) {
+        console.error(`  - ${msg}`);
       }
       hasErrors = true;
     } else {

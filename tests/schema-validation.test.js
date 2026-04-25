@@ -58,7 +58,7 @@ describe("Server Definition Schema", () => {
         metadata: {
           inputs: [
             { id: "LOG_LEVEL", label: "Log Level", type: "text", required: false, default: "info" },
-            { id: "API_KEY", label: "API Key", type: "password", required: true, secret: true },
+            { id: "API_KEY", label: "API Key", type: "text", required: true, secret: true },
           ],
         },
       },
