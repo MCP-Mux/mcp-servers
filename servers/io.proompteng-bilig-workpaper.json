@@ -1,0 +1,73 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "io.proompteng-bilig-workpaper",
+  "name": "Bilig WorkPaper",
+  "alias": "bilig-workpaper",
+  "description": "Formula-backed WorkPaper MCP server for editing workbook JSON, recalculating cells, reading display values, and persisting reviewable state.",
+  "logo": "https://avatars.githubusercontent.com/u/234536857?v=4",
+  "schema_version": "2.1",
+  "categories": [
+    "developer-tools",
+    "productivity"
+  ],
+  "tags": [
+    "spreadsheet",
+    "formula",
+    "workbook",
+    "typescript",
+    "agents",
+    "xlsx",
+    "json"
+  ],
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "-p",
+      "@bilig/headless",
+      "bilig-workpaper-mcp",
+      "--workpaper",
+      "${input:WORKPAPER_PATH}",
+      "--init-demo-workpaper",
+      "--writable"
+    ],
+    "metadata": {
+      "inputs": [
+        {
+          "id": "WORKPAPER_PATH",
+          "label": "WorkPaper JSON path",
+          "description": "Path where Bilig should read or create a WorkPaper JSON file.",
+          "type": "text",
+          "required": true,
+          "default": "./pricing.workpaper.json",
+          "placeholder": "./pricing.workpaper.json"
+        }
+      ]
+    }
+  },
+  "auth": {
+    "type": "none",
+    "instructions": "No API key required. The server runs locally against the configured WorkPaper JSON file."
+  },
+  "contributor": {
+    "name": "Greg Konush",
+    "github": "gregkonush",
+    "url": "https://github.com/gregkonush"
+  },
+  "links": {
+    "repository": "https://github.com/proompteng/bilig",
+    "homepage": "https://proompteng.github.io/bilig/",
+    "documentation": "https://proompteng.github.io/bilig/mcp-client-setup.html"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": true,
+    "read_only_mode": false
+  },
+  "changelog_url": "https://github.com/proompteng/bilig/releases"
+}
